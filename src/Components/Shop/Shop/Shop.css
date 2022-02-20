@@ -1,0 +1,21 @@
+.search-field{
+    width: 30%;
+    border: 1px solid rgb(206, 206, 206);
+    border-radius: 25px;
+    outline: none;
+    box-shadow: 0px 2px 5px rgb(223, 223, 223);
+}
+.search-button{
+    border-radius: 45px;
+    outline: none;
+}
+@media screen and (max-width:570px){
+    .search-field{
+        width: 96%;
+        margin: auto;
+    }
+    .search-button{
+        width: 50%;
+        margin-top: 10px;
+    }
+}

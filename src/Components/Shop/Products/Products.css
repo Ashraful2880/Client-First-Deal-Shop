@@ -1,0 +1,14 @@
+.product-container{
+    border: 0.2px solid #fff;
+    background-color: #F1F4FA;
+    border: 5px solid #fff;
+    border-radius: 13px;
+}
+.product-container:hover{
+    background-color: #fff;
+    transition: ease-in-out 1s;
+}
+.product-container:hover img{
+    transform: scale(1.2);
+    transition: ease-in-out 0.5s;
+}
