@@ -4,6 +4,14 @@ import MiddleHeader from "../MiddleHeader/MiddleHeader";
 import TopHeader from "../TopHeader/TopHeader";
 
 const Header = () => {
+  const myFunction = () => {
+    const toggleButton = document.getElementById("toogleDiv");
+    if (toggleButton.style.display === "none") {
+      toggleButton.style.display = "block";
+    } else {
+      toggleButton.style.display = "none";
+    }
+  };
   return (
     <div>
       <TopHeader />
@@ -22,15 +30,16 @@ const Header = () => {
             <div className="flex md:hidden">
               <button
                 type="button"
-                className="text-white hover:text-gray-600 focus:outline-none focus:text-gray-600"
+                className="text-white focus:outline-none"
                 aria-label="toggle menu"
+                onClick={myFunction}
               >
                 <i className="fa-solid fa-bars mr-2"></i>
               </button>
             </div>
           </div>
 
-          <div className="md:flex items-center">
+          <div className="md:flex items-center" id="toogleDiv">
             <div className="flex flex-col md:flex-row md:mx-6 text-white">
               <Link
                 className="my-1 text-sm font-medium hover:text-indigo-500 md:mx-4 md:my-0"

@@ -37,7 +37,7 @@ const Footer = () => {
       </div>
       <hr />
       <div className="container mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-        <div className="text-left">
+        <div>
           <h4 className="mb-4 text-xl font-bold">Legal</h4>
           <Link to="/home">
             <p>Terms Of Service</p>
