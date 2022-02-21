@@ -79,7 +79,7 @@ const Blogs = () => {
                     <hr className="border" />
                     <div className="py-2 text-stone-500">
                       <p>{blog?.description.slice(0, 100)}</p>
-                      <button className="bg-orange-500 text-white px-2 py-1 mt-3 rounded-md text-sm">
+                      <button className="text-orange-600 font-bold border-b-2 border-orange-600 px-2 py-1 mt-3 text-sm">
                         Read More
                       </button>
                     </div>

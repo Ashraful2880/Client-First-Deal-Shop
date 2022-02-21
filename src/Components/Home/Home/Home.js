@@ -1,55 +1,12 @@
 import React from "react";
+import Blogs from "../../Blogs/Blogs";
+import Application from "../Application/Application";
 
 const Home = () => {
   return (
     <div>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
-      <h1>This is Home Component</h1>
+      <Application />
+      <Blogs />
     </div>
   );
 };
