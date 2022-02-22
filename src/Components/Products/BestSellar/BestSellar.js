@@ -14,7 +14,7 @@ SwiperCore.use([Autoplay, Pagination]);
 const BestSellar = () => {
   const [products] = useProducts();
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto mb-10">
       {products?.length > 0 ? (
         <div className="flex my-10 border shadow-xl p-5">
           <div className="w-full overflow-hidden px-5">
@@ -103,6 +103,15 @@ const BestSellar = () => {
           alt="Loading..."
         />
       )}
+      <div className="overflow-hidden">
+        <Link to="/home">
+          <img
+            className="w-full hover:scale-105 duration-1000"
+            src="https://i.ibb.co/hmDN8fs/New-Arrival-bannar.jpg"
+            alt="Off Banner"
+          />
+        </Link>
+      </div>
     </div>
   );
 };
