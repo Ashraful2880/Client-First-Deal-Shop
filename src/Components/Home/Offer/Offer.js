@@ -5,24 +5,24 @@ const Offer = () => {
   return (
     <div className=" my-10 container mx-auto border shadow-md p-5">
       <div className="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 gap-5">
-        <Link to="/home" className="border rounded-2xl overflow-hidden">
+        <Link to="/home" className="rounded-2xl overflow-hidden">
           <img
-            className="hover:scale-110 duration-500"
-            src="https://i.ibb.co/9c80fVX/big-offer-1.png"
+            className="hover:scale-110 duration-500 rounded-r-xl"
+            src="https://i.ibb.co/wKDh9nL/Offer-1.jpg"
             alt="OfferImage"
           />
         </Link>
-        <Link to="/home" className="border rounded-2xl overflow-hidden">
+        <Link to="/home" className=" rounded-2xl overflow-hidden">
           <img
-            className="hover:scale-110 duration-500"
-            src="https://i.ibb.co/XxSrHw8/big-offer-2.png"
+            className="hover:scale-110 duration-500 rounded-r-xl"
+            src="https://i.ibb.co/X4qSh3B/Offer-2.jpg"
             alt="OfferImage"
           />
         </Link>
-        <Link to="/home" className="border rounded-2xl overflow-hidden">
+        <Link to="/home" className=" rounded-2xl overflow-hidden">
           <img
-            className="hover:scale-110 duration-500"
-            src="https://i.ibb.co/SKc19nR/big-offer-3.png"
+            className="hover:scale-110 duration-500 rounded-r-xl"
+            src="https://i.ibb.co/rFnS4TT/offer-3.jpg"
             alt="OfferImage"
           />
         </Link>

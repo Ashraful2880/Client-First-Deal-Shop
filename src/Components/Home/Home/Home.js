@@ -4,6 +4,7 @@ import TopTrending from "../../Products/TopTrending/TopTrending";
 import Application from "../Application/Application";
 import Banner from "../Banner/Banner";
 import Offer from "../Offer/Offer";
+import OfferBanner from "../OfferBanner/OfferBanner";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <Banner />
       <Offer />
       <TopTrending />
+      <OfferBanner />
       <Application />
       <Blogs />
     </div>

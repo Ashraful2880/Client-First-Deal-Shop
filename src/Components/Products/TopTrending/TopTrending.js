@@ -16,7 +16,7 @@ const TopTrending = () => {
   return (
     <div className="container mx-auto">
       {products?.length > 0 ? (
-        <div className="flex mt-10 mb-20 border shadow-xl p-5">
+        <div className="flex my-10 border shadow-xl p-5">
           <div className="overflow-hidden">
             <Link to="/home">
               <img
