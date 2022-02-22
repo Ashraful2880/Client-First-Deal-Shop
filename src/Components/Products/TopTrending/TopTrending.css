@@ -1,25 +1,10 @@
 .overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(51, 51, 51, 0.164);
-    overflow: hidden;
-    width: 100%;
-    height: 0;
-    border-radius: 6px;
     transition: .5s ease;
   }
   .text, .icon {
-    color: #F77426;
-    font-size: 18px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    text-align: center;
   }
   .product-link:hover .overlay {
     height: 100%;

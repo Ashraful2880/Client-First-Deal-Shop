@@ -17,13 +17,13 @@ const TopTrending = () => {
   const [products] = useProducts();
   return (
     <div className="container mx-auto">
-      <h3 className="text-left my-3 mx-6 font-bold text-3xl">
+      <h3 className="text-left my-3 font-bold text-3xl">
         Top Trending Products
       </h3>
       <hr className="bg-orange-500" style={{ padding: "1px 0px" }} />
       {products?.length > 0 ? (
-        <div className="flex">
-          <div className="mt-7 overflow-hidden">
+        <div className="flex mt-10 mb-20">
+          <div className="overflow-hidden">
             <Link to="/home">
               <img
                 className=" hover:scale-125 duration-1000"
@@ -32,7 +32,7 @@ const TopTrending = () => {
               />
             </Link>
           </div>
-          <div className="w-full mt-7 pb-10 overflow-hidden px-5">
+          <div className="w-full overflow-hidden px-5">
             <Swiper
               loop={true}
               autoplay={{ delay: 2000 }}
@@ -67,9 +67,12 @@ const TopTrending = () => {
                         src={product?.url}
                         alt="ProductsImage"
                       />
-                      <Link to="/blogs" className="overlay">
-                        <p className="cart-button text"></p>
-                        <p className="cart-button icon">
+                      <Link
+                        to="/blogs"
+                        className="overlay overflow-hidden absolute bottom-0 left-0 right-0 h-0 w-full bg-gray-500"
+                      >
+                        <p className=" text-orange-500 absolute top-1/2 left-1/2 text"></p>
+                        <p className=" text-orange-500 absolute top-1/2 left-1/2 icon">
                           <i className="fas fa-shopping-cart"></i>
                         </p>
                       </Link>
