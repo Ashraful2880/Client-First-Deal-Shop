@@ -21,12 +21,12 @@ const Blogs = () => {
   return (
     <div className="container mx-auto" style={{ minHeight: "70vh" }}>
       <h3 className="text-left my-3 mx-6 font-bold text-3xl">From Our Blogs</h3>
-      <hr style={{ padding: "2px 0px", backgroundColor: "#FCC902" }} />
+      <hr className="bg-orange-500" style={{ padding: "1px 0px" }} />
       {blogs?.length > 0 ? (
         <div className="w-full pt-7 pb-20 overflow-hidden px-5">
           <Swiper
             loop={true}
-            autoplay={{ delay: 2000 }}
+            autoplay={{ delay: 3000 }}
             grabCursor={true}
             slidesPerView={3}
             spaceBetween={30}
@@ -79,7 +79,7 @@ const Blogs = () => {
                     <hr className="border" />
                     <div className="py-2 text-stone-500">
                       <p>{blog?.description.slice(0, 100)}</p>
-                      <button className="text-orange-600 font-bold border-b-2 border-orange-600 px-2 py-1 mt-3 text-sm">
+                      <button className="text-orange-500 font-bold border-b-2 border-orange-500 border-t-2 border-t-transparent hover:border-t-orange-500 duration-500 px-2 py-1 mt-3 text-sm">
                         Read More
                       </button>
                     </div>
