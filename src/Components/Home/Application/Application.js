@@ -26,15 +26,15 @@ const Application = () => {
             <h5 className="bg-orange-500 hover:bg-white hover:text-orange-500 border border-orange-500 text-white px-3 py-2 rounded-full font-bold duration-300">
               01
             </h5>
-            <h4 className="font-bold text-xl ml-5 cursor-pointer">
+            <h4 className="font-bold text-xl ml-5 cursor-pointer hover:-translate-y-1 duration-300">
               Order From Any Location
             </h4>
           </div>
           <div className="flex items-center mb-5">
-            <h5 className="bg-orange-500 hover:bg-white hover:text-orange-500 border border-orange-500 text-white px-3 py-2 rounded-full font-bold duration-300">
+            <h5 className="bg-orange-500 hover:bg-white hover:text-orange-500 border border-orange-500 text-white px-3 py-2 rounded-full font-bold duration-300 ">
               02
             </h5>
-            <h4 className="font-bold text-xl ml-5 cursor-pointer">
+            <h4 className="font-bold text-xl ml-5 cursor-pointer hover:-translate-y-1 duration-300">
               Get Important Notices
             </h4>
           </div>
@@ -42,16 +42,24 @@ const Application = () => {
             <h5 className="bg-orange-500 hover:bg-white hover:text-orange-500 border border-orange-500 text-white px-3 py-2 rounded-full font-bold duration-300">
               03
             </h5>
-            <h4 className="font-bold text-xl ml-5 cursor-pointer">
+            <h4 className="font-bold text-xl ml-5 cursor-pointer hover:-translate-y-1 duration-300">
               Follow Delivery Status
             </h4>
           </div>
           <div className="flex mt-12 mb-6">
-            <Link to="/home" className="mx-2">
-              <img src="https://i.ibb.co/FndBwq2/app-1.png" alt="Apple Icon" />
+            <Link to="/home" className="mx-3">
+              <img
+                className=" border-4 border-transparent rounded-xl hover:border-orange-500 duration-300"
+                src="https://i.ibb.co/FndBwq2/app-1.png"
+                alt="Apple Icon"
+              />
             </Link>
             <Link to="/home" className="mx-2">
-              <img src="https://i.ibb.co/w0r5Gyp/app-2.png" alt="google play" />
+              <img
+                className=" border-4 border-transparent rounded-xl hover:border-orange-500 duration-300"
+                src="https://i.ibb.co/w0r5Gyp/app-2.png"
+                alt="google play"
+              />
             </Link>
           </div>
         </div>

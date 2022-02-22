@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import AboutUs from "./Components/AboutUs/AboutUs";
+import AboutUs from "./Components/AboutUs/AboutUs/AboutUs";
 import Blogs from "./Components/Blogs/Blogs";
 import Contact from "./Components/Contact/Contact";
 import Home from "./Components/Home/Home/Home";
