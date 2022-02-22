@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../../../Images/Mainlogo.png";
 
 const MiddleHeader = () => {
   return (
@@ -8,7 +7,11 @@ const MiddleHeader = () => {
       <div className="container mx-auto flex justify-between items-center">
         <div>
           <Link to="/home">
-            <img className="w-32" src={logo} alt="Main Logo" />
+            <img
+              className="w-14"
+              src="https://i.ibb.co/K6X7cBS/Logo.png"
+              alt="Main Logo"
+            />
           </Link>
         </div>
         <div className="container mx-auto w-3/6 ">

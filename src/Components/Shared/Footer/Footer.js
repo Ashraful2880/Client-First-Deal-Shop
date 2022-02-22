@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../../../Images/Logo.png";
 import "./Footer.css";
 
 const Footer = () => {
@@ -9,7 +8,11 @@ const Footer = () => {
       <div>
         <div className="container mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center py-6 ">
           <Link to="/home" className=" mb-2">
-            <img className=" w-16" src={logo} alt="Main Logo" />
+            <img
+              className=" w-16"
+              src="https://i.ibb.co/K6X7cBS/Logo.png"
+              alt="Main Logo"
+            />
             <h4 className="text-orange-500 text-left font-bold">
               First Deal Shop
             </h4>

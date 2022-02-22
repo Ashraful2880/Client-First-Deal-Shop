@@ -5,8 +5,6 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import loader from "../../../Images/Loading.gif";
-import trendingBanner from "../../../Images/top-trending.jpg";
 import useProducts from "../../../Hooks/UseProducts";
 import { Link } from "react-router-dom";
 import Rating from "react-rating";
@@ -17,22 +15,25 @@ const TopTrending = () => {
   const [products] = useProducts();
   return (
     <div className="container mx-auto">
-      <h3 className="text-left my-3 font-bold text-3xl">
-        Top Trending Products
-      </h3>
-      <hr className="bg-orange-500" style={{ padding: "1px 0px" }} />
       {products?.length > 0 ? (
-        <div className="flex mt-10 mb-20">
+        <div className="flex mt-10 mb-20 border shadow-xl p-5">
           <div className="overflow-hidden">
             <Link to="/home">
               <img
                 className=" hover:scale-125 duration-1000"
-                src={trendingBanner}
+                src="https://i.ibb.co/xLrYkN7/top-trending.jpg"
                 alt="Trending Banner"
               />
             </Link>
           </div>
           <div className="w-full overflow-hidden px-5">
+            <h3 className="text-left mb-3 font-bold lg:text-3xl sm:text-sm">
+              Top Trending Products
+            </h3>
+            <hr
+              className="bg-orange-500 lg:mb-14"
+              style={{ padding: "1px 0px" }}
+            />
             <Swiper
               loop={true}
               autoplay={{ delay: 2000 }}
@@ -57,10 +58,7 @@ const TopTrending = () => {
             >
               {products?.map((product, key) => (
                 <SwiperSlide key={key}>
-                  <div
-                    className="border rounded-lg mx-auto bg-white"
-                    style={{ height: "270px" }}
-                  >
+                  <div className="border rounded-lg mx-auto bg-white py-10 max-h-80">
                     <div className="overflow-hidden relative product-link ">
                       <img
                         className="rounded-t-lg product-Image"
@@ -101,7 +99,7 @@ const TopTrending = () => {
       ) : (
         <img
           className="w-96 rounded-2xl mx-auto mt-3"
-          src={loader}
+          src="https://i.ibb.co/D1GcjP6/Loading.gif"
           alt="Loading..."
         />
       )}

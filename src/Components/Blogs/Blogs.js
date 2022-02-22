@@ -6,7 +6,6 @@ import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "./Blogs.css";
-import loader from "../../Images/Loading.gif";
 
 SwiperCore.use([Autoplay, Pagination]);
 
@@ -20,7 +19,7 @@ const Blogs = () => {
   }, []);
   return (
     <div className="container mx-auto" style={{ minHeight: "70vh" }}>
-      <h3 className="text-left my-3 mx-6 font-bold text-3xl">From Our Blogs</h3>
+      <h3 className="text-left my-3 font-bold text-3xl">From Our Blogs</h3>
       <hr className="bg-orange-500" style={{ padding: "1px 0px" }} />
       {blogs?.length > 0 ? (
         <div className="w-full pt-7 pb-20 overflow-hidden px-5">
@@ -57,7 +56,7 @@ const Blogs = () => {
                     />
                   </div>
                   <div className="px-4 pb-4 card-content text-left">
-                    <h1 className="text-lg font-bold my-5 text-gray-700 hover:text-red-500 duration-300 cursor-pointer">
+                    <h1 className="text-lg font-bold my-5 text-gray-700 cursor-pointer">
                       {blog?.name}
                     </h1>
                     <hr className="border" />
@@ -92,7 +91,7 @@ const Blogs = () => {
       ) : (
         <img
           className="w-96 rounded-2xl mx-auto mt-3"
-          src={loader}
+          src="https://i.ibb.co/D1GcjP6/Loading.gif"
           alt="Loading..."
         />
       )}

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Offer = () => {
   return (
-    <div className=" my-10 container mx-auto">
+    <div className=" my-10 container mx-auto border shadow-md p-5">
       <div className="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 gap-5">
         <Link to="/home" className="border rounded-2xl overflow-hidden">
           <img
