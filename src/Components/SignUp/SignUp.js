@@ -72,11 +72,11 @@ const SignUp = () => {
                   </button>
                 </div>
               </form>
-              <p className="focus:outline-none text-sm font-medium leading-none text-white">
+              <p className="focus:outline-none text-md font-medium leading-none text-white">
                 Allready Registerd?
                 <Link
                   to="/login"
-                  className="ml-2 text-orange-500 focus:text-white focus:outline-none hover:underline text-sm font-medium leading-none cursor-pointer"
+                  className="ml-2 text-orange-500 focus:text-white focus:outline-none hover:underline text-md font-medium leading-none cursor-pointer"
                 >
                   Login here
                 </Link>

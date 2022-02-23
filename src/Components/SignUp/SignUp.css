@@ -1,5 +1,5 @@
 .bgContainer{
-    background-image:url("https://i.ibb.co/ns5rDVV/dog.jpg");
+    background-image:url("https://i.ibb.co/xLrYkN7/top-trending.jpg");
 }
 .bg{
     background-image:linear-gradient(rgba(0, 0, 0, 0.63),rgba(0, 0, 0, 0.63)),url("https://i.ibb.co/YWR4K2B/pexels-andrea-piacquadio-3765132.jpg");
@@ -7,4 +7,7 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+}
+.logincontainer{
+    background-image:url("https://i.ibb.co/txs8GmD/register-bannar.jpg");
 }
