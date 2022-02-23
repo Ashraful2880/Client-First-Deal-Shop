@@ -16,7 +16,7 @@ const Header = () => {
     <div>
       <TopHeader />
       <MiddleHeader />
-      <nav className="bg-gray-800 shadow">
+      <nav className="bg-gray-800 shadow py-2">
         <div className="container mx-auto px-6 py-3 md:flex md:justify-between md:items-center">
           <div className="flex justify-between items-center">
             <div className="lg:block sm:hidden md:hidden">

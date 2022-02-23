@@ -1,0 +1,19 @@
+.slider-container{
+    height: 80vh;
+}
+.swiper-pagination-bullet-active{
+    background: #EA580C;
+    opacity: 1;
+}
+
+@media screen and (max-width:981px){
+  
+}
+@media screen and (max-width:710px){
+
+}
+@media screen and (max-width:452px){
+    .slider-container{
+        height: 25vh;
+    }
+}
