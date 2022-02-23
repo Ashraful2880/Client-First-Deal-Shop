@@ -20,22 +20,8 @@ const SignUp = () => {
                 First Deal Shop
               </h3>
               <hr className="mt-4 mb-2 border-t" />
-              <form className="px-8 pt-6 pb-2 mb-4 text-left">
-                <div className="mb-3 ml-2 lg:w-2/3 sm:w-full md:w-full">
-                  <label
-                    className="block mb-2 text-sm font-bold text-white"
-                    htmlFor="name"
-                  >
-                    Your Name
-                  </label>
-                  <input
-                    className="w-full px-3 py-2 text-sm leading-tight text-white border rounded shadow appearance-none focus:outline-none focus:shadow-outline mb-4"
-                    name="name"
-                    type="text"
-                    placeholder="Your Name"
-                  />
-                </div>
-                <div className="mb-3 ml-2 lg:w-2/3 sm:w-full md:w-full">
+              <form className="px-8 pt-6 pb-2 mb-4 text-center">
+                <div className="mb-3 lg:w-2/3 sm:w-full md:w-full mx-auto">
                   <label
                     className="block mb-2 text-sm font-bold text-white"
                     htmlFor="email"
@@ -49,7 +35,7 @@ const SignUp = () => {
                     placeholder="Your Email"
                   />
                 </div>
-                <div className="mb-3 ml-2 lg:w-2/3 sm:w-full md:w-full">
+                <div className="mb-3 lg:w-2/3 sm:w-full md:w-full mx-auto">
                   <label
                     className="block mb-2 text-sm font-bold text-white"
                     htmlFor="password"
@@ -63,7 +49,7 @@ const SignUp = () => {
                     placeholder="Your Password"
                   />
                 </div>
-                <div className="mb-3 ml-2 lg:w-2/3 sm:w-full md:w-full">
+                <div className="mb-3 lg:w-2/3 sm:w-full md:w-full mx-auto">
                   <label
                     className="block mb-2 text-sm font-bold text-white"
                     htmlFor="password2"
@@ -77,7 +63,7 @@ const SignUp = () => {
                     placeholder="Repeat Password"
                   />
                 </div>
-                <div className="text-left ml-2">
+                <div className="text-center ml-2">
                   <button
                     className=" lg:w-2/3 sm:w-full md:w-full px-4 py-2 font-bold text-orange-500 border border-orange-500 rounded-lg hover:bg-orange-500 hover:text-white duration-300"
                     type="submit"
@@ -102,10 +88,7 @@ const SignUp = () => {
                 </p>
                 <hr className="w-full bg-white" />
               </div>
-              <button
-                onClick="{googleSignIn} "
-                className="mx-auto lg:w-2/4 sm:w-full md:w-full p-3 border rounded-lg border-orange-500 flex items-center mt-6 hover:bg-orange-500 duration-300"
-              >
+              <button className="mx-auto lg:w-2/4 sm:w-full md:w-full p-3 border rounded-lg border-orange-500 flex items-center mt-6 hover:bg-orange-500 duration-300">
                 <img
                   src="https://tuk-cdn.s3.amazonaws.com/can-uploader/sign_in_2-svg2.svg"
                   alt="google"
@@ -114,7 +97,7 @@ const SignUp = () => {
                   Continue with Google
                 </p>
               </button>
-              <button className="mx-auto lg:w-2/4 sm:w-full md:w-full p-3 border rounded-lg border-orange-500 flex items-center mt-4 hover:bg-orange-500 duration-300">
+              <button className="mx-auto lg:w-2/4 sm:w-full md:w-full p-3 border rounded-lg border-orange-500 flex items-center mt-4 hover:bg-orange-500 duration-300 mb-10">
                 <img
                   src="https://tuk-cdn.s3.amazonaws.com/can-uploader/sign_in_2-svg3.svg"
                   alt="github"
