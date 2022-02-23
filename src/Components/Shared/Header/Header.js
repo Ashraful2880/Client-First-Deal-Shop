@@ -16,14 +16,17 @@ const Header = () => {
     <div>
       <TopHeader />
       <MiddleHeader />
-      <nav className="bg-indigo-600 shadow">
+      <nav className="bg-gray-800 shadow">
         <div className="container mx-auto px-6 py-3 md:flex md:justify-between md:items-center">
           <div className="flex justify-between items-center">
             <div className="lg:block sm:hidden md:hidden">
-              <Link to="/home" className="text-white hover:text-gray-700">
-                <i className="fa-solid fa-bars mr-2"></i>
-                Browse Categories
-                <i className="fa-solid fa-angle-down ml-2"></i>
+              <Link
+                to="/home"
+                className="text-white hover:text-orange-500 focus:text-orange-500 duration-300"
+              >
+                <i className="fa-solid fa-bars mr-2 text-md"></i>
+                <span className="font-semibold ">Browse Categories</span>
+                <i className="fa-solid fa-angle-down ml-2 text-md"></i>
               </Link>
             </div>
 
@@ -42,45 +45,45 @@ const Header = () => {
           <div className="md:flex items-center" id="toogleDiv">
             <div className="flex flex-col md:flex-row md:mx-6 text-white">
               <Link
-                className="my-1 text-sm font-medium hover:text-indigo-500 md:mx-4 md:my-0"
+                className="my-1 text-md font-semibold  hover:text-orange-500 focus:text-orange-500 duration-300 md:mx-4 md:my-0"
                 to="/home"
               >
                 Home
               </Link>
               <Link
-                className="my-1 text-sm font-medium hover:text-indigo-500 md:mx-4 md:my-0"
+                className="my-1 text-md font-semibold  hover:text-orange-500 focus:text-orange-500 duration-300 md:mx-4 md:my-0"
                 to="/home"
               >
                 Categories
                 <i className="fa-solid fa-angle-down ml-2"></i>
               </Link>
               <Link
-                className="my-1 text-sm font-medium hover:text-indigo-500 md:mx-4 md:my-0"
+                className="my-1 text-md font-semibold  hover:text-orange-500 focus:text-orange-500 duration-300 md:mx-4 md:my-0"
                 to="/shop"
               >
                 Shop
                 <i className="fa-solid fa-angle-down ml-2"></i>
               </Link>
               <Link
-                className="my-1 text-sm font-medium hover:text-indigo-500 md:mx-4 md:my-0"
+                className="my-1 text-md font-semibold  hover:text-orange-500 focus:text-orange-500 duration-300 md:mx-4 md:my-0"
                 to="/contact"
               >
                 Contact
               </Link>
               <Link
-                className="my-1 text-sm font-medium hover:text-indigo-500 md:mx-4 md:my-0"
+                className="my-1 text-md font-semibold  hover:text-orange-500 focus:text-orange-500 duration-300 md:mx-4 md:my-0"
                 to="/about"
               >
                 About
               </Link>
               <Link
-                className="my-1 text-sm font-medium hover:text-indigo-500 md:mx-4 md:my-0"
+                className="my-1 text-md font-semibold  hover:text-orange-500 focus:text-orange-500 duration-300 md:mx-4 md:my-0"
                 to="/blogs"
               >
                 Blog
               </Link>
               <Link
-                className="my-1 text-sm font-medium hover:text-indigo-500 md:mx-4 md:my-0"
+                className="my-1 text-md font-semibold hover:text-orange-500 focus:text-orange-500 duration-300 md:mx-4 md:my-0"
                 to="/signup"
               >
                 Sign Up

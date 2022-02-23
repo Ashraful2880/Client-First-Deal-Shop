@@ -88,7 +88,7 @@ const SignUp = () => {
                 </p>
                 <hr className="w-full bg-white" />
               </div>
-              <button className="mx-auto lg:w-2/4 sm:w-full md:w-full p-3 border rounded-lg border-orange-500 flex items-center mt-6 hover:bg-orange-500 duration-300">
+              <button className="mx-auto lg:w-2/4 sm:w-full md:w-full p-3 border rounded-lg border-orange-500 flex items-center justify-center mt-6 hover:bg-orange-500 duration-300">
                 <img
                   src="https://tuk-cdn.s3.amazonaws.com/can-uploader/sign_in_2-svg2.svg"
                   alt="google"
@@ -97,7 +97,7 @@ const SignUp = () => {
                   Continue with Google
                 </p>
               </button>
-              <button className="mx-auto lg:w-2/4 sm:w-full md:w-full p-3 border rounded-lg border-orange-500 flex items-center mt-4 hover:bg-orange-500 duration-300 mb-10">
+              <button className="mx-auto lg:w-2/4 sm:w-full md:w-full p-3 border rounded-lg border-orange-500 flex justify-center items-center mt-4 hover:bg-orange-500 duration-300 mb-10">
                 <img
                   src="https://tuk-cdn.s3.amazonaws.com/can-uploader/sign_in_2-svg3.svg"
                   alt="github"

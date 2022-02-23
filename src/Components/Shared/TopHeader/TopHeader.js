@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const TopHeader = () => {
   return (
-    <div className="border py-1 bg-black text-gray-300">
+    <div className="py-2 bg-black text-gray-300">
       <div className="container mx-auto flex justify-between">
         <div>
           <Link className="mx-1 text-sm hover:text-white" to="/about">

@@ -3,20 +3,16 @@ import { Link } from "react-router-dom";
 
 const MiddleHeader = () => {
   return (
-    <div className="border-b bg-indigo-100">
+    <div className="bg-orange-600 py-2">
       <div className="container mx-auto flex justify-between items-center">
         <div>
           <Link to="/home">
-            <img
-              className="w-14"
-              src="https://i.ibb.co/K6X7cBS/Logo.png"
-              alt="Main Logo"
-            />
+            <h5 className="text-white text-xl font-bold">First Deal Shop</h5>
           </Link>
         </div>
         <div className="container mx-auto w-3/6 ">
           <form action="/search">
-            <div className="bg-white flex items-center rounded-lg border h-12 shadow-lg">
+            <div className="bg-white flex items-center rounded-md border h-10 shadow-lg">
               <input
                 autoFocus
                 type="search"
@@ -33,17 +29,17 @@ const MiddleHeader = () => {
         </div>
         <div>
           <Link to="/home" className="relative">
-            <i className="fa-solid fa-cart-shopping mx-2 text-2xl text-gray-700  px-2"></i>
+            <i className="fa-solid fa-cart-shopping mx-2 text-2xl text-white  px-2"></i>
             <span className="absolute bottom-4 left-11 rounded-full bg-indigo-500 text-white px-1 text-xs">
               1
             </span>
           </Link>
           <Link to="/login">
-            <i className="fa-solid fa-user-large mx-2 text-2xl text-gray-700"></i>
+            <i className="fa-solid fa-user-large mx-2 text-2xl text-white"></i>
           </Link>
           <Link to="contact">
-            <i className="fa-solid fa-headphones mx-2 text-2xl text-gray-700"></i>
-            <span>+88-01974238487</span>
+            <i className="fa-solid fa-headphones mx-2 text-2xl text-white"></i>
+            <span className="text-white font-bold">+88-01974238487</span>
           </Link>
         </div>
       </div>
