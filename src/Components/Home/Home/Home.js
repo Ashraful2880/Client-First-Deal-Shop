@@ -1,6 +1,7 @@
 import React from "react";
 import Blogs from "../../Blogs/Blogs";
 import BestSellar from "../../Products/BestSellar/BestSellar";
+import HotDeal from "../../Products/HotDeal/HotDeal";
 import NewArraival from "../../Products/NewArraival/NewArraival";
 import TopTrending from "../../Products/TopTrending/TopTrending";
 import Application from "../Application/Application";
@@ -17,6 +18,7 @@ const Home = () => {
       <OfferBanner />
       <BestSellar />
       <NewArraival />
+      <HotDeal />
       <Application />
       <Blogs />
     </div>

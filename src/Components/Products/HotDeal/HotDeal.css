@@ -1,0 +1,7 @@
+.deal-bannar{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.068),rgba(0, 0, 0, 0.068)),url('https://i.ibb.co/rvmmNJ9/hot-deal.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 50vh;
+    background-position: center center;
+}
