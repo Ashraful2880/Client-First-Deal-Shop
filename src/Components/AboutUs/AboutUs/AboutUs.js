@@ -5,8 +5,8 @@ import Testimonial from "../Testimonial/Testimonial";
 
 const AboutUs = () => {
   return (
-    <div className="container mx-auto" style={{ minHeight: "70vh" }}>
-      <div>
+    <div style={{ minHeight: "70vh" }}>
+      <div className="container mx-auto">
         <h3 className="text-left my-3 font-bold text-3xl">
           Few Words About Us
         </h3>
