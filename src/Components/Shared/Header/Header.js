@@ -79,6 +79,12 @@ const Header = () => {
               >
                 Blog
               </Link>
+              <Link
+                className="my-1 text-sm font-medium hover:text-indigo-500 md:mx-4 md:my-0"
+                to="/signup"
+              >
+                Sign Up
+              </Link>
             </div>
           </div>
         </div>

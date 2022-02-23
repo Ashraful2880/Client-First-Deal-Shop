@@ -1,5 +1,6 @@
 import React from "react";
 import Blogs from "../../Blogs/Blogs";
+import Contact from "../../Contact/Contact";
 import BestSellar from "../../Products/BestSellar/BestSellar";
 import HotDeal from "../../Products/HotDeal/HotDeal";
 import NewArraival from "../../Products/NewArraival/NewArraival";
@@ -21,6 +22,7 @@ const Home = () => {
       <HotDeal />
       <Application />
       <Blogs />
+      <Contact />
     </div>
   );
 };

@@ -1,0 +1,10 @@
+.bgContainer{
+    background-image:url("https://i.ibb.co/ns5rDVV/dog.jpg");
+}
+.bg{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.63),rgba(0, 0, 0, 0.63)),url("https://i.ibb.co/YWR4K2B/pexels-andrea-piacquadio-3765132.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}

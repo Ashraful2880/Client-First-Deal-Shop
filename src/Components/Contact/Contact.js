@@ -3,10 +3,10 @@ import "./Contact.css";
 
 const Contact = () => {
   return (
-    <div className="w-full bg h-screen contact-bannar">
-      <div className="max-w-5xl mx-auto px-6 sm:px-6 lg:px-8 pb-12 pt-10">
+    <div className="contact-bannar">
+      <div className="max-w-5xl mx-auto px-6 sm:px-6 lg:px-8 py-20">
         <div
-          className=" w-full p-8 sm:p-12 rounded-xl"
+          className=" w-full sm:p-12 rounded-xl"
           style={{ background: "#0000009e" }}
         >
           <p className="text-4xl font-bold leading-7 text-center text-white mb-5">
