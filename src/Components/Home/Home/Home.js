@@ -1,4 +1,5 @@
 import React from "react";
+import Team from "../../AboutUs/Team/Team";
 import Blogs from "../../Blogs/Blogs";
 import Contact from "../../Contact/Contact";
 import BestSellar from "../../Products/BestSellar/BestSellar";
@@ -22,6 +23,7 @@ const Home = () => {
       <HotDeal />
       <Application />
       <Blogs />
+      <Team />
       <Contact />
     </div>
   );

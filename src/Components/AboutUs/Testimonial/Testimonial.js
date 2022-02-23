@@ -12,8 +12,8 @@ const Testimonial = () => {
         Happy Customeer Quotes
       </h2>
       <div className="bannar">
-        <div className="container mx-auto grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-8 h-64 items-center">
-          <div className=" border rounded-lg">
+        <div className="container mx-auto grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-8 h-96 items-center">
+          <div className=" border rounded-lg pb-5">
             <img
               className="w-24 mx-auto"
               src="https://i.ibb.co/9ngGnQ6/happy-face.png"
@@ -26,8 +26,7 @@ const Testimonial = () => {
               Happy Customers
             </h3>
           </div>
-
-          <div className=" border rounded-lg">
+          <div className=" border rounded-lg pb-5">
             <img
               className="w-24 mx-auto"
               src="https://i.ibb.co/9ngGnQ6/happy-face.png"
@@ -40,8 +39,7 @@ const Testimonial = () => {
               Trusted Sellar
             </h3>
           </div>
-
-          <div className=" border rounded-lg">
+          <div className=" border rounded-lg pb-5">
             <img
               className="w-24 mx-auto"
               src="https://i.ibb.co/9ngGnQ6/happy-face.png"
@@ -52,7 +50,7 @@ const Testimonial = () => {
             </h1>
             <h3 className="font-bold text-orange-500 text-2xl">Delivery</h3>
           </div>
-          <div className=" border rounded-lg ">
+          <div className=" border rounded-lg pb-5">
             <img
               className="w-24 mx-auto"
               src="https://i.ibb.co/9ngGnQ6/happy-face.png"
