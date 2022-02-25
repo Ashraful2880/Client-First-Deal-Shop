@@ -8,7 +8,7 @@ import Home from "./Components/Home/Home/Home";
 import Login from "./Components/Login/Login";
 import NotFound from "./Components/NotFound/NotFound";
 import Footer from "./Components/Shared/Footer/Footer";
-import Header from "./Components/Shared/Header/Header";
+import Header from "./Components/Shared/Header/Header/Header";
 import Shop from "./Components/Shop/Shop/Shop";
 import SignUp from "./Components/SignUp/SignUp";
 

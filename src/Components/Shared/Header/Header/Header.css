@@ -1,0 +1,11 @@
+.mega-menu {
+    z-index: 999;
+    display: none;
+    left: 0;
+    position: absolute;
+    text-align: left;
+    width: 100%;
+}
+.hoverable:hover .mega-menu {
+    display: block;
+}
