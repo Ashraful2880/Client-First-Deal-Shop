@@ -42,11 +42,17 @@ const Header = () => {
           </div>
           <div className="md:flex items-center" id="toogleDiv">
             <div className="flex flex-col md:flex-row md:mx-6 text-white">
+              <Link
+                to="/home"
+                className="my-1 text-md font-semibold hover:text-orange-500 focus:text-orange-500 duration-300 md:mx-4 md:my-0"
+              >
+                Home
+              </Link>
               <ul className="flex justify-center">
                 <li className="hoverable hover:text-white">
                   <Link
+                    to="/shop"
                     className="my-1 text-md font-semibold  hover:text-orange-500 focus:text-orange-500 duration-300 md:mx-4 md:my-0"
-                    to="/home"
                   >
                     <i className="fa-solid fa-bars mr-2 text-md"></i>
                     <span className="font-semibold ">Browse Categories</span>
@@ -54,7 +60,7 @@ const Header = () => {
                   </Link>
                   <div className="p-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-gray-800">
                     <div className="container mx-auto w-full flex flex-wrap justify-between">
-                      <ul className="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
+                      <div className="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
                         <div className="flex items-center border-b mb-4">
                           <h3 className="font-bold text-xl text-white text-bold mb-2">
                             Categories
@@ -111,8 +117,8 @@ const Header = () => {
                             UnCategorized
                           </Link>
                         </div>
-                      </ul>
-                      <ul className="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-r-0 lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
+                      </div>
+                      <div className="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-r-0 lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
                         <div className="flex items-center border-b mb-4">
                           <h3 className="font-bold text-xl text-white text-bold mb-2">
                             Special Products
@@ -169,8 +175,8 @@ const Header = () => {
                             App Info
                           </Link>
                         </div>
-                      </ul>
-                      <ul className="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-b-0 sm:border-r md:border-b-0 pb-6 pt-6 lg:pt-3 cursor-pointer">
+                      </div>
+                      <div className="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-b-0 sm:border-r md:border-b-0 pb-6 pt-6 lg:pt-3 cursor-pointer">
                         <div className="flex items-center border-b mb-4">
                           <h3 className="font-bold text-xl text-white text-bold mb-2">
                             Latest News
@@ -194,17 +200,19 @@ const Header = () => {
                           a stellar paradigm shift, let's touch base off-line
                           before we fire the new ux experience.
                         </p>
-                      </ul>
+                      </div>
                       <ul className="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 pb-6 pt-6 lg:pt-3 cursor-pointer">
                         <div className="flex items-center border-b mb-4">
                           <h3 className="font-bold text-xl text-white text-bold mb-2">
                             Weekly Hot
                           </h3>
                         </div>
-                        <img
-                          src="https://i.ibb.co/0nckYyr/Dropdown-Categories-Bannar.png"
-                          alt="Drop Down Bannar"
-                        />
+                        <Link to="/women">
+                          <img
+                            src="https://i.ibb.co/0nckYyr/Dropdown-Categories-Bannar.png"
+                            alt="Drop Down Bannar"
+                          />
+                        </Link>
                         <p className="text-gray-100 text-sm mt-4">
                           This is a no-brainer to wash your face, or we need to
                           future-proof this high performance keywords
@@ -228,11 +236,13 @@ const Header = () => {
                     <div className="container mx-auto w-full flex flex-wrap justify-between">
                       <ul className="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
                         <div className="flex items-center mb-4">
-                          <img
-                            className="w-full mb-2"
-                            src="https://i.ibb.co/qgb43KQ/shop-bannar-1.jpg"
-                            alt="shop banner"
-                          />
+                          <Link to="/shop" className="w-full">
+                            <img
+                              className="w-full mb-2"
+                              src="https://i.ibb.co/qgb43KQ/shop-bannar-1.jpg"
+                              alt="shop banner"
+                            />
+                          </Link>
                         </div>
                         <div className="text-gray-100 text-md flex flex-col">
                           <Link
@@ -288,11 +298,13 @@ const Header = () => {
                       </ul>
                       <ul className="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-r-0 lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
                         <div className="flex items-center mb-4">
-                          <img
-                            className="w-full mb-2"
-                            src="https://i.ibb.co/CvM7Q81/Shop-bannar-2.jpg"
-                            alt="shop banner"
-                          />
+                          <Link to="/bag" className="w-full">
+                            <img
+                              className="w-full mb-2"
+                              src="https://i.ibb.co/CvM7Q81/Shop-bannar-2.jpg"
+                              alt="shop banner"
+                            />
+                          </Link>
                         </div>
                         <div className="text-gray-100 text-md flex flex-col">
                           <Link
@@ -348,11 +360,13 @@ const Header = () => {
                       </ul>
                       <ul className="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-b-0 sm:border-r md:border-b-0 pb-6 pt-6 lg:pt-3 cursor-pointer">
                         <div className="flex items-center mb-4">
-                          <img
-                            className="mb-2 w-full"
-                            src="https://i.ibb.co/qgb43KQ/shop-bannar-1.jpg"
-                            alt="shop banner"
-                          />
+                          <Link to="/women" className="mb-2 w-full">
+                            <img
+                              className="mb-2 w-full"
+                              src="https://i.ibb.co/qgb43KQ/shop-bannar-1.jpg"
+                              alt="shop banner"
+                            />
+                          </Link>
                         </div>
                         <h4 className="text-orange-500 mb-2 font-bold">
                           <i className="fa-solid fa-angles-right mr-2 text-md"></i>
@@ -374,17 +388,19 @@ const Header = () => {
                         </p>
                       </ul>
                       <ul className="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 pb-6 pt-6 lg:pt-3 cursor-pointer">
-                        <div className="flex items-center border-b mb-4">
-                          <img
-                            className="mx-1"
-                            src="https://i.ibb.co/1fzq18C/shop-bannar-3.jpg"
-                            alt="Drop Down Bannar"
-                          />
-                          <img
-                            className="mx-1"
-                            src="https://i.ibb.co/28QStX4/shop-banner-4.jpg"
-                            alt="Drop Down Bannar"
-                          />
+                        <div className="flex items-center mb-4">
+                          <Link to="/kids" className="mx-1">
+                            <img
+                              src="https://i.ibb.co/1fzq18C/shop-bannar-3.jpg"
+                              alt="Drop Down Bannar"
+                            />
+                          </Link>
+                          <Link to="/womens" className="mx-1">
+                            <img
+                              src="https://i.ibb.co/28QStX4/shop-banner-4.jpg"
+                              alt="Drop Down Bannar"
+                            />
+                          </Link>
                         </div>
                         <p className="text-gray-100 text-sm mt-4">
                           This is a no-brainer to wash your face, or we need to
@@ -397,26 +413,26 @@ const Header = () => {
                 </li>
               </ul>
               <Link
-                className="my-1 text-md font-semibold hover:text-orange-500 focus:text-orange-500 duration-300 md:mx-4 md:my-0"
                 to="/contact"
+                className="my-1 text-md font-semibold hover:text-orange-500 focus:text-orange-500 duration-300 md:mx-4 md:my-0"
               >
                 Contact
               </Link>
               <Link
-                className="my-1 text-md font-semibold hover:text-orange-500 focus:text-orange-500 duration-300 md:mx-4 md:my-0"
                 to="/about"
+                className="my-1 text-md font-semibold hover:text-orange-500 focus:text-orange-500 duration-300 md:mx-4 md:my-0"
               >
                 About
               </Link>
               <Link
-                className="my-1 text-md font-semibold hover:text-orange-500 focus:text-orange-500 duration-300 md:mx-4 md:my-0"
                 to="/blogs"
+                className="my-1 text-md font-semibold hover:text-orange-500 focus:text-orange-500 duration-300 md:mx-4 md:my-0"
               >
                 Blog
               </Link>
               <Link
-                className="my-1 text-md font-semibold hover:text-orange-500 focus:text-orange-500 duration-300 md:mx-4 md:my-0"
                 to="/signup"
+                className="my-1 text-md font-semibold hover:text-orange-500 focus:text-orange-500 duration-300 md:mx-4 md:my-0"
               >
                 Sign Up
               </Link>
