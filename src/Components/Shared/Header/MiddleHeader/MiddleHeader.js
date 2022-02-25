@@ -5,11 +5,10 @@ const MiddleHeader = () => {
   return (
     <div className="bg-orange-600 py-2">
       <div className="container mx-auto flex justify-between items-center">
-        <div>
-          <Link to="/home">
-            <h5 className="text-white text-xl font-bold">First Deal Shop</h5>
-          </Link>
-        </div>
+        <Link to="contact" className="ml-4">
+          <i className="fa-solid fa-headphones mx-2 text-xl text-white"></i>
+          <span className="text-white font-normal">+88-01974238487</span>
+        </Link>
         <div className="container mx-auto w-3/6 ">
           <form action="/search">
             <div className="bg-white flex items-center rounded-md border h-10 shadow-lg">
@@ -29,17 +28,16 @@ const MiddleHeader = () => {
         </div>
         <div>
           <Link to="/home" className="relative">
-            <i className="fa-solid fa-cart-shopping mx-2 text-2xl text-white  px-2"></i>
+            <i className="fa-solid fa-cart-shopping mx-2 text-xl text-white px-2"></i>
             <span className="absolute bottom-4 left-11 rounded-full bg-indigo-500 text-white px-1 text-xs">
               1
             </span>
           </Link>
           <Link to="/login">
-            <i className="fa-solid fa-user-large mx-2 text-2xl text-white"></i>
+            <i className="fa-solid fa-right-to-bracket mx-2 text-xl text-white"></i>
           </Link>
-          <Link to="contact">
-            <i className="fa-solid fa-headphones mx-2 text-2xl text-white"></i>
-            <span className="text-white font-bold">+88-01974238487</span>
+          <Link to="/logout">
+            <i className="fa-solid fa-right-from-bracket mx-2 text-xl text-white"></i>
           </Link>
         </div>
       </div>

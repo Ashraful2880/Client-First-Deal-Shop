@@ -439,12 +439,13 @@ const Header = () => {
               >
                 Blog
               </Link>
-              <Link
-                to="/signup"
-                className="my-1 text-md font-semibold hover:text-orange-500 focus:text-orange-500 duration-300 md:mx-4 md:my-0"
-              >
-                Sign Up
-              </Link>
+              <button className="text-md font-semibold hover:text-orange-500 focus:text-orange-500 duration-300 md:mx-4 md:my-0">
+                <img
+                  className="w-8 rounded-full border border-orange-500 mx-auto"
+                  src="https://avatars.githubusercontent.com/u/86690202?v=4"
+                  alt="User Prpfile"
+                />
+              </button>
             </div>
           </div>
         </div>
