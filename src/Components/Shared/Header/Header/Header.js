@@ -25,8 +25,18 @@ const Header = () => {
                 to="/home"
                 className="text-white sub-menu-container hover:text-orange-500 focus:text-orange-500 duration-300"
               >
-                <i className="fa-solid fa-bars mr-2 text-md"></i>
-                <span className="font-semibold ">Logo Here</span>
+                <div className="flex">
+                  <img
+                    className="w-10"
+                    src="https://i.ibb.co/K6X7cBS/Logo.png"
+                    alt="Main Logo"
+                  />
+                  <h4 className="mx-2 font-bold text-orange-500 text-xl mt-1">
+                    <span className="text-white">F</span>irst
+                    <span className="text-white"> D</span>eal
+                    <span className="text-white"> S</span>hop
+                  </h4>
+                </div>
               </Link>
             </div>
             <div className="flex md:hidden">
@@ -54,7 +64,6 @@ const Header = () => {
                     to="/shop"
                     className="my-1 text-md font-semibold  hover:text-orange-500 focus:text-orange-500 duration-300 md:mx-4 md:my-0"
                   >
-                    <i className="fa-solid fa-bars mr-2 text-md"></i>
                     <span className="font-semibold ">Browse Categories</span>
                     <i className="fa-solid fa-angle-down ml-2 text-md"></i>
                   </Link>
