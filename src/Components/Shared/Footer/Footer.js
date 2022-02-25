@@ -7,17 +7,19 @@ const Footer = () => {
     <div className="footer-container">
       <div>
         <div className="container mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center py-6 ">
-          <Link to="/home" className=" mb-2">
+          <Link to="/home" className=" mb-2 flex justify-center items-center">
             <img
               className=" w-16"
               src="https://i.ibb.co/K6X7cBS/Logo.png"
               alt="Main Logo"
             />
-            <h4 className="text-orange-500 text-left font-bold">
-              First Deal Shop
+            <h4 className="mx-2 font-bold text-orange-500 text-xl mt-1">
+              <span className="text-white">F</span>irst
+              <span className="text-white"> D</span>eal
+              <span className="text-white"> S</span>hop
             </h4>
           </Link>
-          <div className="flex mb-2">
+          <div className="flex justify-center items-center">
             <p>
               <i className="fa-solid fa-location-dot bg-orange-500 hover:bg-white hover:text-orange-500 duration-300 p-3 rounded-full text-white mr-5"></i>
             </p>
@@ -30,13 +32,13 @@ const Footer = () => {
               </p>
             </div>
           </div>
-          <div className="flex items-center mb-2">
+          <div className="flex justify-center items-center">
             <i className="fa-solid fa-phone-flip bg-orange-500 hover:bg-white hover:text-orange-500 duration-300 p-3 rounded-full text-white mr-5"></i>
             <h2 className="text-white hover:text-orange-500 duration-300 cursor-pointer">
               +123-456-7890
             </h2>
           </div>
-          <div className="text-left lg:text-center mb-2">
+          <div className="flex justify-center items-center">
             <Link to="/home">
               <i className="fa-brands fa-facebook mx-2 bg-orange-500 hover:bg-white hover:text-orange-500 duration-300 p-3 rounded-full text-white"></i>
             </Link>
