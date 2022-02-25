@@ -215,13 +215,187 @@ const Header = () => {
                   </div>
                 </li>
               </ul>
-              <Link
-                className=" my-1 text-md font-semibold hover:text-orange-500 focus:text-orange-500 duration-300 md:mx-4 md:my-0"
-                to="/shop"
-              >
-                Shop
-                <i className="fa-solid fa-angle-down ml-2"></i>
-              </Link>
+              <ul className="flex justify-center">
+                <li className="shop-container hover:text-white">
+                  <Link
+                    className="my-1 text-md font-semibold hover:text-orange-500 focus:text-orange-500 duration-300 md:mx-4 md:my-0"
+                    to="/shop"
+                  >
+                    Shop
+                    <i className="fa-solid fa-angle-down ml-2"></i>
+                  </Link>
+                  <div className="p-6 shop-mega-menu mb-16 sm:mb-0 shadow-xl bg-gray-800">
+                    <div className="container mx-auto w-full flex flex-wrap justify-between">
+                      <ul className="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
+                        <div className="flex items-center mb-4">
+                          <img
+                            className="w-full mb-2"
+                            src="https://i.ibb.co/qgb43KQ/shop-bannar-1.jpg"
+                            alt="shop banner"
+                          />
+                        </div>
+                        <div className="text-gray-100 text-md flex flex-col">
+                          <Link
+                            to="/shop"
+                            className="mb-1 hover:translate-x-1 hover:text-orange-500 duration-300"
+                          >
+                            <i className="fa-solid fa-angles-right mr-2 text-md"></i>
+                            All Products
+                          </Link>
+                          <Link
+                            to="/mens"
+                            className="mb-1 hover:translate-x-1 hover:text-orange-500 duration-300"
+                          >
+                            <i className="fa-solid fa-angles-right mr-2 text-md"></i>
+                            Mens Collections
+                          </Link>
+                          <Link
+                            to="womens"
+                            className="mb-1 hover:translate-x-1 hover:text-orange-500 duration-300"
+                          >
+                            <i className="fa-solid fa-angles-right mr-2 text-md"></i>
+                            Womens Collections
+                          </Link>
+                          <Link
+                            to="/kids"
+                            className="mb-1 hover:translate-x-1 hover:text-orange-500 duration-300"
+                          >
+                            <i className="fa-solid fa-angles-right mr-2 text-md"></i>
+                            Kids Collections
+                          </Link>
+                          <Link
+                            to="/shoes"
+                            className="mb-1 hover:translate-x-1 hover:text-orange-500 duration-300"
+                          >
+                            <i className="fa-solid fa-angles-right mr-2 text-md"></i>
+                            Shoes Collections
+                          </Link>
+                          <Link
+                            to="/others"
+                            className="mb-1 hover:translate-x-1 hover:text-orange-500 duration-300"
+                          >
+                            <i className="fa-solid fa-angles-right mr-2 text-md"></i>
+                            Others Collections
+                          </Link>
+                          <Link
+                            to="uncategorized"
+                            className="mb-1 hover:translate-x-1 hover:text-orange-500 duration-300"
+                          >
+                            <i className="fa-solid fa-angles-right mr-2 text-md"></i>
+                            UnCategorized
+                          </Link>
+                        </div>
+                      </ul>
+                      <ul className="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-r-0 lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
+                        <div className="flex items-center mb-4">
+                          <img
+                            className="w-full mb-2"
+                            src="https://i.ibb.co/CvM7Q81/Shop-bannar-2.jpg"
+                            alt="shop banner"
+                          />
+                        </div>
+                        <div className="text-gray-100 text-md flex flex-col">
+                          <Link
+                            to="/home"
+                            className="mb-1 hover:translate-x-1 hover:text-orange-500 duration-300"
+                          >
+                            <i className="fa-solid fa-angles-right mr-2 text-md"></i>
+                            Top Trending
+                          </Link>
+                          <Link
+                            to="/home"
+                            className="mb-1 hover:translate-x-1 hover:text-orange-500 duration-300"
+                          >
+                            <i className="fa-solid fa-angles-right mr-2 text-md"></i>
+                            Best Selling
+                          </Link>
+                          <Link
+                            to="/home"
+                            className="mb-1 hover:translate-x-1 hover:text-orange-500 duration-300"
+                          >
+                            <i className="fa-solid fa-angles-right mr-2 text-md"></i>
+                            New Arraival
+                          </Link>
+                          <Link
+                            to="/home"
+                            className="mb-1 hover:translate-x-1 hover:text-orange-500 duration-300"
+                          >
+                            <i className="fa-solid fa-angles-right mr-2 text-md"></i>
+                            Hot Sales
+                          </Link>
+                          <Link
+                            to="/home"
+                            className="mb-1 hover:translate-x-1 hover:text-orange-500 duration-300"
+                          >
+                            <i className="fa-solid fa-angles-right mr-2 text-md"></i>
+                            Shoes Collections
+                          </Link>
+                          <Link
+                            to="/home"
+                            className="mb-1 hover:translate-x-1 hover:text-orange-500 duration-300"
+                          >
+                            <i className="fa-solid fa-angles-right mr-2 text-md"></i>
+                            Brand Of The Week
+                          </Link>
+                          <Link
+                            to="/home"
+                            className="mb-1 hover:translate-x-1 hover:text-orange-500 duration-300"
+                          >
+                            <i className="fa-solid fa-angles-right mr-2 text-md"></i>
+                            App Info
+                          </Link>
+                        </div>
+                      </ul>
+                      <ul className="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-b-0 sm:border-r md:border-b-0 pb-6 pt-6 lg:pt-3 cursor-pointer">
+                        <div className="flex items-center mb-4">
+                          <img
+                            className="mb-2 w-full"
+                            src="https://i.ibb.co/qgb43KQ/shop-bannar-1.jpg"
+                            alt="shop banner"
+                          />
+                        </div>
+                        <h4 className="text-orange-500 mb-2 font-bold">
+                          <i className="fa-solid fa-angles-right mr-2 text-md"></i>
+                          For Sellar
+                        </h4>
+                        <p className="text-gray-100 text-sm">
+                          This proposal is a win-win situation which will cause
+                          a stellar paradigm shift, let's touch base off-line
+                          before we fire the new ux experience.
+                        </p>
+                        <h4 className="text-orange-500 my-2 font-bold">
+                          <i className="fa-solid fa-angles-right mr-2 text-md"></i>
+                          For Buyer
+                        </h4>
+                        <p className="text-gray-100 text-sm">
+                          This proposal is a win-win situation which will cause
+                          a stellar paradigm shift, let's touch base off-line
+                          before we fire the new ux experience.
+                        </p>
+                      </ul>
+                      <ul className="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 pb-6 pt-6 lg:pt-3 cursor-pointer">
+                        <div className="flex items-center border-b mb-4">
+                          <img
+                            className="mx-1"
+                            src="https://i.ibb.co/1fzq18C/shop-bannar-3.jpg"
+                            alt="Drop Down Bannar"
+                          />
+                          <img
+                            className="mx-1"
+                            src="https://i.ibb.co/28QStX4/shop-banner-4.jpg"
+                            alt="Drop Down Bannar"
+                          />
+                        </div>
+                        <p className="text-gray-100 text-sm mt-4">
+                          This is a no-brainer to wash your face, or we need to
+                          future-proof this high performance keywords
+                          granularity.
+                        </p>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
               <Link
                 className="my-1 text-md font-semibold hover:text-orange-500 focus:text-orange-500 duration-300 md:mx-4 md:my-0"
                 to="/contact"
