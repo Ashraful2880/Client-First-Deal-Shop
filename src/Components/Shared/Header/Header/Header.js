@@ -67,7 +67,7 @@ const Header = () => {
                     <span className="font-semibold ">Browse Categories</span>
                     <i className="fa-solid fa-angle-down ml-2 text-md"></i>
                   </Link>
-                  <div className="p-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-gray-800">
+                  <div className="mega-menu w-full text-left absolute left-0 hidden z-50 p-6 mb-16 sm:mb-0 shadow-xl bg-gray-800">
                     <div className="container mx-auto w-full flex flex-wrap justify-between">
                       <div className="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
                         <div className="flex items-center border-b mb-4">
@@ -241,7 +241,7 @@ const Header = () => {
                     Shop
                     <i className="fa-solid fa-angle-down ml-2"></i>
                   </Link>
-                  <div className="p-6 shop-mega-menu mb-16 sm:mb-0 shadow-xl bg-gray-800">
+                  <div className="p-6 shop-mega-menu w-full text-left absolute left-0 hidden z-50 mb-16 sm:mb-0 shadow-xl bg-gray-800">
                     <div className="container mx-auto w-full flex flex-wrap justify-between">
                       <ul className="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
                         <div className="flex items-center mb-4">
