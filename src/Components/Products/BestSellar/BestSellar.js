@@ -67,13 +67,13 @@ const BestSellar = () => {
                       </Link>
                     </div>
                     <div className="px-4 card-content text-left">
-                      {/* <Rating
+                      <Rating
                         readonly
                         className="text-orange-500"
                         emptySymbol="far fa-star"
                         fullSymbol="fas fa-star"
                         initialRating={product?.star}
-                      /> */}
+                      />
                       <h1 className="text-md font-bold text-gray-700">
                         {product?.name}
                       </h1>

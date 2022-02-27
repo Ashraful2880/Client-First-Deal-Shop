@@ -22,7 +22,7 @@ const Banner = () => {
         <SwiperSlide>
           <img
             className=" h-full w-full"
-            src="https://i.ibb.co/txs8GmD/register-bannar.jpg"
+            src="https://res.cloudinary.com/ashraful-islam/image/upload/v1645944487/First%20Deal-Shop/slider-1_oxsazp.jpg"
             alt="SliderImage"
           />
           <div className="text-left absolute xl:top-44 lg:top-40 md:top-28 sm:top-16 top-8 left-48">
@@ -45,7 +45,7 @@ const Banner = () => {
         <SwiperSlide>
           <img
             className=" h-full w-full"
-            src="https://i.ibb.co/THkLWXS/slider-3.jpg"
+            src="https://res.cloudinary.com/ashraful-islam/image/upload/v1645944360/First%20Deal-Shop/slider-3_xndvji.jpg"
             alt="SliderImage"
           />
           <div className="text-left absolute xl:top-44 lg:top-40 md:top-28 sm:top-16 top-8 left-48">
@@ -68,7 +68,7 @@ const Banner = () => {
         <SwiperSlide>
           <img
             className=" h-full w-full"
-            src="https://i.ibb.co/bXhDVTV/slider-1.jpg"
+            src="https://res.cloudinary.com/ashraful-islam/image/upload/v1645944360/First%20Deal-Shop/slider-1_b6bryd.jpg"
             alt="SliderImage"
           />
           <div className="text-left absolute xl:top-44 lg:top-40 md:top-28 sm:top-16 top-8 left-48">
@@ -91,7 +91,7 @@ const Banner = () => {
         <SwiperSlide>
           <img
             className=" h-full w-full"
-            src="https://i.ibb.co/S7qscqJ/slider-2.jpg"
+            src="https://res.cloudinary.com/ashraful-islam/image/upload/v1645944360/First%20Deal-Shop/slider-2_q069bk.jpg"
             alt="SliderImage"
           />
           <div className="text-left absolute xl:top-44 lg:top-40 md:top-28 sm:top-16 top-8 left-48">

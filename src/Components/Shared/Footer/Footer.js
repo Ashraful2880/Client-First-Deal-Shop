@@ -10,7 +10,7 @@ const Footer = () => {
           <Link to="/home" className=" mb-2 flex justify-center items-center">
             <img
               className=" w-16"
-              src="https://i.ibb.co/K6X7cBS/Logo.png"
+              src="https://res.cloudinary.com/ashraful-islam/image/upload/v1645943479/First%20Deal-Shop/Logo_mdshou.png"
               alt="Main Logo"
             />
             <h4 className="mx-2 font-bold text-orange-500 text-xl mt-1">

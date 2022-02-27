@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import "./Team.css";
 import { Link } from "react-router-dom";
 
 SwiperCore.use([Autoplay, Pagination]);
@@ -48,34 +49,36 @@ const Team = () => {
           >
             {teams?.map((team, key) => (
               <SwiperSlide key={key}>
-                <div className="border rounded-lg mx-auto bg-white pb-5">
+                <div className="border rounded-lg mx-auto bg-white pb-1 team-container">
                   <div className="overflow-hidden">
                     <img
-                      className="rounded-t-lg hover:scale-110 duration-300"
+                      className="rounded-t-lg"
                       src={team?.image}
-                      alt="ProductsImage"
+                      alt="TeamImage"
                     />
                   </div>
-                  <div className="px-4 pt-5 text-left ">
-                    <div className="flex justify-between">
-                      <h4 className="text-lg font-bold text-gray-700">
-                        {team?.name}
-                      </h4>
+                  <div className="px-4 text-left overlay-details">
+                    <div className="flex justify-between items-center pt-1">
+                      <div>
+                        <h4 className="text-lg font-bold text-orange-500">
+                          {team?.name}
+                        </h4>
+                        <h5 className="text-sm font-bold text-gray-300">
+                          {team?.designation}
+                        </h5>
+                      </div>
                       <h1>
                         <a href="https://ashrafulislambd.com">
-                          <i className="fab fa-facebook mx-1 text-orange-500 text-2xl hover:text-black hover:scale-125 duration-300"></i>
+                          <i className="fab fa-facebook mx-1 text-gray-200 text-2xl hover:text-orange-500  duration-300"></i>
                         </a>
                         <a href="https://ashrafulislambd.com">
-                          <i className="fab fa-twitter mx-1 text-orange-500 text-2xl hover:text-black hover:scale-125 duration-300"></i>
+                          <i className="fab fa-twitter mx-1 text-gray-200 text-2xl hover:text-orange-500  duration-300"></i>
                         </a>
                         <a href="https://ashrafulislambd.com">
-                          <i className="fs-4 fab fa-instagram mx-1 text-orange-500 text-2xl hover:text-black hover:scale-125 duration-300"></i>
+                          <i className="fs-4 fab fa-instagram mx-1 text-gray-200 text-2xl hover:text-orange-500 duration-300"></i>
                         </a>
                       </h1>
                     </div>
-                    <h5 className="text-sm font-bold text-gray-700">
-                      {team?.designation}
-                    </h5>
                   </div>
                 </div>
               </SwiperSlide>

@@ -28,7 +28,7 @@ const Header = () => {
                 <div className="flex">
                   <img
                     className="w-10"
-                    src="https://i.ibb.co/K6X7cBS/Logo.png"
+                    src="https://res.cloudinary.com/ashraful-islam/image/upload/v1645943479/First%20Deal-Shop/Logo_mdshou.png"
                     alt="Main Logo"
                   />
                   <h4 className="mx-2 font-bold text-orange-500 text-xl mt-1">
