@@ -16,7 +16,7 @@ const TopTrending = () => {
   return (
     <div className="container mx-auto">
       {products?.length > 0 ? (
-        <div className="flex my-10 border shadow-xl p-5">
+        <div className="lg:flex md:flex sm:block my-10 border shadow-xl p-5">
           <div className="overflow-hidden">
             <Link to="/home">
               <img
@@ -31,7 +31,7 @@ const TopTrending = () => {
               Top Trending Products
             </h3>
             <hr
-              className="bg-orange-500 lg:mb-14"
+              className="bg-orange-500 lg:mb-14 mb-8"
               style={{ padding: "1px 0px" }}
             />
             <Swiper
@@ -58,7 +58,7 @@ const TopTrending = () => {
             >
               {products?.map((product, key) => (
                 <SwiperSlide key={key}>
-                  <div className="border rounded-lg mx-auto bg-white py-10 max-h-80">
+                  <div className="border rounded-lg mx-auto bg-white py-10 lg:max-h-80 md:max-h-80 sm:h-full">
                     <div className="overflow-hidden relative product-link ">
                       <img
                         className="rounded-t-lg product-Image"

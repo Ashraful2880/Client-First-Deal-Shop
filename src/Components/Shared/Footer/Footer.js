@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="container mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center py-6 ">
           <Link to="/home" className=" mb-2 flex justify-center items-center">
             <img
-              className=" w-16"
+              className="w-1/12"
               src="https://res.cloudinary.com/ashraful-islam/image/upload/v1645943479/First%20Deal-Shop/Logo_mdshou.png"
               alt="Main Logo"
             />

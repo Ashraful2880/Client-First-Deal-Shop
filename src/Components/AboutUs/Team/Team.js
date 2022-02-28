@@ -18,7 +18,7 @@ const Team = () => {
       .then((data) => setTeams(data));
   }, []);
   return (
-    <div className="mt-4 mb-14">
+    <div className="mb-14">
       <h5 className="text-orange-500 text-2xl font-bold uppercase">
         Our Members
       </h5>

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const OfferBanner = () => {
   return (
     <div className="container mx-auto">
-      <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-6">
+      <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-6 px-1">
         <Link to="/bag" className="overflow-hidden rounded-lg">
           <img
             className="hover:scale-105 duration-300"

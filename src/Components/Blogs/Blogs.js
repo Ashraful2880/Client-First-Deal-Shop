@@ -18,8 +18,8 @@ const Blogs = () => {
       .then((data) => setBlogs(data));
   }, []);
   return (
-    <div className="container mx-auto" style={{ minHeight: "70vh" }}>
-      <h3 className="text-left my-3 font-bold text-3xl">From Our Blogs</h3>
+    <div className="container mx-auto">
+      <h3 className="text-left my-3 font-bold text-3xl pl-2">From Our Blogs</h3>
       <hr className="bg-orange-500" style={{ padding: "1px 0px" }} />
       {blogs?.length > 0 ? (
         <div className="w-full pt-7 pb-20 overflow-hidden px-5">

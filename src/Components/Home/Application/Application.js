@@ -12,7 +12,7 @@ const Application = () => {
             alt="app Tracker Phone Logo"
           />
         </div>
-        <div className="lg:text-left sm:text-center lg:pt-14 sm:pt-0 ">
+        <div className="lg:text-left sm:text-center lg:pt-14 sm:pt-0 px-1">
           <h1 className="text-4xl font-bold py-5">
             Get More With
             <span className="text-orange-500"> Our Application</span>

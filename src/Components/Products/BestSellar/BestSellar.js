@@ -16,13 +16,13 @@ const BestSellar = () => {
   return (
     <div className="container mx-auto mb-10">
       {products?.length > 0 ? (
-        <div className="flex my-10 border shadow-xl p-5">
+        <div className="lg:flex md:flex sm:block my-10 border shadow-xl p-5">
           <div className="w-full overflow-hidden px-5">
             <h3 className="text-left mb-3 font-bold lg:text-3xl sm:text-sm">
               Best Selling Products
             </h3>
             <hr
-              className="bg-orange-500 lg:mb-14"
+              className="bg-orange-500 lg:mb-14  mb-8"
               style={{ padding: "1px 0px" }}
             />
             <Swiper
@@ -49,7 +49,7 @@ const BestSellar = () => {
             >
               {products?.map((product, key) => (
                 <SwiperSlide key={key}>
-                  <div className="border rounded-lg mx-auto bg-white py-10 max-h-80">
+                  <div className="border rounded-lg mx-auto bg-white py-10 lg:max-h-80 md:max-h-80 sm:h-full mb-10">
                     <div className="overflow-hidden relative product-link ">
                       <img
                         className="rounded-t-lg product-Image"
@@ -103,15 +103,6 @@ const BestSellar = () => {
           alt="Loading..."
         />
       )}
-      <div className="overflow-hidden">
-        <Link to="/home">
-          <img
-            className="w-full hover:scale-105 duration-1000"
-            src="https://i.ibb.co/hmDN8fs/New-Arrival-bannar.jpg"
-            alt="Off Banner"
-          />
-        </Link>
-      </div>
     </div>
   );
 };

@@ -6,17 +6,17 @@ const Contact = () => {
     <div className="contact-bannar">
       <div className="max-w-5xl mx-auto px-6 sm:px-6 lg:px-8 py-20">
         <div
-          className=" w-full sm:p-12 rounded-xl"
+          className=" w-full sm:p-12 rounded-xl px-2 py-10"
           style={{ background: "#0000009e" }}
         >
-          <p className="text-4xl font-bold leading-7 text-center text-white mb-5">
+          <p className="lg:text-4xl md:text-3xl sm:text-2xl font-bold leading-7 text-center text-white lg:mb-5 md:mb-3 sm;mb-2">
             Just Drop a Message For
           </p>
-          <p className="text-3xl font-bold leading-7 text-center text-white">
+          <p className="lg:text-3xl md:text-2xl sm:text-xl font-bold leading-7 text-center text-white mb-4">
             Contact Us
           </p>
           <form>
-            <div className="md:flex items-center mt-12">
+            <div className="md:flex items-center lg:mt-12 md:mt-10 sm:mt-4">
               <div className="w-full md:w-1/2 flex flex-col">
                 <label className="font-semibold leading-none text-white">
                   Name

@@ -12,7 +12,9 @@ const Story = () => {
       <h5 className="text-orange-500 text-2xl font-bold uppercase">
         Our Story
       </h5>
-      <h2 className="text-3xl uppercase font-bold mb-10">Rate Our Workflow</h2>
+      <h2 className="text-3xl uppercase font-bold lg:mb-10">
+        Rate Our Workflow
+      </h2>
       <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
         <div>
           <Swiper
@@ -89,7 +91,7 @@ const Story = () => {
                       </div>
                     </div>
                     <div className="flex items-start flex-col ml-6 pt-8 ">
-                      <h2 className="text-lg font-semibold leading-4 text-gray-800">
+                      <h2 className="text-lg font-bold leading-4 text-gray-800">
                         Time Prompt
                       </h2>
                       <p className="lg:w-40 2xl:w-52 text-base leading-6 mt-2 text-gray-600">
@@ -109,7 +111,7 @@ const Story = () => {
                       </div>
                     </div>
                     <div className="flex items-start flex-col ml-6 pt-8">
-                      <h2 className="text-lg font-semibold leading-4 text-gray-800">
+                      <h2 className="text-lg font-bold leading-4 text-gray-800">
                         Customer Friendly
                       </h2>
                       <p className="lg:w-40 2xl:w-52 text-base leading-6 mt-2 text-gray-600">
@@ -129,7 +131,7 @@ const Story = () => {
                       </div>
                     </div>
                     <div className="flex items-start flex-col ml-6 pt-8">
-                      <h2 className="text-lg font-semibold leading-4 text-gray-800">
+                      <h2 className="text-lg font-bold leading-4 text-gray-800">
                         Fast Delivery
                       </h2>
                       <p className="lg:w-40 2xl:w-52 text-base leading-6 mt-2 text-gray-600">
@@ -149,7 +151,7 @@ const Story = () => {
                       </div>
                     </div>
                     <div className="flex items-start flex-col ml-6 pt-8">
-                      <h2 className="text-lg font-semibold leading-4 text-gray-800">
+                      <h2 className="text-lg font-bold leading-4 text-gray-800">
                         Easy Payment
                       </h2>
                       <p className="lg:w-40 2xl:w-52 text-base leading-6 mt-2 text-gray-600">
