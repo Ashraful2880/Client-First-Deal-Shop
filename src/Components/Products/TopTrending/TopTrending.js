@@ -1,21 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SwiperCore, { Autoplay, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import useProducts from "../../../Hooks/UseProducts";
 import { Link } from "react-router-dom";
 import Rating from "react-rating";
 import "./TopTrending.css";
 SwiperCore.use([Autoplay, Pagination]);
 
 const TopTrending = () => {
-  const [products] = useProducts();
+  const [topTrending, settopTrending] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:5000/topTrending?trending=topTrending")
+      .then((res) => res.json())
+      .then((data) => settopTrending(data));
+  }, []);
   return (
     <div className="container mx-auto">
-      {products?.length > 0 ? (
+      {topTrending?.length > 0 ? (
         <div className="lg:flex md:flex sm:block my-10 border shadow-xl p-5">
           <div className="overflow-hidden">
             <Link to="/home">
@@ -56,7 +60,7 @@ const TopTrending = () => {
               }}
               className="mySwiper"
             >
-              {products?.map((product, key) => (
+              {topTrending?.map((product, key) => (
                 <SwiperSlide key={key}>
                   <div className="border rounded-lg mx-auto bg-white py-10 lg:max-h-80 md:max-h-80 sm:h-full">
                     <div className="overflow-hidden relative product-link ">
