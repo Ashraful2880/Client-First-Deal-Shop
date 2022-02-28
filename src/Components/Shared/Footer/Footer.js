@@ -5,55 +5,54 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <div className="footer-container">
-      <div>
-        <div className="container mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center py-6 ">
-          <Link to="/home" className=" mb-2 flex justify-center items-center">
-            <img
-              className="w-1/12"
-              src="https://res.cloudinary.com/ashraful-islam/image/upload/v1645943479/First%20Deal-Shop/Logo_mdshou.png"
-              alt="Main Logo"
-            />
-            <h4 className="mx-2 font-bold text-orange-500 text-xl mt-1">
-              <span className="text-white">F</span>irst
-              <span className="text-white"> D</span>eal
-              <span className="text-white"> S</span>hop
-            </h4>
-          </Link>
-          <div className="flex justify-center items-center">
-            <p>
-              <i className="fa-solid fa-location-dot bg-orange-500 hover:bg-white hover:text-orange-500 duration-300 p-3 rounded-full text-white mr-5"></i>
+      <div className="container mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center py-6 ">
+        <Link to="/home" className=" mb-2 flex justify-center items-center">
+          <img
+            className="w-1/12"
+            src="https://res.cloudinary.com/ashraful-islam/image/upload/v1645943479/First%20Deal-Shop/Logo_mdshou.png"
+            alt="Main Logo"
+          />
+          <h4 className="mx-2 font-bold text-orange-500 text-xl mt-1">
+            <span className="text-white">F</span>irst
+            <span className="text-white"> D</span>eal
+            <span className="text-white"> S</span>hop
+          </h4>
+        </Link>
+        <div className="flex justify-center items-center">
+          <p>
+            <i className="fa-solid fa-location-dot bg-orange-500 hover:bg-white hover:text-orange-500 duration-300 p-3 rounded-full text-white mr-5"></i>
+          </p>
+          <div>
+            <p className="text-white hover:text-orange-500 duration-300 cursor-pointer text-left">
+              No: 58 A, East Madison Street,
             </p>
-            <div>
-              <p className="text-white hover:text-orange-500 duration-300 cursor-pointer text-left">
-                No: 58 A, East Madison Street,
-              </p>
-              <p className="text-white hover:text-orange-500 duration-300 cursor-pointer text-left">
-                Baltimore, MD, USA 4508.
-              </p>
-            </div>
-          </div>
-          <div className="flex justify-center items-center">
-            <i className="fa-solid fa-phone-flip bg-orange-500 hover:bg-white hover:text-orange-500 duration-300 p-3 rounded-full text-white mr-5"></i>
-            <h2 className="text-white hover:text-orange-500 duration-300 cursor-pointer">
-              +123-456-7890
-            </h2>
-          </div>
-          <div className="flex justify-center items-center">
-            <Link to="/home">
-              <i className="fa-brands fa-facebook mx-2 bg-orange-500 hover:bg-white hover:text-orange-500 duration-300 p-3 rounded-full text-white"></i>
-            </Link>
-            <Link to="/home">
-              <i className="fa-brands fa-twitter mx-2 bg-orange-500 hover:bg-white hover:text-orange-500 duration-300 p-3 rounded-full text-white"></i>
-            </Link>
-            <Link to="/home">
-              <i className="fa-brands fa-instagram mx-2 bg-orange-500 hover:bg-white hover:text-orange-500 duration-300 p-3 rounded-full text-white"></i>
-            </Link>
-            <Link to="/home">
-              <i className="fa-brands fa-whatsapp mx-2 bg-orange-500 hover:bg-white hover:text-orange-500 duration-300 p-3 rounded-full text-white"></i>
-            </Link>
+            <p className="text-white hover:text-orange-500 duration-300 cursor-pointer text-left">
+              Baltimore, MD, USA 4508.
+            </p>
           </div>
         </div>
+        <div className="flex justify-center items-center">
+          <i className="fa-solid fa-phone-flip bg-orange-500 hover:bg-white hover:text-orange-500 duration-300 p-3 rounded-full text-white mr-5"></i>
+          <h2 className="text-white hover:text-orange-500 duration-300 cursor-pointer">
+            +123-456-7890
+          </h2>
+        </div>
+        <div className="flex justify-center items-center">
+          <Link to="/home">
+            <i className="fa-brands fa-facebook mx-2 bg-orange-500 hover:bg-white hover:text-orange-500 duration-300 p-3 rounded-full text-white"></i>
+          </Link>
+          <Link to="/home">
+            <i className="fa-brands fa-twitter mx-2 bg-orange-500 hover:bg-white hover:text-orange-500 duration-300 p-3 rounded-full text-white"></i>
+          </Link>
+          <Link to="/home">
+            <i className="fa-brands fa-instagram mx-2 bg-orange-500 hover:bg-white hover:text-orange-500 duration-300 p-3 rounded-full text-white"></i>
+          </Link>
+          <Link to="/home">
+            <i className="fa-brands fa-whatsapp mx-2 bg-orange-500 hover:bg-white hover:text-orange-500 duration-300 p-3 rounded-full text-white"></i>
+          </Link>
+        </div>
       </div>
+
       <hr />
       <div>
         <div className="container mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 pt-6 pb-10 text-white">
