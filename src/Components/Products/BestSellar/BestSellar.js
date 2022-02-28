@@ -13,7 +13,9 @@ SwiperCore.use([Autoplay, Pagination]);
 const BestSellar = () => {
   const [bestSelling, setBestSelling] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/bestSelling?trending=bestSelling")
+    fetch(
+      "https://safe-bastion-76919.herokuapp.com/bestSelling?trending=bestSelling"
+    )
       .then((res) => res.json())
       .then((data) => setBestSelling(data));
   }, []);

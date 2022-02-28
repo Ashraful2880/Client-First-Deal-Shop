@@ -13,7 +13,9 @@ SwiperCore.use([Autoplay, Pagination]);
 const TopTrending = () => {
   const [topTrending, settopTrending] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/topTrending?trending=topTrending")
+    fetch(
+      "https://safe-bastion-76919.herokuapp.com/topTrending?trending=topTrending"
+    )
       .then((res) => res.json())
       .then((data) => settopTrending(data));
   }, []);
