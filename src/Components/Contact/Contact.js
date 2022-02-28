@@ -25,6 +25,7 @@ const Contact = () => {
                   type="text"
                   name="name"
                   className="leading-none p-3 focus:outline-none focus:border-orange-500 mt-4 border-0 bg-whiterounded"
+                  placeholder="Enter Your Name"
                   required
                 />
               </div>
@@ -36,6 +37,7 @@ const Contact = () => {
                   type="number"
                   name="number"
                   className="leading-none p-3 focus:outline-none focus:border-orange-500 mt-4 border-0 bg-whiterounded"
+                  placeholder="Enter Contact Number"
                 />
               </div>
             </div>
@@ -47,6 +49,7 @@ const Contact = () => {
                 <input
                   type="email"
                   className="leading-none p-3 focus:outline-none focus:border-orange-500 mt-4 border-0 bg-whiterounded"
+                  placeholder="Enter Your Email"
                   required
                 />
               </div>
@@ -60,6 +63,7 @@ const Contact = () => {
                   type="text"
                   name="message"
                   className="h-40 text-base leading-none p-3 focus:outline-none focus:border-orange-500 mt-4 bg-whiteborder-0 rounded"
+                  placeholder="Your Message"
                 ></textarea>
               </div>
             </div>
