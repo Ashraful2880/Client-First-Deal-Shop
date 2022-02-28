@@ -1,21 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SwiperCore, { Autoplay, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import useProducts from "../../../Hooks/UseProducts";
 import { Link } from "react-router-dom";
 import Rating from "react-rating";
 
 SwiperCore.use([Autoplay, Pagination]);
 
 const BestSellar = () => {
-  const [products] = useProducts();
+  const [bestSelling, setBestSelling] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:5000/bestSelling?trending=bestSelling")
+      .then((res) => res.json())
+      .then((data) => setBestSelling(data));
+  }, []);
+
   return (
     <div className="container mx-auto mb-10">
-      {products?.length > 0 ? (
+      {bestSelling?.length > 0 ? (
         <div className="lg:flex md:flex sm:block my-10 border shadow-xl p-5">
           <div className="w-full overflow-hidden px-5">
             <h3 className="text-left mb-3 font-bold lg:text-3xl sm:text-sm">
@@ -47,7 +52,7 @@ const BestSellar = () => {
               }}
               className="mySwiper"
             >
-              {products?.map((product, key) => (
+              {bestSelling?.map((product, key) => (
                 <SwiperSlide key={key}>
                   <div className="border rounded-lg mx-auto bg-white py-10 lg:max-h-80 md:max-h-80 sm:h-full mb-10">
                     <div className="overflow-hidden relative product-link ">
