@@ -9,6 +9,7 @@ import NewArraival from "../../Products/NewArraival/NewArraival";
 import TopTrending from "../../Products/TopTrending/TopTrending";
 import Application from "../Application/Application";
 import Banner from "../Banner/Banner";
+import Newslater from "../Newslater/Newslater";
 import Offer from "../Offer/Offer";
 import OfferBanner from "../OfferBanner/OfferBanner";
 
@@ -26,6 +27,7 @@ const Home = () => {
       <Application />
       <Blogs />
       <Team />
+      <Newslater />
       <Contact />
     </div>
   );
