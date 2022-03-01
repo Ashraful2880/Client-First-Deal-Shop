@@ -12,6 +12,7 @@ import Banner from "../Banner/Banner";
 import Newslater from "../Newslater/Newslater";
 import Offer from "../Offer/Offer";
 import OfferBanner from "../OfferBanner/OfferBanner";
+import Topbrands from "../Topbrands/Topbrands";
 
 const Home = () => {
   return (
@@ -28,6 +29,7 @@ const Home = () => {
       <Blogs />
       <Team />
       <Newslater />
+      <Topbrands />
       <Contact />
     </div>
   );
