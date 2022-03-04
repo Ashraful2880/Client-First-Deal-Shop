@@ -6,12 +6,12 @@ const Newslater = () => {
     <div className="container mx-auto">
       <div className="flex justify-center px-6 mb-12 pt-20">
         <div className="w-full flex">
-          <div className="w-full h-auto bg-transparent hidden lg:block bg-cover rounded-l-lg subscribeContainer"></div>
+          <div className="w-full bg-transparent hidden lg:block bg-cover rounded-l-lg subscribeContainer"></div>
           <div className="w-full lg:w-7/12 p-5 rounded-lg lg:rounded-l-none pb-20 bg-gray-700">
-            <h1 className="pt-10 text-7xl text-center text-orange-500 font-semibold leading-tight">
+            <h1 className="pt-10 text-5xl text-center text-orange-500 font-semibold leading-tight">
               Subscribe &
             </h1>
-            <h1 className="pt-1 text-6xl text-center text-white font-semibold  leading-tight">
+            <h1 className="pt-1 text-4xl text-center text-white font-semibold  leading-tight">
               Get 15%
             </h1>
             <h1 className="pt-1 text-5xl text-center text-orange-500 font-semibold leading-tight">

@@ -1,58 +1,9 @@
 import React from "react";
-import Rating from "react-rating";
-import { Link } from "react-router-dom";
-import useAuth from "../../Hooks/UseAuth";
-import useProducts from "../../Hooks/UseProducts";
 
 const Mens = () => {
-  const [products] = useProducts();
-  const { isloading } = useAuth();
   return (
     <div>
-      <h3 className="text-start fw-bold ms-3">Mens Products</h3>
-      <hr className="bg-orange-500" style={{ padding: "1px 0px" }} />
-      <div className="row container-fluid mx-auto">
-        {isloading ? (
-          <div className="spinner-grow text-danger mx-auto mb-3" role="status">
-            <span className="sr-only">Loading...</span>
-          </div>
-        ) : (
-          products
-            .filter((product) => product.category === "Men")
-            .map((mensProduct) => (
-              <div
-                className="col-lg-2 col-md-4 col-sm-6 product-container text-start"
-                key={mensProduct._id}
-              >
-                <img
-                  className="w-100 pt-4"
-                  src={mensProduct.url}
-                  alt="rnjgrn"
-                />
-                <div className="ps-2">
-                  <Rating
-                    className="text-warning mt-4"
-                    readonly
-                    emptySymbol="far fa-star"
-                    fullSymbol="fas fa-star"
-                    initialRating={mensProduct.star}
-                  ></Rating>
-                  <h5>{mensProduct.name}</h5>
-                  <span>Category: {mensProduct.category}</span>
-                  <h6 className="my-2">
-                    Price:{" "}
-                    <span className="text-danger">${mensProduct.price}</span>
-                  </h6>
-                  <Link to={`/myCart/${mensProduct._id}`}>
-                    <button className="btn btn-warning my-3">
-                      Add To Cart
-                    </button>
-                  </Link>
-                </div>
-              </div>
-            ))
-        )}
-      </div>
+      <h1 className="text-2xl text-orange-500">Mens Products</h1>
     </div>
   );
 };
