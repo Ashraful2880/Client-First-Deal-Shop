@@ -10,29 +10,46 @@ import Womens from "../Womens/Womens";
 
 const Shop = () => {
   return (
-    <div className="pt-5">
-      <div className="mb-4">
-        <Link to="/shop">
-          <button className="m-2">All Products</button>
-        </Link>
-        <Link to="mens">
-          <button className="m-2">Mens</button>
-        </Link>
-        <Link to="womens">
-          <button className="m-2">Womens</button>
-        </Link>
-        <Link to="kids">
-          <button className="m-2">Kids</button>
-        </Link>
-        <Link to="shoes">
-          <button className="m-2">Shoes</button>
-        </Link>
-        <Link to="others">
-          <button className="m-2">Others</button>
-        </Link>
-        <Link to="uncategorize">
-          <button className="my-2 ms-2 me-5">Uncategorized</button>
-        </Link>
+    <div className="container mx-auto pt-5">
+      <div className="w-full overflow-hidden px-5">
+        <div className="mb-2 text-left">
+          <Link to="/shop">
+            <button className="mx-2 pt-2 font-bold text-xl border-t-2 border-transparent hover:text-orange-500 hover:border-orange-500 duration-300 focus:text-red-500 focus:border-orange-500">
+              All Products
+            </button>
+          </Link>
+          <Link to="mens">
+            <button className="mx-2 pt-2 font-bold text-xl border-t-2 border-transparent hover:text-orange-500 hover:border-orange-500 duration-300 focus:text-red-500 focus:border-orange-500">
+              Mens
+            </button>
+          </Link>
+          <Link to="womens">
+            <button className="mx-2 pt-2 font-bold text-xl border-t-2 border-transparent hover:text-orange-500 hover:border-orange-500 duration-300 focus:text-red-500 focus:border-orange-500">
+              Womens
+            </button>
+          </Link>
+          <Link to="kids">
+            <button className="mx-2 pt-2 font-bold text-xl border-t-2 border-transparent hover:text-orange-500 hover:border-orange-500 duration-300 focus:text-red-500 focus:border-orange-500">
+              Kids
+            </button>
+          </Link>
+          <Link to="shoes">
+            <button className="mx-2 pt-2 font-bold text-xl border-t-2 border-transparent hover:text-orange-500 hover:border-orange-500 duration-300 focus:text-red-500 focus:border-orange-500">
+              Shoes
+            </button>
+          </Link>
+          <Link to="others">
+            <button className="mx-2 pt-2 font-bold text-xl border-t-2 border-transparent hover:text-orange-500 hover:border-orange-500 duration-300 focus:text-red-500 focus:border-orange-500">
+              Others
+            </button>
+          </Link>
+          <Link to="uncategorize">
+            <button className="mx-2 pt-2 font-bold text-xl border-t-2 border-transparent hover:text-orange-500 hover:border-orange-500 duration-300 focus:text-red-500 focus:border-orange-500">
+              Uncategorized
+            </button>
+          </Link>
+        </div>
+        <hr className="bg-orange-500 mb-8" style={{ padding: "1px 0px" }} />
       </div>
       <Routes>
         <Route path="/" element={<AllProducts />} />

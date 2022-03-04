@@ -11,6 +11,7 @@ import Footer from "./Components/Shared/Footer/Footer";
 import Header from "./Components/Shared/Header/Header/Header";
 import Shop from "./Components/Shop/Shop/Shop";
 import SignUp from "./Components/SignUp/SignUp";
+import AddToCart from "./Components/CartOverview/AddToCart/AddToCart";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="shop/*" element={<Shop />} />
+          <Route path="overview/:productId" element={<AddToCart />} />
           <Route path="contact" element={<Contact />} />
           <Route path="about" element={<AboutUs />} />
           <Route path="blogs" element={<Blogs />} />
