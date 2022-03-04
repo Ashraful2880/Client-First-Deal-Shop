@@ -13,25 +13,25 @@ const Shop = () => {
     <div className="pt-5">
       <div className="mb-4">
         <Link to="/shop">
-          <button className="m-2"> All Products</button>
+          <button className="m-2">All Products</button>
         </Link>
         <Link to="mens">
-          <button className="m-2"> Mens</button>
+          <button className="m-2">Mens</button>
         </Link>
         <Link to="womens">
-          <button className="m-2"> Womens</button>
+          <button className="m-2">Womens</button>
         </Link>
         <Link to="kids">
-          <button className="m-2"> Kids</button>
+          <button className="m-2">Kids</button>
         </Link>
         <Link to="shoes">
-          <button className="m-2"> Shoes</button>
+          <button className="m-2">Shoes</button>
         </Link>
         <Link to="others">
-          <button className="m-2"> Others</button>
+          <button className="m-2">Others</button>
         </Link>
         <Link to="uncategorize">
-          <button className="my-2 ms-2 me-5"> Uncategorized</button>
+          <button className="my-2 ms-2 me-5">Uncategorized</button>
         </Link>
       </div>
       <Routes>
