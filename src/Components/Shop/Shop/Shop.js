@@ -14,37 +14,37 @@ const Shop = () => {
       <div className="w-full overflow-hidden px-5">
         <div className="mb-2 text-left">
           <Link to="/shop">
-            <button className="mx-2 pt-2 font-bold text-xl border-t-2 border-transparent hover:text-orange-500 hover:border-orange-500 duration-300 focus:text-red-500 focus:border-orange-500">
+            <button className="mx-2 pt-2 font-bold text-xl border-t-2 border-transparent hover:text-orange-500 hover:border-orange-500 duration-300 focus:text-orange-500 focus:border-orange-500">
               All Products
             </button>
           </Link>
           <Link to="mens">
-            <button className="mx-2 pt-2 font-bold text-xl border-t-2 border-transparent hover:text-orange-500 hover:border-orange-500 duration-300 focus:text-red-500 focus:border-orange-500">
+            <button className="mx-2 pt-2 font-bold text-xl border-t-2 border-transparent hover:text-orange-500 hover:border-orange-500 duration-300 focus:text-orange-500 focus:border-orange-500">
               Mens
             </button>
           </Link>
           <Link to="womens">
-            <button className="mx-2 pt-2 font-bold text-xl border-t-2 border-transparent hover:text-orange-500 hover:border-orange-500 duration-300 focus:text-red-500 focus:border-orange-500">
+            <button className="mx-2 pt-2 font-bold text-xl border-t-2 border-transparent hover:text-orange-500 hover:border-orange-500 duration-300 focus:text-orange-500 focus:border-orange-500">
               Womens
             </button>
           </Link>
           <Link to="kids">
-            <button className="mx-2 pt-2 font-bold text-xl border-t-2 border-transparent hover:text-orange-500 hover:border-orange-500 duration-300 focus:text-red-500 focus:border-orange-500">
+            <button className="mx-2 pt-2 font-bold text-xl border-t-2 border-transparent hover:text-orange-500 hover:border-orange-500 duration-300 focus:text-orange-500 focus:border-orange-500">
               Kids
             </button>
           </Link>
           <Link to="shoes">
-            <button className="mx-2 pt-2 font-bold text-xl border-t-2 border-transparent hover:text-orange-500 hover:border-orange-500 duration-300 focus:text-red-500 focus:border-orange-500">
+            <button className="mx-2 pt-2 font-bold text-xl border-t-2 border-transparent hover:text-orange-500 hover:border-orange-500 duration-300 focus:text-orange-500 focus:border-orange-500">
               Shoes
             </button>
           </Link>
           <Link to="others">
-            <button className="mx-2 pt-2 font-bold text-xl border-t-2 border-transparent hover:text-orange-500 hover:border-orange-500 duration-300 focus:text-red-500 focus:border-orange-500">
+            <button className="mx-2 pt-2 font-bold text-xl border-t-2 border-transparent hover:text-orange-500 hover:border-orange-500 duration-300 focus:text-orange-500 focus:border-orange-500">
               Others
             </button>
           </Link>
           <Link to="uncategorize">
-            <button className="mx-2 pt-2 font-bold text-xl border-t-2 border-transparent hover:text-orange-500 hover:border-orange-500 duration-300 focus:text-red-500 focus:border-orange-500">
+            <button className="mx-2 pt-2 font-bold text-xl border-t-2 border-transparent hover:text-orange-500 hover:border-orange-500 duration-300 focus:text-orange-500 focus:border-orange-500">
               Uncategorized
             </button>
           </Link>
