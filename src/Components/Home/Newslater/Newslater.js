@@ -20,7 +20,7 @@ const Newslater = () => {
             <form className=" px-4 pt-6 pb-2 mb-4 text-center">
               <div className="mb-3 w-full mx-auto">
                 <label
-                  className="block mb-2 text-2xl font-bold text-white text-left"
+                  className="block mb-2 text-xl font-bold text-white text-left"
                   htmlFor="email"
                 >
                   Email

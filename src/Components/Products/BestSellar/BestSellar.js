@@ -93,7 +93,7 @@ const BestSellar = () => {
               ))}
             </Swiper>
           </div>
-          <div className="overflow-hidden">
+          <div className="overflow-hidden h-full">
             <Link to="/home">
               <img
                 className=" hover:scale-125 duration-1000"

@@ -5,14 +5,14 @@ const OfferBanner = () => {
   return (
     <div className="container mx-auto">
       <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-6 px-1">
-        <Link to="/bag" className="overflow-hidden rounded-lg">
+        <Link to="/shop/others" className="overflow-hidden rounded-lg">
           <img
             className="hover:scale-105 duration-300"
             src="https://i.ibb.co/M69HfCh/offer-bannar-2.png"
             alt="Offer Banner"
           />
         </Link>
-        <Link to="/women" className="overflow-hidden rounded-lg">
+        <Link to="/shop/womens" className="overflow-hidden rounded-lg">
           <img
             className="hover:scale-105 duration-300"
             src="https://i.ibb.co/k41nBBp/offer-banner-3.png"

@@ -44,7 +44,7 @@ const Topbrands = () => {
           >
             {brands?.map((brand, key) => (
               <SwiperSlide key={key}>
-                <div className="border rounded-lg mx-auto bg-white pb-1 brand-container">
+                <div className="border border-orange-500 rounded-lg mx-auto bg-white pb-1 brand-container">
                   <div className="overflow-hidden">
                     <img
                       className="rounded-t-lg"
