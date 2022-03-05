@@ -6,7 +6,7 @@ const SignUp = () => {
   return (
     <div className="bg lg:h-screen sm:h-full">
       <div className="container mx-auto">
-        <div className="flex justify-center px-6 mb-12 pt-20">
+        <div className="flex justify-center px-6 mb-12 pt-6">
           <div className="w-full xl:w-3/4 lg:w-11/12 flex">
             <div className="w-full h-auto bg-transparent hidden lg:block lg:w-5/12 bg-cover rounded-l-lg bgContainer"></div>
             <div
