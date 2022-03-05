@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import useAuth from "../../../../Hooks/UseAuth";
 import MiddleHeader from "../MiddleHeader/MiddleHeader";
 import TopHeader from "../TopHeader/TopHeader";
 import "./Header.css";
 
 const Header = () => {
+  const { user } = useAuth();
   const myFunction = () => {
     const toggleButton = document.getElementById("toogleDiv");
     if (toggleButton.style.display === "none") {
@@ -442,8 +444,8 @@ const Header = () => {
               <button className="text-md font-semibold hover:text-orange-500 focus:text-orange-500 duration-300 md:mx-4 md:my-0">
                 <img
                   className="w-8 rounded-full border border-orange-500 mx-auto"
-                  src="https://avatars.githubusercontent.com/u/86690202?v=4"
-                  alt="User Prpfile"
+                  src={user?.photoURL}
+                  alt={user?.displayname}
                 />
               </button>
             </div>

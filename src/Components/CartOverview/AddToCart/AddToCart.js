@@ -5,7 +5,6 @@ import { useParams } from "react-router-dom";
 const AddToCart = () => {
   const { productId } = useParams();
   const [addCart, setAddCart] = useState({});
-  console.log(addCart);
   useEffect(() => {
     fetch(`https://safe-bastion-76919.herokuapp.com/addToCart/${productId}`)
       .then((res) => res.json())
