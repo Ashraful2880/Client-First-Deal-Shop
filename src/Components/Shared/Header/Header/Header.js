@@ -84,42 +84,42 @@ const Header = () => {
                             All Products
                           </Link>
                           <Link
-                            to="/mens"
+                            to="shop/mens"
                             className="mb-1 hover:translate-x-1 hover:text-orange-500 duration-300"
                           >
                             <i className="fa-solid fa-angles-right mr-2 text-md"></i>
                             Mens Collections
                           </Link>
                           <Link
-                            to="womens"
+                            to="shop/womens"
                             className="mb-1 hover:translate-x-1 hover:text-orange-500 duration-300"
                           >
                             <i className="fa-solid fa-angles-right mr-2 text-md"></i>
                             Womens Collections
                           </Link>
                           <Link
-                            to="/kids"
+                            to="shop/kids"
                             className="mb-1 hover:translate-x-1 hover:text-orange-500 duration-300"
                           >
                             <i className="fa-solid fa-angles-right mr-2 text-md"></i>
                             Kids Collections
                           </Link>
                           <Link
-                            to="/shoes"
+                            to="shop/shoes"
                             className="mb-1 hover:translate-x-1 hover:text-orange-500 duration-300"
                           >
                             <i className="fa-solid fa-angles-right mr-2 text-md"></i>
                             Shoes Collections
                           </Link>
                           <Link
-                            to="/others"
+                            to="shop/others"
                             className="mb-1 hover:translate-x-1 hover:text-orange-500 duration-300"
                           >
                             <i className="fa-solid fa-angles-right mr-2 text-md"></i>
                             Others Collections
                           </Link>
                           <Link
-                            to="uncategorized"
+                            to="shop/uncategorize"
                             className="mb-1 hover:translate-x-1 hover:text-orange-500 duration-300"
                           >
                             <i className="fa-solid fa-angles-right mr-2 text-md"></i>
@@ -262,42 +262,42 @@ const Header = () => {
                             All Products
                           </Link>
                           <Link
-                            to="/mens"
+                            to="shop/mens"
                             className="mb-1 hover:translate-x-1 hover:text-orange-500 duration-300"
                           >
                             <i className="fa-solid fa-angles-right mr-2 text-md"></i>
                             Mens Collections
                           </Link>
                           <Link
-                            to="womens"
+                            to="shop/womens"
                             className="mb-1 hover:translate-x-1 hover:text-orange-500 duration-300"
                           >
                             <i className="fa-solid fa-angles-right mr-2 text-md"></i>
                             Womens Collections
                           </Link>
                           <Link
-                            to="/kids"
+                            to="shop/kids"
                             className="mb-1 hover:translate-x-1 hover:text-orange-500 duration-300"
                           >
                             <i className="fa-solid fa-angles-right mr-2 text-md"></i>
                             Kids Collections
                           </Link>
                           <Link
-                            to="/shoes"
+                            to="shop/shoes"
                             className="mb-1 hover:translate-x-1 hover:text-orange-500 duration-300"
                           >
                             <i className="fa-solid fa-angles-right mr-2 text-md"></i>
                             Shoes Collections
                           </Link>
                           <Link
-                            to="/others"
+                            to="shop/others"
                             className="mb-1 hover:translate-x-1 hover:text-orange-500 duration-300"
                           >
                             <i className="fa-solid fa-angles-right mr-2 text-md"></i>
                             Others Collections
                           </Link>
                           <Link
-                            to="uncategorized"
+                            to="shop/uncategorize"
                             className="mb-1 hover:translate-x-1 hover:text-orange-500 duration-300"
                           >
                             <i className="fa-solid fa-angles-right mr-2 text-md"></i>
