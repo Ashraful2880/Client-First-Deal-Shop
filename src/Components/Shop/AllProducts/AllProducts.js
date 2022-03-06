@@ -20,7 +20,7 @@ const AllProducts = () => {
                       alt="ProductsImage"
                     />
                     <Link
-                      to={`/overview/${product._id}`}
+                      to={`/addToCart/${product._id}`}
                       className="overlay overflow-hidden absolute bottom-0 left-0 right-0 h-0 w-full bg-gray-500"
                     >
                       <p className=" text-orange-500 absolute top-1/2 left-1/2 text"></p>

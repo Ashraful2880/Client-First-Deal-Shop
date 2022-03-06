@@ -445,7 +445,7 @@ const Header = () => {
                 <img
                   className="w-8 rounded-full border border-orange-500 mx-auto"
                   src={user?.photoURL}
-                  alt={user?.displayname}
+                  alt={user?.displayName}
                 />
               </button>
             </div>

@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const MiddleHeader = () => {
+  const [items, setItems] = useState();
+  useEffect(() => {
+    const myCartProduct = localStorage.getItem("cart");
+    setItems(JSON.parse(myCartProduct));
+  }, []);
+
   return (
-    <div className="bg-orange-600 py-2">
+    <div className="bg-orange-600 py-3">
       <div className="container mx-auto flex justify-between items-center">
         <Link to="contact" className="ml-4">
           <i className="fa-solid fa-headphones mx-2 text-xl text-white"></i>
@@ -27,10 +33,13 @@ const MiddleHeader = () => {
           </form>
         </div>
         <div>
-          <Link to="/home" className="relative">
+          <Link to="/checkout" className="relative">
             <i className="fa-solid fa-cart-shopping mx-2 text-xl text-white px-2"></i>
-            <span className="absolute bottom-4 left-11 rounded-full bg-indigo-500 text-white px-1 text-xs">
-              1
+            <span
+              className="absolute bottom-4 left-10 rounded-full bg-black text-white font-bold text-xs"
+              style={{ padding: "4px 10px" }}
+            >
+              {items?.length}
             </span>
           </Link>
           <Link to="/login">

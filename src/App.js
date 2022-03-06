@@ -13,6 +13,8 @@ import Shop from "./Components/Shop/Shop/Shop";
 import SignUp from "./Components/SignUp/SignUp";
 import AddToCart from "./Components/CartOverview/AddToCart/AddToCart";
 import AuthProvider from "./Context/AuthProvider";
+import Checkout from "./Components/CartOverview/Checkout/Checkout";
+import PlaceOrder from "./Components/CartOverview/PlaceOrder/PlaceOrder";
 
 function App() {
   return (
@@ -25,7 +27,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="shop/*" element={<Shop />} />
-            <Route path="overview/:productId" element={<AddToCart />} />
+            <Route path="addToCart/:productId" element={<AddToCart />} />
+            <Route path="placeOrder" element={<PlaceOrder />} />
+            <Route path="checkout" element={<Checkout />} />
             <Route path="contact" element={<Contact />} />
             <Route path="about" element={<AboutUs />} />
             <Route path="blogs" element={<Blogs />} />
