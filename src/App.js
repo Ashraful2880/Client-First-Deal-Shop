@@ -15,6 +15,9 @@ import AddToCart from "./Components/CartOverview/AddToCart/AddToCart";
 import AuthProvider from "./Context/AuthProvider";
 import Checkout from "./Components/CartOverview/Checkout/Checkout";
 import PlaceOrder from "./Components/CartOverview/PlaceOrder/PlaceOrder";
+import Success from "./Components/PaymentInfo/Success/Success";
+import Fail from "./Components/PaymentInfo/Fail/Fail";
+import Cancel from "./Components/PaymentInfo/Cancel/Cancel";
 
 function App() {
   return (
@@ -30,6 +33,9 @@ function App() {
             <Route path="addToCart/:productId" element={<AddToCart />} />
             <Route path="placeOrder" element={<PlaceOrder />} />
             <Route path="checkout" element={<Checkout />} />
+            <Route path="/success" element={<Success />} />
+            <Route path="fail" element={<Fail />} />
+            <Route path="cancel" element={<Cancel />} />
             <Route path="contact" element={<Contact />} />
             <Route path="about" element={<AboutUs />} />
             <Route path="blogs" element={<Blogs />} />
