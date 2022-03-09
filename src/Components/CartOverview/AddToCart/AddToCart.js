@@ -97,7 +97,7 @@ const AddToCart = () => {
           >
             Add To Cart
           </button>
-          <button className="bg-indigo-600 border border-indigo-600 text-white px-3 py-2 rounded-md ml-2 hover:bg-transparent hover:text-indigo-600 duration-300">
+          <button className="bg-orange-500 border border-orange-500 text-white px-3 py-2 rounded-md ml-2 hover:bg-transparent hover:text-orange-500 duration-300">
             <Link to="/placeOrder">Place Order</Link>
           </button>
         </div>
