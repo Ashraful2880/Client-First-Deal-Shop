@@ -33,7 +33,7 @@ const MiddleHeader = () => {
           </form>
         </div>
         <div>
-          <Link to="/checkout" className="relative">
+          <Link to="/placeOrder" className="relative">
             <i className="fa-solid fa-cart-shopping mx-2 text-xl text-white px-2"></i>
             <span
               className="absolute bottom-4 left-10 rounded-full bg-black text-white font-bold text-xs"
