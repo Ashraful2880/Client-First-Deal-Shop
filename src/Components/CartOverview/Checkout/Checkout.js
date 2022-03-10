@@ -2,20 +2,20 @@ import React from "react";
 
 const Checkout = () => {
   const handlePay = () => {
-    const order = {
-      cus_name: "Ashraful",
-      cus_email: "Ami@gmail.com",
-      product_name: "test Product",
-      product_profile: "test Product",
-      product_image: "https://i.ibb.co/tDLT8N3/Best-Sellar-Bannar.png",
-      total_amount: 5000,
+    const info = {
+      product_name: "Ashraful Islam",
+      product_profile: "Details Of Me",
+      product_image: "My Image",
+      total_amount: 3000,
+      cus_name: "My Name",
+      cus_email: "My Email",
     };
     fetch(`http://localhost:5000/init`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(order),
+      body: JSON.stringify(info),
     })
       .then((res) => res.json())
       .then((data) => {
