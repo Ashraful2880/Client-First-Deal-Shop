@@ -6,7 +6,7 @@ const Checkout = () => {
       product_name: "Ashraful Islam",
       product_profile: "Details Of Me",
       product_image: "My Image",
-      total_amount: 3000,
+      total_amount: 200,
       cus_name: "My Name",
       cus_email: "My Email",
     };
