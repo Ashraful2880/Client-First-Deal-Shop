@@ -10,7 +10,7 @@ const Checkout = () => {
       cus_name: "My Name",
       cus_email: "My Email",
     };
-    fetch(`http://localhost:5000/init`, {
+    fetch(`https://safe-bastion-76919.herokuapp.com/init`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
