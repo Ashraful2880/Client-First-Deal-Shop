@@ -186,12 +186,14 @@ const PlaceOrder = () => {
               Grand Total: {grandTotal?.toFixed(2) || subTotal}$
             </h2>
           </div>
-          <button
-            onClick={orderSaveToLocalStorage}
-            className="text-lg font-bold bg-orange-500 border border-orange-500 hover:bg-transparent hover:text-orange-500 duration-300 py-3 px-6 rounded-md absolute bottom-4 left-10"
-          >
-            <Link to="/checkout">Proceed to Checkout</Link>
-          </button>
+          <Link to="/checkout">
+            <button
+              onClick={orderSaveToLocalStorage}
+              className="text-lg font-bold bg-orange-500 border border-orange-500 hover:bg-transparent hover:text-orange-500 duration-300 py-3 px-6 rounded-md absolute bottom-4 left-10"
+            >
+              Proceed to Checkout
+            </button>
+          </Link>
         </div>
       </div>
     </div>

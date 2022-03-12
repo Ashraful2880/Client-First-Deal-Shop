@@ -27,7 +27,9 @@ const Checkout = () => {
       product_name: "Ashraful Islam",
       product_profile: "Details Of Me",
       product_image: "My Image",
-      total_amount: 200,
+      total_amount:
+        checkoutProduct?.netTotal * 80 ||
+        checkoutProduct?.totalWithoutCoupon * 80,
       cus_name: cusName,
       cus_email: email,
       cus_add1: address2,
@@ -54,10 +56,10 @@ const Checkout = () => {
   return (
     <div className="min-h-screen container mx-auto">
       <div className="flex justify-around mb-52 border border-gray-300 rounded-lg mt-10">
-        <div className="mt-10 sm:mt-0">
-          <div className="md:grid md:grid-cols-3 md:gap-6 pb-10">
+        <div className="mt-10 sm:mt-0 lg:w-3/5 sm:w-full">
+          <div className="grid grid-cols-2 gap-6 pb-10 mx-10">
             <div className="mt-5 md:mt-0 md:col-span-2">
-              <h2 className="text-2xl text-left mt-4 mb-2 font-bold ml-1">
+              <h2 className="text-2xl text-left mt-4 mb-6 font-bold ml-1">
                 Billing Address
               </h2>
               <div className=" shadow-2xl overflow-hidden rounded-md border border-gray-200">
@@ -92,7 +94,7 @@ const Checkout = () => {
                         <input
                           type="email"
                           name="email"
-                          autoComplete="given-name"
+                          autoComplete="given email"
                           className="mt-1 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm rounded-md border border-gray-400 p-2"
                           placeholder="Customer Email Here"
                           onChange={(e) => setEmail(e.target.value)}
@@ -109,7 +111,7 @@ const Checkout = () => {
                         <input
                           type="text"
                           name="street address"
-                          autoComplete="given-name"
+                          autoComplete="given-street address"
                           className="mt-1 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm rounded-md border border-gray-400 p-2"
                           placeholder="Street Where You Live"
                           onChange={(e) => setStreet(e.target.value)}
@@ -121,16 +123,15 @@ const Checkout = () => {
                           htmlFor="state"
                           className="block font-bold text-sm text-left"
                         >
-                          Address Line-2
+                          Address Line-2 (Optional)
                         </label>
                         <input
                           type="text"
                           name="address2"
-                          autoComplete="given-name"
+                          autoComplete="given address2"
                           className="mt-1 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm rounded-md border border-gray-400 p-2"
                           placeholder="Your Address Line"
                           onChange={(e) => setAddress2(e.target.value)}
-                          required
                         />
                       </div>
 
@@ -144,7 +145,7 @@ const Checkout = () => {
                         <input
                           type="text"
                           name="city"
-                          autoComplete="given-name"
+                          autoComplete="given city"
                           className="mt-1 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm rounded-md border border-gray-400 p-2"
                           placeholder="Your City Name Here"
                           onChange={(e) => setCityName(e.target.value)}
@@ -161,7 +162,7 @@ const Checkout = () => {
                         <input
                           type="text"
                           name="state name"
-                          autoComplete="given-name"
+                          autoComplete="given-state name"
                           className="mt-1 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm rounded-md border border-gray-400 p-2"
                           placeholder="Your State"
                           onChange={(e) => setState(e.target.value)}
@@ -179,7 +180,7 @@ const Checkout = () => {
                         <input
                           type="number"
                           name="postal"
-                          autoComplete="given-name"
+                          autoComplete="given postal number"
                           className="mt-1 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm rounded-md border border-gray-400 p-2"
                           placeholder="Zip / Postal Code Here"
                           onChange={(e) => setPostal(e.target.value)}
@@ -196,7 +197,7 @@ const Checkout = () => {
                         <input
                           type="number"
                           name="phone"
-                          autoComplete="given-name"
+                          autoComplete="given number"
                           className="mt-1 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm rounded-md border border-gray-400 p-2"
                           placeholder="Enter a Active Number"
                           onChange={(e) => setPhone(e.target.value)}
@@ -212,7 +213,7 @@ const Checkout = () => {
                         </label>
                         <select
                           name="country"
-                          autoComplete="country-name"
+                          autoComplete="given country"
                           className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500 sm:text-sm"
                           onChange={(e) => setCountry(e.target.value)}
                         >
@@ -224,12 +225,15 @@ const Checkout = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="px-4 pb-6 bg-gray-50 text-right sm:px-6">
+                  <div className="px-4 pb-6 sm:px-6">
                     <button
                       type="submit"
-                      className="bg-orange-500 border border-orange-500 text-white px-3 py-2 rounded-md ml-2 hover:bg-transparent hover:text-orange-500 duration-300"
+                      className="bg-orange-500 border border-orange-500 text-black px-3 py-2 rounded-md ml-2 hover:bg-transparent hover:text-orange-500 duration-300 w-1/2 font-bold text-lg"
                     >
-                      Proced To Pay
+                      Proced To Pay With{" "}
+                      {checkoutProduct?.netTotal ||
+                        checkoutProduct?.totalWithoutCoupon}
+                      $
                     </button>
                   </div>
                 </form>
@@ -237,16 +241,16 @@ const Checkout = () => {
             </div>
           </div>
         </div>
-        <div className="mt-10 sm:mt-0 w-1/4">
-          <div className="md:grid md:grid-cols-3 md:gap-6 pb-10">
+        <div className="mt-10 sm:mt-0 lg:w-2/5 sm:w-full">
+          <div className="grid grid-cols-1 gap-6 pb-10 mx-10">
             <div className="mt-5 md:mt-0 md:col-span-2">
-              <h2 className="text-2xl text-left mt-4 mb-2 font-bold ml-1">
+              <h2 className="text-2xl text-left mt-4 mb-6 font-bold ml-1">
                 Order Summary
               </h2>
 
-              <div className=" shadow-2xl overflow-hidden rounded-md border border-gray-200">
-                <div className="px-4 pb-6 bg-gray-50 text-right sm:px-6">
-                  <div className="flex justify-between ">
+              <div className=" shadow-2xl overflow-hidden rounded-md border border-gray-200 h-[56vh]">
+                <div className="px-4 pb-6 bg-gray-50 text-right sm:px-6 font-bold">
+                  <div className="flex justify-between py-4">
                     <h4 className="text-md font-bold">Your Orderd Items</h4>
                     <h4 className="text-orange-500 text-lg font-bold">
                       {checkoutProduct?.totalProduct}
@@ -255,19 +259,27 @@ const Checkout = () => {
                   <div>
                     <div className="flex justify-between border py-2 px-4">
                       <p>Product Price</p>
-                      <p>{checkoutProduct?.totalProductPrice}$</p>
+                      <p className="text-orange-500">
+                        {checkoutProduct?.totalProductPrice}$
+                      </p>
                     </div>
                     <div className="flex justify-between border py-2 px-4">
                       <p>Delivery</p>
-                      <p>{checkoutProduct?.deliveryCost}$</p>
+                      <p className="text-orange-500">
+                        {checkoutProduct?.deliveryCost}$
+                      </p>
                     </div>
                     <div className="flex justify-between border py-2 px-4">
                       <p>Shipping</p>
-                      <p>{checkoutProduct?.shippingCost}$</p>
+                      <p className="text-orange-500">
+                        {checkoutProduct?.shippingCost}$
+                      </p>
                     </div>
                     <div className="flex justify-between border py-2 px-4">
                       <p>Total Price</p>
-                      <p>{checkoutProduct?.totalPrice}$</p>
+                      <p className="text-orange-500">
+                        {checkoutProduct?.totalPrice}$
+                      </p>
                     </div>
                     <div className="flex justify-between border py-2 px-4">
                       <p>Discount</p>
@@ -276,8 +288,8 @@ const Checkout = () => {
                       </p>
                     </div>
                     <div className="flex justify-between border py-2 px-4">
-                      <p className="font-bold">Grand Total</p>
-                      <p className="font-bold">
+                      <p className="font-bold text-xl">Grand Total</p>
+                      <p className="font-bold text-xl">
                         {checkoutProduct?.netTotal ||
                           checkoutProduct?.totalWithoutCoupon}
                         $
