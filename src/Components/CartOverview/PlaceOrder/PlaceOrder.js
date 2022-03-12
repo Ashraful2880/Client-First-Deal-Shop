@@ -6,17 +6,22 @@ const PlaceOrder = () => {
   const [coupon, setCoupon] = useState();
   const [grandTotal, setGrandTotal] = useState();
 
+  //<------- Get All Cart Products From Local Storage ------->
+
   useEffect(() => {
     const myCartProduct = localStorage.getItem("cart");
     setCartItems(JSON.parse(myCartProduct));
   }, []);
 
+  //<------ Function For Remove (Added Cart) Item From Local Storage ------->
+
   const removeItem = (id) => {
     const setCart = cartItems.filter((items) => items.productId !== id);
     setCartItems(setCart);
     localStorage.setItem("cart", JSON.stringify(setCart));
-    console.log(setCart);
   };
+
+  //<------ Function For Calculation Price And Discount Area -------->
 
   let TotalCartPrice = cartItems.reduce(function (accumulator, item) {
     return accumulator + item.price;
@@ -26,10 +31,6 @@ const PlaceOrder = () => {
   const deliveryCostCalculate = parseFloat((TotalCartPrice / 100) * 15);
   const deliveryCost = deliveryCostCalculate;
   const subTotal = parseFloat(TotalCartPrice + shippingCost + deliveryCost);
-
-  const couponInput = (e) => {
-    setCoupon(e.target.value);
-  };
 
   const handleCoupon = (e) => {
     if (coupon === "discount") {
@@ -42,9 +43,21 @@ const PlaceOrder = () => {
       setCoupon("");
     }
   };
-  /*   const savePdDetails = () => {
-    localStorage.setItem("Checkout", JSON.stringify(cartItems));
-  }; */
+  //<------ Pending Payment Order Save To Local Storage ---------->
+
+  const orderSaveToLocalStorage = () => {
+    const pendingPayment = {
+      totalProduct: cartItems?.length,
+      totalProductPrice: TotalCartPrice,
+      shippingCost: shippingCost.toFixed(2),
+      deliveryCost: deliveryCost.toFixed(2),
+      totalPrice: subTotal,
+      coupon: parseFloat(grandTotal - subTotal) || 0,
+      netTotal: grandTotal,
+      totalWithoutCoupon: subTotal,
+    };
+    localStorage.setItem("pendingPayment", JSON.stringify(pendingPayment));
+  };
 
   return (
     <div className="container mx-auto mb-10 min-h-screen">
@@ -131,7 +144,7 @@ const PlaceOrder = () => {
           </h2>
           <div className="px-8 pt-8">
             <h2 className="text-lg font-bold border-b my-4">
-              Cart Sub Total:{" "}
+              Products Total:{" "}
               <span className="text-orange-500">{TotalCartPrice}$</span>
             </h2>
             <h2 className="text-lg font-bold border-b my-4">
@@ -147,7 +160,7 @@ const PlaceOrder = () => {
               </span>
             </h2>
             <h2 className="text-lg font-bold border-b my-4">
-              Total:{" "}
+              Sub Total:{" "}
               <span className="text-orange-500">{subTotal?.toFixed(2)}$</span>
             </h2>
           </div>
@@ -157,7 +170,7 @@ const PlaceOrder = () => {
                 className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
                 type="text"
                 placeholder="Enter Coupon Code"
-                onBlur={couponInput}
+                onChange={(e) => setCoupon(e.target.value)}
               />
               <button
                 className=" text-md font-bold text-white border bg-orange-500 hover:bg-transparent border-orange-500 hover:border-orange-500 hover:text-orange-500 py-1 px-3 rounded-lg hover:border-l-2"
@@ -173,7 +186,10 @@ const PlaceOrder = () => {
               Grand Total: {grandTotal?.toFixed(2) || subTotal}$
             </h2>
           </div>
-          <button className="text-lg font-bold bg-orange-500 border border-orange-500 hover:bg-transparent hover:text-orange-500 duration-300 py-3 px-6 rounded-md absolute bottom-4 left-10">
+          <button
+            onClick={orderSaveToLocalStorage}
+            className="text-lg font-bold bg-orange-500 border border-orange-500 hover:bg-transparent hover:text-orange-500 duration-300 py-3 px-6 rounded-md absolute bottom-4 left-10"
+          >
             <Link to="/checkout">Proceed to Checkout</Link>
           </button>
         </div>

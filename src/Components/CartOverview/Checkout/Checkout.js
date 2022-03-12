@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const Checkout = () => {
   const [cusName, setCusName] = useState("");
@@ -10,6 +10,16 @@ const Checkout = () => {
   const [postal, setPostal] = useState("");
   const [phone, setPhone] = useState("");
   const [country, setCountry] = useState("");
+  const [checkoutProduct, setCheckoutProduct] = useState({});
+
+  //<--------- Get Pending Payment Order From Local Storage --------->
+
+  useEffect(() => {
+    const getCheckoutProduct = localStorage.getItem("pendingPayment");
+    setCheckoutProduct(JSON.parse(getCheckoutProduct));
+  }, []);
+
+  //<-------- sslCommerz Function Here --------->
 
   const handlePay = (e) => {
     e.preventDefault();
@@ -25,10 +35,10 @@ const Checkout = () => {
       cus_city: cityName,
       cus_state: state,
       cus_postcode: postal,
-      cus_country: "Bangladesh",
+      cus_country: country,
       cus_phone: phone,
     };
-    fetch(`https://safe-bastion-76919.herokuapp.com/init`, {
+    fetch(`http://localhost:5000/init`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -37,12 +47,12 @@ const Checkout = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         window.location.replace(data);
       });
   };
+
   return (
-    <div className=" min-h-screen container mx-auto">
+    <div className="min-h-screen container mx-auto">
       <div className="flex justify-around mb-52 border border-gray-300 rounded-lg mt-10">
         <div className="mt-10 sm:mt-0">
           <div className="md:grid md:grid-cols-3 md:gap-6 pb-10">
@@ -68,6 +78,7 @@ const Checkout = () => {
                           className="mt-1 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm rounded-md border border-gray-400 p-2"
                           placeholder="Customer Name Here"
                           onChange={(e) => setCusName(e.target.value)}
+                          required
                         />
                       </div>
 
@@ -85,6 +96,7 @@ const Checkout = () => {
                           className="mt-1 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm rounded-md border border-gray-400 p-2"
                           placeholder="Customer Email Here"
                           onChange={(e) => setEmail(e.target.value)}
+                          required
                         />
                       </div>
                       <div className="col-span-6 sm:col-span-3">
@@ -101,6 +113,7 @@ const Checkout = () => {
                           className="mt-1 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm rounded-md border border-gray-400 p-2"
                           placeholder="Street Where You Live"
                           onChange={(e) => setStreet(e.target.value)}
+                          required
                         />
                       </div>
                       <div className="col-span-6 sm:col-span-3">
@@ -117,6 +130,7 @@ const Checkout = () => {
                           className="mt-1 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm rounded-md border border-gray-400 p-2"
                           placeholder="Your Address Line"
                           onChange={(e) => setAddress2(e.target.value)}
+                          required
                         />
                       </div>
 
@@ -134,6 +148,7 @@ const Checkout = () => {
                           className="mt-1 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm rounded-md border border-gray-400 p-2"
                           placeholder="Your City Name Here"
                           onChange={(e) => setCityName(e.target.value)}
+                          required
                         />
                       </div>
                       <div className="col-span-6 sm:col-span-3">
@@ -150,6 +165,7 @@ const Checkout = () => {
                           className="mt-1 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm rounded-md border border-gray-400 p-2"
                           placeholder="Your State"
                           onChange={(e) => setState(e.target.value)}
+                          required
                         />
                       </div>
 
@@ -167,6 +183,7 @@ const Checkout = () => {
                           className="mt-1 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm rounded-md border border-gray-400 p-2"
                           placeholder="Zip / Postal Code Here"
                           onChange={(e) => setPostal(e.target.value)}
+                          required
                         />
                       </div>
                       <div className="col-span-6 sm:col-span-3">
@@ -183,6 +200,7 @@ const Checkout = () => {
                           className="mt-1 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm rounded-md border border-gray-400 p-2"
                           placeholder="Enter a Active Number"
                           onChange={(e) => setPhone(e.target.value)}
+                          required
                         />
                       </div>
                       <div className="col-span-6">
@@ -196,6 +214,7 @@ const Checkout = () => {
                           name="country"
                           autoComplete="country-name"
                           className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500 sm:text-sm"
+                          onChange={(e) => setCountry(e.target.value)}
                         >
                           <option>Bangladesh</option>
                           <option>United States</option>
@@ -229,32 +248,40 @@ const Checkout = () => {
                 <div className="px-4 pb-6 bg-gray-50 text-right sm:px-6">
                   <div className="flex justify-between ">
                     <h4 className="text-md font-bold">Your Orderd Items</h4>
-                    <h4 className="text-orange-500 text-lg font-bold">4</h4>
+                    <h4 className="text-orange-500 text-lg font-bold">
+                      {checkoutProduct?.totalProduct}
+                    </h4>
                   </div>
                   <div>
-                    <div className="flex justify-between border border-b-0 py-2 px-4">
-                      <p>Product Name</p>
-                      <p>60$</p>
-                    </div>
-                    <div className="flex justify-between border border-b-0 py-2 px-4">
-                      <p>Product Name</p>
-                      <p>90$</p>
-                    </div>
-                    <div className="flex justify-between border-b-0 py-2 px-4">
-                      <p>Product Name</p>
-                      <p>20$</p>
+                    <div className="flex justify-between border py-2 px-4">
+                      <p>Product Price</p>
+                      <p>{checkoutProduct?.totalProductPrice}$</p>
                     </div>
                     <div className="flex justify-between border py-2 px-4">
-                      <p>Total</p>
-                      <p>140$</p>
+                      <p>Delivery</p>
+                      <p>{checkoutProduct?.deliveryCost}$</p>
                     </div>
                     <div className="flex justify-between border py-2 px-4">
-                      <p>Promo</p>
-                      <p className="text-orange-500">-10$</p>
+                      <p>Shipping</p>
+                      <p>{checkoutProduct?.shippingCost}$</p>
+                    </div>
+                    <div className="flex justify-between border py-2 px-4">
+                      <p>Total Price</p>
+                      <p>{checkoutProduct?.totalPrice}$</p>
+                    </div>
+                    <div className="flex justify-between border py-2 px-4">
+                      <p>Discount</p>
+                      <p className="text-orange-500">
+                        - {checkoutProduct?.coupon}$
+                      </p>
                     </div>
                     <div className="flex justify-between border py-2 px-4">
                       <p className="font-bold">Grand Total</p>
-                      <p className="font-bold">130$</p>
+                      <p className="font-bold">
+                        {checkoutProduct?.netTotal ||
+                          checkoutProduct?.totalWithoutCoupon}
+                        $
+                      </p>
                     </div>
                   </div>
                 </div>
