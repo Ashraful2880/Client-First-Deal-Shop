@@ -11,11 +11,14 @@ const Checkout = () => {
   const [phone, setPhone] = useState("");
   const [country, setCountry] = useState("");
   const [checkoutProduct, setCheckoutProduct] = useState({});
+  const [productDetails, setProductDetails] = useState([]);
 
   //<--------- Get Pending Payment Order From Local Storage --------->
 
   useEffect(() => {
     const getCheckoutProduct = localStorage.getItem("pendingPayment");
+    const getCart = localStorage.getItem("cart");
+    setProductDetails(getCart);
     setCheckoutProduct(JSON.parse(getCheckoutProduct));
   }, []);
 
@@ -24,9 +27,6 @@ const Checkout = () => {
   const handlePay = (e) => {
     e.preventDefault();
     const info = {
-      product_name: "Ashraful Islam",
-      product_profile: "Details Of Me",
-      product_image: "My Image",
       total_amount:
         checkoutProduct?.netTotal * 80 ||
         checkoutProduct?.totalWithoutCoupon * 80,
@@ -39,6 +39,7 @@ const Checkout = () => {
       cus_postcode: postal,
       cus_country: country,
       cus_phone: phone,
+      productDetails,
     };
     fetch(`https://safe-bastion-76919.herokuapp.com/init`, {
       method: "POST",

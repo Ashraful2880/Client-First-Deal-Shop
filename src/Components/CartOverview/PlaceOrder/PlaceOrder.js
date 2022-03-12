@@ -5,6 +5,8 @@ const PlaceOrder = () => {
   const [cartItems, setCartItems] = useState([]);
   const [coupon, setCoupon] = useState();
   const [grandTotal, setGrandTotal] = useState();
+  const [disablebtn, setDisablebtn] = useState();
+  const [disablebtnOpacity, setdisablebtnOpacity] = useState();
 
   //<------- Get All Cart Products From Local Storage ------->
 
@@ -38,6 +40,8 @@ const PlaceOrder = () => {
       setGrandTotal(discount);
       alert("Congratualions, You have Get 15% discount");
       setCoupon("");
+      setDisablebtn("none");
+      setdisablebtnOpacity("0.7");
     } else {
       alert("Wrong Coupon Code");
       setCoupon("");
@@ -173,8 +177,12 @@ const PlaceOrder = () => {
                 onChange={(e) => setCoupon(e.target.value)}
               />
               <button
-                className=" text-md font-bold text-white border bg-orange-500 hover:bg-transparent border-orange-500 hover:border-orange-500 hover:text-orange-500 py-1 px-3 rounded-lg hover:border-l-2"
+                className="text-md font-bold text-white border bg-orange-500 hover:bg-transparent border-orange-500 hover:border-orange-500 hover:text-orange-500 py-1 px-3 rounded-lg hover:border-l-2"
                 type="button"
+                style={{
+                  pointerEvents: `${disablebtn}`,
+                  opacity: `${disablebtnOpacity}`,
+                }}
                 onClick={handleCoupon}
               >
                 Apply

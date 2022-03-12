@@ -19,9 +19,7 @@ const Success = () => {
       body: JSON.stringify(orderInfo),
     })
       .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-      });
+      .then((data) => {});
   };
 
   useEffect(() => {
