@@ -12,7 +12,6 @@ const Checkout = () => {
   const [country, setCountry] = useState("");
   const [checkoutProduct, setCheckoutProduct] = useState({});
   const [productDetails, setProductDetails] = useState([]);
-  console.log(country);
 
   //<--------- Get Pending Payment Order From Local Storage --------->
 
