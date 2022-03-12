@@ -12,6 +12,7 @@ const Checkout = () => {
   const [country, setCountry] = useState("");
   const [checkoutProduct, setCheckoutProduct] = useState({});
   const [productDetails, setProductDetails] = useState([]);
+  console.log(country);
 
   //<--------- Get Pending Payment Order From Local Storage --------->
 
@@ -27,6 +28,9 @@ const Checkout = () => {
   const handlePay = (e) => {
     e.preventDefault();
     const info = {
+      product_name: "follow the product details",
+      product_profile: "product details",
+      product_image: "see the product details",
       total_amount:
         checkoutProduct?.netTotal * 80 ||
         checkoutProduct?.totalWithoutCoupon * 80,
@@ -41,7 +45,7 @@ const Checkout = () => {
       cus_phone: phone,
       productDetails,
     };
-    fetch(`https://safe-bastion-76919.herokuapp.com/init`, {
+    fetch(`http://localhost:5000/init`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -124,7 +128,7 @@ const Checkout = () => {
                           htmlFor="state"
                           className="block font-bold text-sm text-left"
                         >
-                          Address Line-2 (Optional)
+                          Address Line-2
                         </label>
                         <input
                           type="text"
@@ -132,6 +136,7 @@ const Checkout = () => {
                           autoComplete="given address2"
                           className="mt-1 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm rounded-md border border-gray-400 p-2"
                           placeholder="Your Address Line"
+                          required
                           onChange={(e) => setAddress2(e.target.value)}
                         />
                       </div>
@@ -216,8 +221,10 @@ const Checkout = () => {
                           name="country"
                           autoComplete="given country"
                           className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500 sm:text-sm"
+                          required
                           onChange={(e) => setCountry(e.target.value)}
                         >
+                          <option>Select Country</option>
                           <option>Bangladesh</option>
                           <option>United States</option>
                           <option>Canada</option>
