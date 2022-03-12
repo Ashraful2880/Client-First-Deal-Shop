@@ -55,14 +55,14 @@ const Checkout = () => {
 
   return (
     <div className="min-h-screen container mx-auto">
-      <div className="flex justify-around mb-52 border border-gray-300 rounded-lg mt-10">
-        <div className="mt-10 sm:mt-0 lg:w-3/5 sm:w-full">
+      <div className="flex justify-around mb-52 border border-gray-300 rounded-lg mt-10 lg:pb-20">
+        <div className="mt-10 sm:mt-0 lg:w-3/5 w-full">
           <div className="grid grid-cols-2 gap-6 pb-10 mx-10">
             <div className="mt-5 md:mt-0 md:col-span-2">
               <h2 className="text-2xl text-left mt-4 mb-6 font-bold ml-1">
                 Billing Address
               </h2>
-              <div className=" shadow-2xl overflow-hidden rounded-md border border-gray-200">
+              <div className=" shadow-xl overflow-hidden rounded-md border border-gray-200">
                 <form onSubmit={handlePay}>
                   <div className="px-4 py-5 bg-white sm:p-6">
                     <div className="grid grid-cols-6 gap-6">
@@ -241,14 +241,13 @@ const Checkout = () => {
             </div>
           </div>
         </div>
-        <div className="mt-10 sm:mt-0 lg:w-2/5 sm:w-full">
+        <div className="mt-10 sm:mt-0 lg:w-2/5 w-full">
           <div className="grid grid-cols-1 gap-6 pb-10 mx-10">
             <div className="mt-5 md:mt-0 md:col-span-2">
               <h2 className="text-2xl text-left mt-4 mb-6 font-bold ml-1">
                 Order Summary
               </h2>
-
-              <div className=" shadow-2xl overflow-hidden rounded-md border border-gray-200 h-[56vh]">
+              <div className="shadow-xl overflow-hidden rounded-md border border-gray-200 h-[56vh]">
                 <div className="px-4 pb-6 bg-gray-50 text-right sm:px-6 font-bold">
                   <div className="flex justify-between py-4">
                     <h4 className="text-md font-bold">Your Orderd Items</h4>
@@ -257,37 +256,37 @@ const Checkout = () => {
                     </h4>
                   </div>
                   <div>
-                    <div className="flex justify-between border py-2 px-4">
+                    <div className="flex justify-between border py-3 px-4">
                       <p>Product Price</p>
                       <p className="text-orange-500">
                         {checkoutProduct?.totalProductPrice}$
                       </p>
                     </div>
-                    <div className="flex justify-between border py-2 px-4">
+                    <div className="flex justify-between border py-3 px-4">
                       <p>Delivery</p>
                       <p className="text-orange-500">
                         {checkoutProduct?.deliveryCost}$
                       </p>
                     </div>
-                    <div className="flex justify-between border py-2 px-4">
+                    <div className="flex justify-between border py-3 px-4">
                       <p>Shipping</p>
                       <p className="text-orange-500">
                         {checkoutProduct?.shippingCost}$
                       </p>
                     </div>
-                    <div className="flex justify-between border py-2 px-4">
+                    <div className="flex justify-between border py-3 px-4">
                       <p>Total Price</p>
                       <p className="text-orange-500">
                         {checkoutProduct?.totalPrice}$
                       </p>
                     </div>
-                    <div className="flex justify-between border py-2 px-4">
+                    <div className="flex justify-between border py-3 px-4">
                       <p>Discount</p>
                       <p className="text-orange-500">
-                        - {checkoutProduct?.coupon}$
+                        {checkoutProduct?.coupon}$
                       </p>
                     </div>
-                    <div className="flex justify-between border py-2 px-4">
+                    <div className="flex justify-between border py-3 px-4">
                       <p className="font-bold text-xl">Grand Total</p>
                       <p className="font-bold text-xl">
                         {checkoutProduct?.netTotal ||
