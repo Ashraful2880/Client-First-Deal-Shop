@@ -69,13 +69,13 @@ const Team = () => {
                       </div>
                       <h1>
                         <a href="https://ashrafulislambd.com">
-                          <i className="fab fa-facebook mx-1 text-gray-200 text-2xl hover:text-orange-500  duration-300"></i>
+                          <i className="fab fa-facebook mx-1 text-gray-200 text-xl hover:text-orange-500  duration-300"></i>
                         </a>
                         <a href="https://ashrafulislambd.com">
-                          <i className="fab fa-twitter mx-1 text-gray-200 text-2xl hover:text-orange-500  duration-300"></i>
+                          <i className="fab fa-twitter mx-1 text-gray-200 text-xl hover:text-orange-500  duration-300"></i>
                         </a>
                         <a href="https://ashrafulislambd.com">
-                          <i className="fs-4 fab fa-instagram mx-1 text-gray-200 text-2xl hover:text-orange-500 duration-300"></i>
+                          <i className="fs-4 fab fa-instagram mx-1 text-gray-200 text-xl hover:text-orange-500 duration-300"></i>
                         </a>
                       </h1>
                     </div>
