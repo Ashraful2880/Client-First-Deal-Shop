@@ -24,14 +24,14 @@ const MiddleHeader = () => {
         </Link>
         <div className="container mx-auto w-2/6 ">
           <form>
-            <div class="flex justify-center py-1">
+            <div className="flex justify-center py-1">
               <input
                 type="search"
-                class="w-full px-3 py-2 text-gray-700 bg-white border border-solid border-gray-300 rounded rounded-r-none transition ease-in-out focus:bg-gray-100"
+                className="w-full px-3 py-2 text-gray-700 bg-white border border-solid border-gray-300 rounded rounded-r-none transition ease-in-out focus:bg-gray-100"
                 placeholder="I'm looking For"
               />
               <button
-                class="btn px-6 py-2 bg-orange-500 text-black font-bold rounded rounded-l-none hover:bg-white duration-150 ease-in-out border-l border-orange-500"
+                className="btn px-6 py-2 bg-orange-500 text-black font-bold rounded rounded-l-none hover:bg-white duration-150 ease-in-out border-l border-orange-500"
                 type="button"
               >
                 <i className="fa-solid fa-magnifying-glass"></i>

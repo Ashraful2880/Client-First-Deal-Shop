@@ -15,9 +15,9 @@ const Topbrands = () => {
   return (
     <div className="mb-14">
       <h5 className="text-orange-500 text-2xl font-bold uppercase">
-        Our Members
+        Our Brands
       </h5>
-      <h2 className="text-3xl uppercase font-bold mb-10">Meet Our brands</h2>
+      <h2 className="text-3xl uppercase font-bold mb-10">our brand partners</h2>
       <div className=" container mx-auto">
         <div className="w-full overflow-hidden px-5">
           <Swiper
