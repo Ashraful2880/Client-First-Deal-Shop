@@ -10,7 +10,7 @@ const Newslater = () => {
           <h1 className="pt-10 text-4xl text-center text-orange-500 font-semibold leading-tight">
             Subscribe Newslater
           </h1>
-          <form className="pt-6 text-center flex justify-between items-center">
+          <form className="pt-6 text-center flex justify-between items-center px-10">
             <input
               className="w-full px-4 py-3 text-sm leading-tight text-white border rounded shadow appearance-none focus:outline-none focus:shadow-outline mx-1"
               name="email"
@@ -18,7 +18,7 @@ const Newslater = () => {
               placeholder="Subscribe Our Newslater"
             />
             <button
-              className="px-10 py-2 font-bold text-white bg-orange-500 border border-orange-500 rounded-lg hover:bg-transparent duration-300 mx-1"
+              className="px-4 py-2 font-bold text-white bg-orange-500 border border-orange-500 rounded-lg hover:bg-transparent duration-300 mx-1"
               type="submit"
             >
               Subscribe
