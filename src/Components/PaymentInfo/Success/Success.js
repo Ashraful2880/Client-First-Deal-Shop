@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 const Success = () => {
   const { id } = useParams();
   const [orderDetails, setOrderDetails] = useState({});
+  const goToHome = useNavigate();
+
   console.log(orderDetails);
 
   const validateOrder = () => {
@@ -20,6 +22,9 @@ const Success = () => {
     })
       .then((res) => res.json())
       .then((data) => {});
+    localStorage.removeItem("cart");
+    localStorage.removeItem("pendingPayment");
+    goToHome("/home");
   };
 
   useEffect(() => {
