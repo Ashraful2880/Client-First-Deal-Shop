@@ -1,7 +1,9 @@
 import React from "react";
 import "./Newslater.css";
-
 const Newslater = () => {
+  const handleNewslater = (event) => {
+    event.prevenrDefault();
+  };
   return (
     <div className="flex justify-center mb-12 pt-20 ">
       <div className="w-full flex">
@@ -10,12 +12,16 @@ const Newslater = () => {
           <h1 className="pt-10 text-4xl text-center text-orange-500 font-semibold leading-tight">
             Subscribe Newslater
           </h1>
-          <form className="pt-6 text-center flex justify-between items-center lg:px-24 px-8">
+          <form
+            className="pt-6 text-center flex justify-between items-center lg:px-24 px-8"
+            onSubmit={handleNewslater}
+          >
             <input
               className="w-full px-4 py-3 text-sm leading-tight text-white border rounded shadow appearance-none focus:outline-none focus:shadow-outline mx-1"
               name="email"
               type="email"
               placeholder="Subscribe Our Newslater"
+              required
             />
             <button
               className="px-4 py-2 font-bold text-white bg-orange-500 border border-orange-500 rounded-lg hover:bg-transparent duration-300 mx-1"

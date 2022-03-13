@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Rating from "react-rating";
 import { Link, useParams } from "react-router-dom";
+import { useAlert } from "react-alert";
 
 const AddToCart = () => {
+  const alert = useAlert();
   const [cart, setCart] = useState({});
   const [cartCount, setCartCount] = useState(1);
   const [price, setPrice] = useState();
@@ -30,7 +32,7 @@ const AddToCart = () => {
       quantity: cartCount,
     });
     localStorage.setItem("cart", JSON.stringify(AddLocalStorage));
-    alert("Product Added in Cart");
+    alert.success("Product Added to Cart");
   };
 
   return (

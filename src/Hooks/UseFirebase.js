@@ -7,11 +7,13 @@ import {
 } from "firebase/auth";
 import { useState } from "react";
 import FirebaseAuthentication from "../Firebase/Firebase.init";
+import { useAlert } from "react-alert";
 
 FirebaseAuthentication();
 
 const useFirebase = () => {
   const auth = getAuth();
+  const alert = useAlert();
 
   // All State Here
   const [user, setUser] = useState("");
@@ -29,10 +31,11 @@ const useFirebase = () => {
       .then((result) => {
         const googleUser = result?.user;
         setUser(googleUser);
+        alert.success("Login Successful");
       })
       .catch((error) => {
         const errorMessage = error.message;
-        setError(errorMessage);
+        alert.error(errorMessage);
       });
   };
 
@@ -64,6 +67,7 @@ const useFirebase = () => {
         setError(error.message);
       });
   };
+
   const updateName = () => {
     updateProfile(auth.currentUser, {
       displayName: name,

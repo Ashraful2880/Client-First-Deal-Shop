@@ -19,16 +19,16 @@ const Login = () => {
                 First Deal Shop
               </h3>
               <hr className="mt-4 mb-2 border-t" />
-              <form className="px-8 pt-6 pb-2 mb-4 text-center">
+              <form className="px-8 pt-6 pb-2 mb-4 text-left">
                 <div className="mb-3 lg:w-2/3 sm:w-full md:w-full mx-auto">
                   <label
-                    className="block mb-2 text-sm font-bold text-white"
+                    className="block mb-2 text-sm font-bold text-orange-500"
                     htmlFor="email"
                   >
                     Your Email
                   </label>
                   <input
-                    className="w-full px-3 py-2 text-sm leading-tight text-white border rounded shadow appearance-none focus:outline-none focus:shadow-outline mb-4"
+                    className="w-full px-3 py-2 text-sm leading-tight rounded mb-4"
                     name="email"
                     type="email"
                     placeholder="Your Email"
@@ -36,13 +36,13 @@ const Login = () => {
                 </div>
                 <div className="mb-3 lg:w-2/3 sm:w-full md:w-full mx-auto">
                   <label
-                    className="block mb-2 text-sm font-bold text-white"
+                    className="block mb-2 text-sm font-bold text-orange-500"
                     htmlFor="password"
                   >
                     Your Password
                   </label>
                   <input
-                    className="w-full px-3 py-2 text-sm leading-tight text-white border rounded shadow appearance-none focus:outline-none focus:shadow-outline mb-4"
+                    className="w-full px-3 py-2 text-sm leading-tight rounded mb-4"
                     name="password"
                     type="password"
                     placeholder="Your Password"

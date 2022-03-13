@@ -29,19 +29,16 @@ const SignUp = () => {
                 First Deal Shop
               </h3>
               <hr className="mt-4 mb-2 border-t" />
-              <form
-                className="px-8 pt-6 pb-2 mb-4 text-center"
-                onSubmit={handleRegister}
-              >
+              <form className="px-8 pt-6 pb-2 mb-4" onSubmit={handleRegister}>
                 <div className="mb-3 lg:w-2/3 sm:w-full md:w-full mx-auto">
                   <label
-                    className="block mb-2 text-sm font-bold text-white"
+                    className="block mb-2 text-sm font-bold text-orange-500 text-left"
                     htmlFor="name"
                   >
                     Your Name
                   </label>
                   <input
-                    className="w-full px-3 py-2 text-sm leading-tight text-orange-500 border rounded shadow appearance-none focus:outline-none focus:shadow-outline mb-4"
+                    className="w-full px-3 py-2 text-sm leading-tight rounded focus:outline-none mb-4"
                     name="name"
                     type="text"
                     placeholder="Your Name"
@@ -51,13 +48,13 @@ const SignUp = () => {
                 </div>
                 <div className="mb-3 lg:w-2/3 sm:w-full md:w-full mx-auto">
                   <label
-                    className="block mb-2 text-sm font-bold text-white"
+                    className="block mb-2 text-sm font-bold text-orange-500 text-left"
                     htmlFor="email"
                   >
                     Your Email
                   </label>
                   <input
-                    className="w-full px-3 py-2 text-sm leading-tight text-orange-500 border rounded shadow appearance-none focus:outline-none focus:shadow-outline mb-4"
+                    className="w-full px-3 py-2 text-sm leading-tight rounded focus:outline-none mb-4"
                     name="email"
                     type="email"
                     placeholder="Your Email"
@@ -67,13 +64,13 @@ const SignUp = () => {
                 </div>
                 <div className="mb-3 lg:w-2/3 sm:w-full md:w-full mx-auto">
                   <label
-                    className="block mb-2 text-sm font-bold text-white"
+                    className="block mb-2 text-sm font-bold text-orange-500 text-left"
                     htmlFor="password"
                   >
                     Your Password
                   </label>
                   <input
-                    className="w-full px-3 py-2 text-sm leading-tight text-orange-500 border rounded shadow appearance-none focus:outline-none focus:shadow-outline mb-4"
+                    className="w-full px-3 py-2 text-sm leading-tight rounded focus:outline-none mb-4"
                     name="password"
                     type="password"
                     placeholder="Your Password"
@@ -83,13 +80,13 @@ const SignUp = () => {
                 </div>
                 <div className="mb-3 lg:w-2/3 sm:w-full md:w-full mx-auto">
                   <label
-                    className="block mb-2 text-sm font-bold text-white"
+                    className="block mb-2 text-sm font-bold text-orange-500 text-left"
                     htmlFor="password2"
                   >
                     Repeat Password
                   </label>
                   <input
-                    className="w-full px-3 py-2 text-sm leading-tight text-orange-500 border rounded shadow appearance-none focus:outline-none focus:shadow-outline mb-4"
+                    className="w-full px-3 py-2 text-sm leading-tight rounded focus:outline-none mb-4"
                     name="password2"
                     type="password"
                     placeholder="Repeat Password"
@@ -136,8 +133,9 @@ const SignUp = () => {
               </button>
               <button className="mx-auto lg:w-2/4 sm:w-full md:w-full p-3 border rounded-lg border-orange-500 flex justify-center items-center mt-4 hover:bg-orange-500 duration-300 mb-10">
                 <img
-                  src="https://tuk-cdn.s3.amazonaws.com/can-uploader/sign_in_2-svg3.svg"
+                  src="https://res.cloudinary.com/ashraful-islam/image/upload/v1647194277/First%20Deal-Shop/github_2_wqmocy.png"
                   alt="github"
+                  className="w-6"
                 />
                 <p className="text-base font-medium ml-4 text-white">
                   Continue with Github

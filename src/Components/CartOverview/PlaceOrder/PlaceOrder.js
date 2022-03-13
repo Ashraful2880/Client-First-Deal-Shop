@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useAlert } from "react-alert";
 
 const PlaceOrder = () => {
+  const alert = useAlert();
   const [cartItems, setCartItems] = useState([]);
   const [coupon, setCoupon] = useState();
   const [grandTotal, setGrandTotal] = useState();
@@ -21,6 +23,7 @@ const PlaceOrder = () => {
     const setCart = cartItems.filter((items) => items.productId !== id);
     setCartItems(setCart);
     localStorage.setItem("cart", JSON.stringify(setCart));
+    alert.success("Remove Item From Cart");
   };
 
   //<------ Function For Calculation Price And Discount Area -------->
@@ -38,12 +41,12 @@ const PlaceOrder = () => {
     if (coupon === "discount") {
       const discount = subTotal - (subTotal / 100) * 15;
       setGrandTotal(discount);
-      alert("Congratualions, You have Get 15% discount");
+      alert.success("You have Get 15% discount");
       setCoupon("");
       setDisablebtn("none");
       setdisablebtnOpacity("0.7");
     } else {
-      alert("Wrong Coupon Code");
+      alert.error("Wrong Coupon Code");
       setCoupon("");
     }
   };
