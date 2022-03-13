@@ -6,7 +6,7 @@ import TopHeader from "../TopHeader/TopHeader";
 import "./Header.css";
 
 const Header = () => {
-  const { user, handleLogOut } = useAuth();
+  const { user, handleSignOut } = useAuth();
   const myFunction = () => {
     const toggleButton = document.getElementById("toogleDiv");
     if (toggleButton.style.display === "none") {
@@ -442,7 +442,7 @@ const Header = () => {
                 Blog
               </Link>
               {user ? (
-                <button onClick={handleLogOut}>
+                <button onClick={handleSignOut}>
                   <i className="fa-solid fa-right-from-bracket mx-2 text-xl text-white"></i>
                 </button>
               ) : (

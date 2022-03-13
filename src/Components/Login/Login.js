@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import useAuth from "../../Hooks/UseAuth";
 
 const Login = () => {
+  const { user, handleSignIn } = useAuth();
   return (
     <div className="bg lg:h-screen sm:h-full">
       <div className="container mx-auto">
@@ -19,7 +21,10 @@ const Login = () => {
                 First Deal Shop
               </h3>
               <hr className="mt-4 mb-2 border-t" />
-              <form className="px-8 pt-6 pb-2 mb-4 text-left">
+              <form
+                className="px-8 pt-6 pb-2 mb-4 text-left"
+                onSubmit={handleSignIn}
+              >
                 <div className="mb-3 lg:w-2/3 sm:w-full md:w-full mx-auto">
                   <label
                     className="block mb-2 text-sm font-bold text-orange-500"

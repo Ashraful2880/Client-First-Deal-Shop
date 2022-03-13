@@ -2,10 +2,13 @@ import {
   createUserWithEmailAndPassword,
   getAuth,
   GoogleAuthProvider,
+  onAuthStateChanged,
+  signInWithEmailAndPassword,
   signInWithPopup,
+  signOut,
   updateProfile,
 } from "firebase/auth";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import FirebaseAuthentication from "../Firebase/Firebase.init";
 import { useAlert } from "react-alert";
 
@@ -22,6 +25,7 @@ const useFirebase = () => {
   const [password, setPassword] = useState("");
   const [repeatPass, setRepeatPass] = useState("");
   const [error, setError] = useState("");
+  const [demoLoading, setDemoLoading] = useState(true);
 
   // Signin With Google
 
@@ -62,11 +66,14 @@ const useFirebase = () => {
         setUser({ ...user, displayName: name });
         setName("");
         updateName();
+        alert.success("Registration Successful");
       })
       .catch((error) => {
-        setError(error.message);
+        alert.error(error.message);
       });
   };
+
+  // Update User Name By Email registration
 
   const updateName = () => {
     updateProfile(auth.currentUser, {
@@ -74,9 +81,53 @@ const useFirebase = () => {
     })
       .then(() => {})
       .catch((error) => {
-        setError(error.message);
+        alert.error(error.message);
       });
   };
+  // Login in Existing User By Email & Password
+
+  const handleSignIn = (event) => {
+    event.preventDefault();
+    setDemoLoading(true);
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        setUser(user);
+      })
+      .catch((error) => {
+        alert.error(error.message);
+      })
+      .finally(() => setDemoLoading(false));
+  };
+  // Function For Log out
+
+  const handleSignOut = () => {
+    const auth = getAuth();
+
+    signOut(auth)
+      .then(() => {
+        setUser("");
+        alert.success("Logout Successfull");
+      })
+      .catch((error) => {
+        alert.error(error.message);
+      })
+      .finally(() => setDemoLoading(false));
+  };
+
+  // observe user auth state changed or not
+
+  useEffect(() => {
+    const unsubscribed = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setUser(user);
+      } else {
+        setUser("");
+      }
+      setDemoLoading(false);
+    });
+    return () => unsubscribed;
+  }, [auth]);
 
   return {
     user,
@@ -86,6 +137,8 @@ const useFirebase = () => {
     handlePassword,
     repeatPassword,
     handleRegister,
+    handleSignIn,
+    handleSignOut,
   };
 };
 
