@@ -12,7 +12,7 @@ const Offer = () => {
             alt="OfferImage"
           />
         </Link>
-        <Link to="/shop/women" className=" rounded-2xl overflow-hidden">
+        <Link to="/shop/womens" className=" rounded-2xl overflow-hidden">
           <img
             className="hover:scale-110 duration-500 rounded-r-xl"
             src="https://i.ibb.co/X4qSh3B/Offer-2.jpg"
