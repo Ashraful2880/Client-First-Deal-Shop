@@ -17,7 +17,6 @@ import Checkout from "./Components/CartOverview/Checkout/Checkout";
 import PlaceOrder from "./Components/CartOverview/PlaceOrder/PlaceOrder";
 import Success from "./Components/PaymentInfo/Success/Success";
 import ScrollToTop from "react-scroll-to-top";
-import MySVG from "../src/Images/scroll to top.svg";
 
 function App() {
   return (
