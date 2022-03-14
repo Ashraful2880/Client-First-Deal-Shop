@@ -68,106 +68,108 @@ const PlaceOrder = () => {
 
   return (
     <div className="container mx-auto mb-10 min-h-screen">
-      <h1 className="lg:text-3xl sm:text-sm font-bold pt-7 pb-3 text-left">
+      <h1 className="lg:text-3xl sm:text-sm font-bold pt-7 pb-3 lg:text-left text-center">
         Products You Have Added
       </h1>
-      <div className="flex justify-between min-h-[55vh]">
-        <table className="w-3/4 mr-2 border">
-          <thead className=" divide-y border-b-2 border-t border-gray-300">
-            <tr>
-              <th
-                scope="col"
-                className="py-4 text-center text-sm font-bold text-black uppercase tracking-widest"
-              >
-                Image
-              </th>
-              <th
-                scope="col"
-                className="py-4 text-center text-sm font-bold text-black uppercase tracking-widest"
-              >
-                Product
-              </th>
-              <th
-                scope="col"
-                className="py-4 text-center text-sm font-bold text-black uppercase tracking-widest"
-              >
-                Price
-              </th>
-              <th
-                scope="col"
-                className="py-4 text-center text-sm font-bold text-black uppercase tracking-widest"
-              >
-                Quantity
-              </th>
-              <th
-                scope="col"
-                className="py-4 text-center text-sm font-bold text-black uppercase tracking-widest"
-              >
-                Total
-              </th>
-              <th
-                scope="col"
-                className="py-4 text-center text-sm font-bold text-black uppercase tracking-widest"
-              >
-                Romove
-              </th>
-            </tr>
-          </thead>
-          <tbody className="bg-white divide-y">
-            {cartItems &&
-              cartItems.map((item, key) => (
-                <tr key={key} className="font-bold">
-                  <td className="px-6 py-4 whitespace-nowrap mx-auto">
-                    <img
-                      className="w-28 mx-auto"
-                      src={item?.image}
-                      alt="CartImage"
-                    />
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-black">
-                    {item?.name}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-black">
-                    {item?.price}$
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-black">
-                    {item?.quantity}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-black">
-                    {item?.price}$
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-orange-600">
-                    <button onClick={() => removeItem(item?.productId)}>
-                      <i className="fa-solid fa-trash"></i>
-                    </button>
-                  </td>
-                </tr>
-              ))}
-          </tbody>
-        </table>
-        <div className="cart border w-1/4 ml-2 text-left relative">
+      <div className="lg:flex block justify-between min-h-[55vh]">
+        <div className="lg:overflow-hidden overflow-x-scroll lg:w-3/4 w-full mb-4">
+          <table className="w-full mr-2 border">
+            <thead className=" divide-y border-b-2 border-t border-gray-300">
+              <tr>
+                <th
+                  scope="col"
+                  className="py-4 text-center text-sm font-bold text-black uppercase tracking-widest"
+                >
+                  Image
+                </th>
+                <th
+                  scope="col"
+                  className="py-4 text-center text-sm font-bold text-black uppercase tracking-widest"
+                >
+                  Product
+                </th>
+                <th
+                  scope="col"
+                  className="py-4 text-center text-sm font-bold text-black uppercase tracking-widest"
+                >
+                  Price
+                </th>
+                <th
+                  scope="col"
+                  className="py-4 text-center text-sm font-bold text-black uppercase tracking-widest"
+                >
+                  Quantity
+                </th>
+                <th
+                  scope="col"
+                  className="py-4 text-center text-sm font-bold text-black uppercase tracking-widest"
+                >
+                  Total
+                </th>
+                <th
+                  scope="col"
+                  className="py-4 text-center text-sm font-bold text-black uppercase tracking-widest"
+                >
+                  Romove
+                </th>
+              </tr>
+            </thead>
+            <tbody className="bg-white divide-y">
+              {cartItems &&
+                cartItems.map((item, key) => (
+                  <tr key={key} className="font-bold">
+                    <td className="px-6 py-4 whitespace-nowrap mx-auto">
+                      <img
+                        className="mx-auto lg:w-28 w-full"
+                        src={item?.image}
+                        alt="CartImage"
+                      />
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-black">
+                      {item?.name}
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-black">
+                      {item?.price}$
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-black">
+                      {item?.quantity}
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-black">
+                      {item?.price}$
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-orange-600">
+                      <button onClick={() => removeItem(item?.productId)}>
+                        <i className="fa-solid fa-trash"></i>
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+            </tbody>
+          </table>
+        </div>
+        <div className="cart border lg:w-1/4 w-full lg:ml-2 ml-0 text-left relative mb-4">
           <h2 className="text-xl font-bold border-b-2 py-3 text-center">
             Details Of Cost
           </h2>
           <div className="px-8 pt-8">
-            <h2 className="text-lg font-bold border-b my-4">
-              Products Total:{" "}
+            <h2 className="text-lg font-bold border-b my-4 flex justify-between">
+              <span>Products Total: </span>
               <span className="text-orange-500">{TotalCartPrice}$</span>
             </h2>
-            <h2 className="text-lg font-bold border-b my-4">
-              Shipping:{" "}
+            <h2 className="text-lg font-bold border-b my-4 flex justify-between">
+              <span>Shipping: </span>
               <span className="text-orange-500">
                 {shippingCost?.toFixed(2)}$
               </span>
             </h2>
-            <h2 className="text-lg font-bold border-b my-4">
-              Delivery:{" "}
+            <h2 className="text-lg font-bold border-b my-4 flex justify-between">
+              <span>Delivery: </span>
               <span className="text-orange-500">
                 {deliveryCost?.toFixed(2)}$
               </span>
             </h2>
-            <h2 className="text-lg font-bold border-b my-4">
-              Sub Total:{" "}
+            <h2 className="text-lg font-bold border-b my-4 flex justify-between">
+              <span>Sub Total: </span>
               <span className="text-orange-500">{subTotal?.toFixed(2)}$</span>
             </h2>
           </div>
@@ -193,14 +195,15 @@ const PlaceOrder = () => {
             </div>
           </div>
           <div className="px-8 pb-4">
-            <h2 className="text-lg font-bold">
-              Grand Total: {grandTotal?.toFixed(2) || subTotal}$
+            <h2 className="text-lg font-bold flex justify-between">
+              <span>Grand Total:</span>
+              <span>{grandTotal?.toFixed(2) || subTotal}$</span>
             </h2>
           </div>
           <Link to="/checkout">
             <button
               onClick={orderSaveToLocalStorage}
-              className="text-lg font-bold bg-orange-500 border border-orange-500 hover:bg-transparent hover:text-orange-500 duration-300 py-3 px-6 rounded-md absolute bottom-4 left-10"
+              className="lg:text-lg text-base font-bold bg-orange-500 border border-orange-500 hover:bg-transparent hover:text-orange-500 duration-300 lg:py-3 py-2 mb-6 lg:px-6 px-3 rounded-md lg:absolute static bottom-4 left-10 lg:ml-1 ml-16"
             >
               Proceed to Checkout
             </button>
