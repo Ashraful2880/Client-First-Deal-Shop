@@ -25,7 +25,7 @@ const NewArraival = () => {
         </Link>
       </div>
       {products?.length > 0 ? (
-        <div className="flex my-10 border shadow-xl p-5">
+        <div className="flex my-10 border shadow-xl p-5 ">
           <div className="w-full overflow-hidden px-5">
             <h3 className="text-left mb-3 font-bold lg:text-3xl text-xl">
               New Arraival Products
@@ -58,7 +58,7 @@ const NewArraival = () => {
             >
               {products?.map((product, key) => (
                 <SwiperSlide key={key}>
-                  <div className="border rounded-lg mx-auto bg-white py-10 lg:max-h-80 md:max-h-80 sm:h-full mb-10">
+                  <div className="border rounded-lg mx-auto bg-white py-10 h-[350px] mb-10">
                     <div className="overflow-hidden relative product-link ">
                       <img
                         className="rounded-t-lg product-Image"
@@ -69,13 +69,12 @@ const NewArraival = () => {
                         to={`/addToCart/${product._id}`}
                         className="overlay overflow-hidden absolute bottom-0 left-0 right-0 h-0 w-full bg-gray-500"
                       >
-                        <p className=" text-orange-500 absolute top-1/2 left-1/2 text"></p>
                         <p className=" text-orange-500 absolute top-1/2 left-1/2 icon">
                           <i className="fas fa-shopping-cart"></i>
                         </p>
                       </Link>
                     </div>
-                    <div className="px-4 card-content text-left">
+                    <div className="px-4 text-left">
                       <Rating
                         readonly
                         className="text-orange-500"

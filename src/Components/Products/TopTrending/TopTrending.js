@@ -64,10 +64,10 @@ const TopTrending = () => {
             >
               {topTrending?.map((product, key) => (
                 <SwiperSlide key={key}>
-                  <div className="border rounded-lg mx-auto bg-white lg:py-10 py-5 lg:max-h-80 md:max-h-80 sm:h-full">
-                    <div className="overflow-hidden relative product-link ">
+                  <div className="border rounded-lg mx-auto bg-white lg:py-10 py-5 h-[350px]">
+                    <div className="overflow-hidden relative product-link flex">
                       <img
-                        className="rounded-t-lg product-Image"
+                        className="rounded-t-lg"
                         src={product?.url}
                         alt="ProductsImage"
                       />
@@ -75,13 +75,12 @@ const TopTrending = () => {
                         to={`/addToCart/${product._id}`}
                         className="overlay overflow-hidden absolute bottom-0 left-0 right-0 h-0 w-full bg-gray-500"
                       >
-                        <p className=" text-orange-500 absolute top-1/2 left-1/2 text"></p>
                         <p className=" text-orange-500 absolute top-1/2 left-1/2 icon">
                           <i className="fas fa-shopping-cart"></i>
                         </p>
                       </Link>
                     </div>
-                    <div className="px-4 card-content text-left">
+                    <div className="px-4 text-left">
                       <Rating
                         readonly
                         className="text-orange-500"
