@@ -20,12 +20,12 @@ const Banner = () => {
       >
         <SwiperSlide>
           <img
-            className=" h-full w-full"
+            className="w-full"
             src="https://res.cloudinary.com/ashraful-islam/image/upload/v1645944487/First%20Deal-Shop/slider-1_oxsazp.jpg"
             alt="SliderImage"
           />
-          <div className="text-left absolute xl:top-44 lg:top-40 md:top-28 sm:top-16 top-8 left-48">
-            <h1 className="xl:text-7xl lg:text-6xl md:text-3xl sm:text-2xl font-bold text-white">
+          <div className="slider-text text-left">
+            <h1 className="xl:text-7xl lg:text-6xl text-2xl font-bold text-white">
               Choose a New
             </h1>
             <h2 className="xl:text-5xl lg:text-4xl md:text-xl sm:text-sm font-bold my-2 text-orange-500">
@@ -43,16 +43,16 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            className=" h-full w-full"
+            className="w-full"
             src="https://res.cloudinary.com/ashraful-islam/image/upload/v1645944360/First%20Deal-Shop/slider-3_xndvji.jpg"
             alt="SliderImage"
           />
-          <div className="text-left absolute xl:top-44 lg:top-40 md:top-28 sm:top-16 top-8 left-48">
-            <h1 className="xl:text-7xl lg:text-6xl md:text-3xl sm:text-2xl font-bold">
-              Western Collections
+          <div className="slider-text text-left">
+            <h1 className="xl:text-7xl lg:text-6xl text-2xl font-bold">
+              Get Western
             </h1>
             <h2 className="xl:text-5xl lg:text-4xl md:text-xl sm:text-sm font-bold my-2 text-orange-500">
-              For All WoMens Style
+              All Womens Style
             </h2>
             <h4 className="lg:mt-5 md:mt-2 sm:mt-1 text-gray-800 lg:text-3xl md:text-xl sm:text-sm font-semibold mb-2">
               With 25% Discount
@@ -66,16 +66,16 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            className=" h-full w-full"
+            className="w-full"
             src="https://res.cloudinary.com/ashraful-islam/image/upload/v1645944360/First%20Deal-Shop/slider-1_b6bryd.jpg"
             alt="SliderImage"
           />
-          <div className="text-left absolute xl:top-44 lg:top-40 md:top-28 sm:top-16 top-8 left-48">
-            <h1 className="xl:text-7xl lg:text-6xl md:text-3xl sm:text-2xl font-bold">
-              Latest Collect Your
+          <div className="slider-text text-left">
+            <h1 className="xl:text-7xl lg:text-6xl text-2xl font-bold">
+              Collect Your
             </h1>
             <h2 className="xl:text-5xl lg:text-4xl md:text-xl sm:text-sm font-bold my-2 text-orange-500">
-              Perfect Womens Style
+              Womens Style
             </h2>
             <h4 className="lg:mt-5 md:mt-2 sm:mt-1 text-gray-800 lg:text-3xl md:text-xl sm:text-sm font-semibold mb-2">
               With 30% Discount
@@ -89,12 +89,12 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            className=" h-full w-full"
+            className="w-full"
             src="https://res.cloudinary.com/ashraful-islam/image/upload/v1645944360/First%20Deal-Shop/slider-2_q069bk.jpg"
             alt="SliderImage"
           />
-          <div className="text-left absolute xl:top-44 lg:top-40 md:top-28 sm:top-16 top-8 left-48">
-            <h1 className="xl:text-7xl lg:text-6xl md:text-3xl sm:text-2xl font-bold">
+          <div className="slider-text text-left">
+            <h1 className="xl:text-7xl lg:text-6xl text-2xl font-bold">
               Finding Your
             </h1>
             <h2 className="xl:text-5xl lg:text-4xl md:text-xl sm:text-sm font-bold my-2 text-orange-500">

@@ -1,9 +1,16 @@
-.slider-container{
+.slider-container img{
     height: 80vh;
+    width: 100%;
 }
 .swiper-pagination-bullet-active{
     background: #EA580C;
     opacity: 1;
+}
+.slider-text{
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%,-50%);
 }
 
 @media screen and (max-width:981px){
