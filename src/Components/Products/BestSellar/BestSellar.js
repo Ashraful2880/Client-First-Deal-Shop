@@ -56,7 +56,7 @@ const BestSellar = () => {
             >
               {bestSelling?.map((product, key) => (
                 <SwiperSlide key={key}>
-                  <div className="border rounded-lg mx-auto bg-white pt-10 pb-5 mb-10 h-[350px]">
+                  <div className="border rounded-lg mx-auto bg-white pt-10 pb-5 mb-10 h-[360px]">
                     <div className="overflow-hidden relative product-link ">
                       <img
                         className="rounded-t-lg"
@@ -92,7 +92,7 @@ const BestSellar = () => {
               ))}
             </Swiper>
           </div>
-          <div className="overflow-hidden h-full">
+          <div className="overflow-hidden h-full hidden lg:block md:block">
             <Link to="/home">
               <img
                 className=" hover:scale-125 duration-1000 mx-auto"

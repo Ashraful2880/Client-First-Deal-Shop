@@ -12,7 +12,7 @@ const AllProducts = () => {
           <div className="grid lg:grid-cols-5 md:grid-cols-2 sm:grid-col-1 gap-10 overflow-hidden px-5">
             {products?.map((product, key) => (
               <div key={key}>
-                <div className="border rounded-lg mx-auto bg-white py-10 md:max-h-80 sm:h-full relative">
+                <div className="border rounded-lg mx-auto bg-white py-10 relative">
                   <div className="overflow-hidden relative product-link ">
                     <img
                       className="rounded-t-lg product-Image"
@@ -23,7 +23,6 @@ const AllProducts = () => {
                       to={`/addToCart/${product._id}`}
                       className="overlay overflow-hidden absolute bottom-0 left-0 right-0 h-0 w-full bg-gray-500"
                     >
-                      <p className=" text-orange-500 absolute top-1/2 left-1/2 text"></p>
                       <p className=" text-orange-500 absolute top-1/2 left-1/2 icon">
                         <i className="fas fa-shopping-cart"></i>
                       </p>

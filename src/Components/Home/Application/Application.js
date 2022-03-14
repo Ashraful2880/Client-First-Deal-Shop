@@ -13,16 +13,16 @@ const Application = () => {
           />
         </div>
         <div className="lg:text-left sm:text-center lg:pt-14 sm:pt-0 px-1">
-          <h1 className="text-4xl font-bold py-5">
+          <h1 className="lg:text-4xl text-xl font-bold py-5">
             Get More With
             <span className="text-orange-500"> Our Application</span>
           </h1>
-          <p className="mb-12 lg:w-3/4 sm:w-full">
+          <p className="mb-12 lg:w-3/4 sm:w-full lg:text-base text-sm">
             Nunc pellentesque orci sed tempor pharetra. Morbi molestie purus in
             interdum facilisis. Mauris commodo mi a egestas sollicitudin. Mauris
             pharetra placerat sem vel fringilla.
           </p>
-          <div className="flex items-center my-5 group">
+          <div className="flex items-center my-5 group pl-5">
             <h5 className="bg-orange-500 hover:bg-white group-hover:text-orange-500 border border-orange-500 text-white px-3 py-2 rounded-full font-bold group-hover:bg-white duration-300">
               01
             </h5>
@@ -30,7 +30,7 @@ const Application = () => {
               Order From Any Location
             </h4>
           </div>
-          <div className="flex items-center mb-5 group">
+          <div className="flex items-center mb-5 group pl-5">
             <h5 className="bg-orange-500 hover:bg-white group-hover:text-orange-500 border border-orange-500 text-white px-3 py-2 rounded-full font-bold group-hover:bg-white duration-300">
               02
             </h5>
@@ -38,7 +38,7 @@ const Application = () => {
               Get Important Notices
             </h4>
           </div>
-          <div className="flex items-center mb-5 group">
+          <div className="flex items-center mb-5 group pl-5">
             <h5 className="bg-orange-500 group-hover:bg-white group-hover:text-orange-500 border border-orange-500 text-white px-3 py-2 rounded-full font-bold duration-300">
               03
             </h5>

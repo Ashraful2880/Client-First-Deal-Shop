@@ -23,7 +23,7 @@ const TopTrending = () => {
     <div className="container mx-auto">
       {topTrending?.length > 0 ? (
         <div className="lg:flex md:flex sm:block my-10 border shadow-xl p-5">
-          <div className="overflow-hidden">
+          <div className="overflow-hidden lg:block hidden">
             <Link to="/home">
               <img
                 className=" hover:scale-125 duration-1000 mx-auto"
@@ -64,7 +64,7 @@ const TopTrending = () => {
             >
               {topTrending?.map((product, key) => (
                 <SwiperSlide key={key}>
-                  <div className="border rounded-lg mx-auto bg-white lg:py-10 py-5 h-[350px]">
+                  <div className="border rounded-lg mx-auto bg-white lg:py-10 py-5 h-[360px]">
                     <div className="overflow-hidden relative product-link flex">
                       <img
                         className="rounded-t-lg"
