@@ -25,7 +25,7 @@ const BestSellar = () => {
       {bestSelling?.length > 0 ? (
         <div className="lg:flex md:flex sm:block my-10 border shadow-xl p-5">
           <div className="w-full overflow-hidden px-5">
-            <h3 className="text-left mb-3 font-bold lg:text-3xl sm:text-sm">
+            <h3 className="text-left mb-3 font-bold lg:text-3xl text-xl">
               Best Selling Products
             </h3>
             <hr
@@ -96,7 +96,7 @@ const BestSellar = () => {
           <div className="overflow-hidden h-full">
             <Link to="/home">
               <img
-                className=" hover:scale-125 duration-1000"
+                className=" hover:scale-125 duration-1000 mx-auto"
                 src="https://i.ibb.co/tDLT8N3/Best-Sellar-Bannar.png"
                 alt="Best Selling Banner"
               />

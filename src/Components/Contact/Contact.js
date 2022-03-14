@@ -4,7 +4,7 @@ import "./Contact.css";
 const Contact = () => {
   return (
     <div className="contact-bannar">
-      <div className="max-w-5xl mx-auto px-6 sm:px-6 lg:px-8 py-20">
+      <div className="max-w-5xl mx-auto px-1 lg:px-8 py-20">
         <div
           className=" w-full sm:p-12 rounded-xl px-2 py-10"
           style={{ background: "#0000009e" }}

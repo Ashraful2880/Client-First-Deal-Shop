@@ -16,7 +16,6 @@ const Banner = () => {
         effect={"slide"}
         pagination={{ clickable: true }}
         autoplay={{ delay: 2000, disableOnInteraction: false }}
-        speed={2500}
         className="mySwiper slider-container"
       >
         <SwiperSlide>

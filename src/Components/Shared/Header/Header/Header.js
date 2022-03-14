@@ -424,12 +424,7 @@ const Header = () => {
                   </div>
                 </li>
               </ul>
-              <Link
-                to="/contact"
-                className="my-1 text-md font-semibold hover:text-orange-500 focus:text-orange-500 duration-300 md:mx-4 md:my-0"
-              >
-                Contact
-              </Link>
+
               <Link
                 to="/about"
                 className="my-1 text-md font-semibold hover:text-orange-500 focus:text-orange-500 duration-300 md:mx-4 md:my-0"
@@ -441,6 +436,12 @@ const Header = () => {
                 className="my-1 text-md font-semibold hover:text-orange-500 focus:text-orange-500 duration-300 md:mx-4 md:my-0"
               >
                 Blog
+              </Link>
+              <Link
+                to="/contact"
+                className="my-1 text-md font-semibold hover:text-orange-500 focus:text-orange-500 duration-300 md:mx-4 md:my-0"
+              >
+                Contact
               </Link>
               {user ? (
                 <button onClick={handleSignOut}>

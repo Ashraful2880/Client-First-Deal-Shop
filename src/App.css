@@ -6,6 +6,15 @@ button.styles_scroll-to-top__2A70v {
   padding-left: 6px;
   border-radius: 50%;
 }
+button.styles_scroll-to-top__2A70v:hover {
+  border: 1px solid #F97316;
+  background: transparent;
+  padding-left: 6px;
+  border-radius: 50%;
+}
+button.styles_scroll-to-top__2A70v:hover svg {
+  fill: #F97316;
+}
 svg {
   height: 19px;
 }

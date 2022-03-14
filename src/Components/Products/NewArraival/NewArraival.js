@@ -27,7 +27,7 @@ const NewArraival = () => {
       {products?.length > 0 ? (
         <div className="flex my-10 border shadow-xl p-5">
           <div className="w-full overflow-hidden px-5">
-            <h3 className="text-left mb-3 font-bold lg:text-3xl sm:text-sm">
+            <h3 className="text-left mb-3 font-bold lg:text-3xl text-xl">
               New Arraival Products
             </h3>
             <hr

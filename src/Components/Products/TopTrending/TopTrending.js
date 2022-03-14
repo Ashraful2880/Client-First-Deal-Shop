@@ -26,14 +26,14 @@ const TopTrending = () => {
           <div className="overflow-hidden">
             <Link to="/home">
               <img
-                className=" hover:scale-125 duration-1000"
+                className=" hover:scale-125 duration-1000 mx-auto"
                 src="https://i.ibb.co/xLrYkN7/top-trending.jpg"
                 alt="Trending Banner"
               />
             </Link>
           </div>
           <div className="w-full overflow-hidden px-5">
-            <h3 className="text-left mb-3 font-bold lg:text-3xl sm:text-sm">
+            <h3 className="text-left mb-3 font-bold lg:text-3xl text-xl">
               Top Trending Products
             </h3>
             <hr
@@ -64,7 +64,7 @@ const TopTrending = () => {
             >
               {topTrending?.map((product, key) => (
                 <SwiperSlide key={key}>
-                  <div className="border rounded-lg mx-auto bg-white py-10 lg:max-h-80 md:max-h-80 sm:h-full">
+                  <div className="border rounded-lg mx-auto bg-white lg:py-10 py-5 lg:max-h-80 md:max-h-80 sm:h-full">
                     <div className="overflow-hidden relative product-link ">
                       <img
                         className="rounded-t-lg product-Image"

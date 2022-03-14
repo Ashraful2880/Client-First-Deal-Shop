@@ -18,7 +18,7 @@ const Footer = () => {
             <span className="text-white"> S</span>hop
           </h4>
         </Link>
-        <div className="flex justify-center items-center">
+        <div className="lg:flex justify-center items-center hidden">
           <p>
             <i className="fa-solid fa-location-dot bg-orange-500 hover:bg-white hover:text-orange-500 duration-300 p-3 rounded-full text-white mr-5"></i>
           </p>
@@ -31,7 +31,7 @@ const Footer = () => {
             </p>
           </div>
         </div>
-        <div className="flex justify-center items-center">
+        <div className="lg:flex justify-center items-center hidden">
           <i className="fa-solid fa-phone-flip bg-orange-500 hover:bg-white hover:text-orange-500 duration-300 p-3 rounded-full text-white mr-5"></i>
           <h2 className="text-white hover:text-orange-500 duration-300 cursor-pointer">
             +123-456-7890
@@ -55,7 +55,7 @@ const Footer = () => {
 
       <hr />
       <div>
-        <div className="container mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 pt-6 pb-10 text-white">
+        <div className="container mx-auto grid grid-cols-2 lg:grid-cols-4 pt-6 pb-10 text-white">
           <div>
             <h4 className="mb-4 text-xl font-bold">Legal</h4>
             <Link to="/home" className="hover:text-orange-500 duration-300">
