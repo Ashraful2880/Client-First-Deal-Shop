@@ -24,7 +24,7 @@ const Contact = () => {
                 <input
                   type="text"
                   name="name"
-                  className="leading-none p-3 focus:outline-none focus:border-orange-500 mt-4 border-0 bg-whiterounded"
+                  className="leading-none p-3 focus:outline-none focus:border-orange-500 mt-4 border-0 bg-white rounded"
                   placeholder="Enter Your Name"
                   required
                 />
@@ -36,7 +36,7 @@ const Contact = () => {
                 <input
                   type="number"
                   name="number"
-                  className="leading-none p-3 focus:outline-none focus:border-orange-500 mt-4 border-0 bg-whiterounded"
+                  className="leading-none p-3 focus:outline-none focus:border-orange-500 mt-4 border-0 bg-white rounded"
                   placeholder="Enter Contact Number"
                 />
               </div>
@@ -48,7 +48,7 @@ const Contact = () => {
                 </label>
                 <input
                   type="email"
-                  className="leading-none p-3 focus:outline-none focus:border-orange-500 mt-4 border-0 bg-whiterounded"
+                  className="leading-none p-3 focus:outline-none focus:border-orange-500 mt-4 border-0 bg-white rounded"
                   placeholder="Enter Your Email"
                   required
                 />
