@@ -7,6 +7,7 @@ import "./Header.css";
 
 const Header = () => {
   const { user, handleSignOut } = useAuth();
+
   const myFunction = () => {
     const toggleButton = document.getElementById("toogleDiv");
     if (toggleButton.style.display === "none") {
@@ -71,7 +72,7 @@ const Header = () => {
                   </Link>
                   <div className="mega-menu w-full text-left absolute left-0 hidden z-50 p-6 mb-16 sm:mb-0 shadow-xl bg-gray-800">
                     <div className="container mx-auto w-full flex flex-wrap justify-between">
-                      <div className="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
+                      <div className="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-r lg:border-b-0 lg:pt-3">
                         <div className="flex items-center border-b mb-4">
                           <h3 className="font-bold text-xl text-white text-bold mb-2">
                             Categories
@@ -243,9 +244,9 @@ const Header = () => {
                     Shop
                     <i className="fa-solid fa-angle-down ml-2"></i>
                   </Link>
-                  <div className="p-6 shop-mega-menu w-full text-left absolute left-0 hidden z-50 mb-16 sm:mb-0 shadow-xl bg-gray-800">
+                  <div className="p-6 shop-mega-menu w-full text-left absolute left-0 hidden z-50 sm:mb-0 shadow-xl bg-gray-800">
                     <div className="container mx-auto w-full flex flex-wrap justify-between">
-                      <ul className="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
+                      <ul className="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-r lg:border-b-0 lg:pt-3">
                         <div className="text-gray-100 text-md flex flex-col">
                           <Link
                             to="/shop"

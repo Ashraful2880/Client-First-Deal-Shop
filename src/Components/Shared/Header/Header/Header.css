@@ -4,3 +4,8 @@
 .shop-container:hover .shop-mega-menu {
     display: block;
 }
+@media screen and (max-width:768px) {
+    #toogleDiv{
+        display: none;
+    }
+}
