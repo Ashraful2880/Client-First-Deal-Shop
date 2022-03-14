@@ -1,0 +1,7 @@
+.shop-menu-bg{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.750),rgba(0, 0, 0, 0.750)),url("https://res.cloudinary.com/ashraful-islam/image/upload/v1647292036/First%20Deal-Shop/offer-bannar_cmpryk.png");
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size:cover;
+}

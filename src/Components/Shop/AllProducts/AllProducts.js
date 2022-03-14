@@ -5,6 +5,7 @@ import Rating from "react-rating";
 
 const AllProducts = () => {
   const [products] = useProducts();
+
   return (
     <div className="container mx-auto pb-10">
       {products?.length > 0 ? (
