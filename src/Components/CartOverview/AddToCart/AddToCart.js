@@ -36,18 +36,18 @@ const AddToCart = () => {
   };
 
   return (
-    <div className="container mx-auto border shadow-lg my-10 py-20">
-      <div className="flex justify-evenly">
-        <div className="w-1/2">
+    <div className="container mx-auto border shadow-lg my-10 lg:py-20 py-2">
+      <div className="grid lg:grid-cols-2 grid-cols-1">
+        <div className="lg:w-1/2 w-full">
           <img style={{ margin: "auto" }} src={cart?.url} alt="product" />
         </div>
-        <div className="w-1/2 text-left">
-          <h3 className="font-bold text-3xl">{cart?.name}</h3>
-          <h3 className="font-bold text-2xl mb-4">
+        <div className="lg:w-1/2 w-full lg:text-left text-center">
+          <h3 className="font-bold lg:text-3xl text-xl">{cart?.name}</h3>
+          <h3 className="font-bold text-2xl lg:mb-4 mb-1">
             Price:{" "}
             <span className="text-orange-500">{price || cart?.price}$</span>
           </h3>
-          <h3 className="font-bold text-md">
+          <h3 className="font-bold lg:text-base text-xs">
             <Rating
               readonly
               className="text-orange-500"
@@ -57,7 +57,7 @@ const AddToCart = () => {
             />{" "}
             (125 Customeer Review)
           </h3>
-          <p className="mt-5 text-gray-600 tracking-wider ">
+          <p className="mt-5 text-gray-600 tracking-wider lg:block hidden">
             <span className="font-bold text-orange-500">{cart?.name} </span>
             allows you to fully express your vibrant personality with three
             grayscale options. Feeling adventurous? Put on a heather gray tee.
@@ -65,7 +65,7 @@ const AddToCart = () => {
             to add an extra pop of color to your outfit? Our white tee has you
             covered.
           </p>
-          <p className="text-md font-bold mb-10 mt-4 text-orange-500">
+          <p className="text-md font-bold lg:mb-10 mb-2 lg:mt-4 mt-1 text-orange-500">
             Only 27 in Stock. Order Now
           </p>
           <h3 className="font-bold text-xl mb-8">
@@ -95,11 +95,11 @@ const AddToCart = () => {
           </h3>
           <button
             onClick={addLocalStorage}
-            className="bg-orange-500 border border-orange-500 text-white px-3 py-2 rounded-md mr-2 hover:bg-transparent hover:text-orange-500 duration-300"
+            className="bg-orange-500 border border-orange-500 text-white px-3 lg:py-2 py-1 lg:text-base text-xs rounded-md mr-2 hover:bg-transparent hover:text-orange-500 duration-300"
           >
             Add To Cart
           </button>
-          <button className="bg-orange-500 border border-orange-500 text-white px-3 py-2 rounded-md ml-2 hover:bg-transparent hover:text-orange-500 duration-300">
+          <button className="bg-orange-500 border border-orange-500 text-white px-3 lg:py-2 py-1 lg:text-base text-xs rounded-md ml-2 hover:bg-transparent hover:text-orange-500 duration-300">
             <Link to="/placeOrder">Place Order</Link>
           </button>
         </div>
