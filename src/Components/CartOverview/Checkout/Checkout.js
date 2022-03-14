@@ -59,11 +59,11 @@ const Checkout = () => {
 
   return (
     <div className="min-h-screen container mx-auto">
-      <div className="flex justify-around mb-52 border border-gray-300 rounded-lg mt-10 lg:pb-20">
-        <div className="mt-10 sm:mt-0 lg:w-3/5 w-full">
-          <div className="grid grid-cols-2 gap-6 pb-10 mx-10">
-            <div className="mt-5 md:mt-0 md:col-span-2">
-              <h2 className="text-2xl text-left mt-4 mb-6 font-bold ml-1">
+      <div className="lg:flex block justify-around lg:mb-52 mb-2 border border-gray-300 rounded-lg lg:mt-10 mt-1 lg:pb-20">
+        <div className="lg:w-3/5 w-full">
+          <div className="grid lg:grid-cols-2 grid-cols-1 gap-6 pb-10 mx-10">
+            <div className="md:col-span-2">
+              <h2 className="text-2xl text-left lg:mt-4 mt-1 mb-6 font-bold ml-1">
                 Billing Address
               </h2>
               <div className=" shadow-xl overflow-hidden rounded-md border border-gray-200">
@@ -80,7 +80,6 @@ const Checkout = () => {
                         <input
                           type="text"
                           name="name"
-                          autoComplete="given-name"
                           className="mt-1 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm rounded-md border border-gray-400 p-2"
                           placeholder="Customer Name Here"
                           onChange={(e) => setCusName(e.target.value)}
@@ -98,7 +97,6 @@ const Checkout = () => {
                         <input
                           type="email"
                           name="email"
-                          autoComplete="given email"
                           className="mt-1 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm rounded-md border border-gray-400 p-2"
                           placeholder="Customer Email Here"
                           onChange={(e) => setEmail(e.target.value)}
@@ -115,7 +113,6 @@ const Checkout = () => {
                         <input
                           type="text"
                           name="street address"
-                          autoComplete="given-street address"
                           className="mt-1 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm rounded-md border border-gray-400 p-2"
                           placeholder="Street Where You Live"
                           onChange={(e) => setStreet(e.target.value)}
@@ -132,7 +129,6 @@ const Checkout = () => {
                         <input
                           type="text"
                           name="address2"
-                          autoComplete="given address2"
                           className="mt-1 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm rounded-md border border-gray-400 p-2"
                           placeholder="Your Address Line"
                           required
@@ -150,7 +146,6 @@ const Checkout = () => {
                         <input
                           type="text"
                           name="city"
-                          autoComplete="given city"
                           className="mt-1 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm rounded-md border border-gray-400 p-2"
                           placeholder="Your City Name Here"
                           onChange={(e) => setCityName(e.target.value)}
@@ -167,14 +162,12 @@ const Checkout = () => {
                         <input
                           type="text"
                           name="state name"
-                          autoComplete="given-state name"
                           className="mt-1 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm rounded-md border border-gray-400 p-2"
                           placeholder="Your State"
                           onChange={(e) => setState(e.target.value)}
                           required
                         />
                       </div>
-
                       <div className="col-span-6 sm:col-span-3">
                         <label
                           htmlFor="postal"
@@ -185,7 +178,6 @@ const Checkout = () => {
                         <input
                           type="number"
                           name="postal"
-                          autoComplete="given postal number"
                           className="mt-1 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm rounded-md border border-gray-400 p-2"
                           placeholder="Zip / Postal Code Here"
                           onChange={(e) => setPostal(e.target.value)}
@@ -202,7 +194,6 @@ const Checkout = () => {
                         <input
                           type="number"
                           name="phone"
-                          autoComplete="given number"
                           className="mt-1 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm rounded-md border border-gray-400 p-2"
                           placeholder="Enter a Active Number"
                           onChange={(e) => setPhone(e.target.value)}
@@ -218,7 +209,6 @@ const Checkout = () => {
                         </label>
                         <select
                           name="country"
-                          autoComplete="given country"
                           className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500 sm:text-sm"
                           required
                           onChange={(e) => setCountry(e.target.value)}
@@ -235,7 +225,7 @@ const Checkout = () => {
                   <div className="px-4 pb-6 sm:px-6">
                     <button
                       type="submit"
-                      className="bg-orange-500 border border-orange-500 text-black px-3 py-2 rounded-md ml-2 hover:bg-transparent hover:text-orange-500 duration-300 w-1/2 font-bold text-lg"
+                      className="bg-orange-500 border border-orange-500 text-black px-3 py-2 rounded-md ml-2 hover:bg-transparent hover:text-orange-500 duration-300 lg:w-1/2 w-full font-bold text-lg"
                     >
                       Proced To Pay With{" "}
                       {checkoutProduct?.netTotal ||
@@ -248,10 +238,10 @@ const Checkout = () => {
             </div>
           </div>
         </div>
-        <div className="mt-10 sm:mt-0 lg:w-2/5 w-full">
-          <div className="grid grid-cols-1 gap-6 pb-10 mx-10">
-            <div className="mt-5 md:mt-0 md:col-span-2">
-              <h2 className="text-2xl text-left mt-4 mb-6 font-bold ml-1">
+        <div className="lg:mt-4 mt-0 lg:w-2/5 w-full">
+          <div className="grid grid-cols-1 gap-6 lg:pb-10 pb-5 mx-10">
+            <div className="md:col-span-2">
+              <h2 className="text-2xl text-left mb-6 font-bold ml-1">
                 Order Summary
               </h2>
               <div className="shadow-xl overflow-hidden rounded-md border border-gray-200 h-[56vh]">
