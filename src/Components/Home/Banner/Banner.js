@@ -20,7 +20,6 @@ const Banner = () => {
       >
         <SwiperSlide>
           <img
-            className="w-full"
             src="https://res.cloudinary.com/ashraful-islam/image/upload/v1645944487/First%20Deal-Shop/slider-1_oxsazp.jpg"
             alt="SliderImage"
           />
@@ -43,7 +42,6 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            className="w-full"
             src="https://res.cloudinary.com/ashraful-islam/image/upload/v1645944360/First%20Deal-Shop/slider-3_xndvji.jpg"
             alt="SliderImage"
           />
@@ -66,7 +64,6 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            className="w-full"
             src="https://res.cloudinary.com/ashraful-islam/image/upload/v1645944360/First%20Deal-Shop/slider-1_b6bryd.jpg"
             alt="SliderImage"
           />
@@ -89,7 +86,6 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            className="w-full"
             src="https://res.cloudinary.com/ashraful-islam/image/upload/v1645944360/First%20Deal-Shop/slider-2_q069bk.jpg"
             alt="SliderImage"
           />

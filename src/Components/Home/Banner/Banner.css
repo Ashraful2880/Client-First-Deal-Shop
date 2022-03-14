@@ -12,15 +12,8 @@
     left: 30%;
     transform: translate(-50%,-50%);
 }
-
-@media screen and (max-width:981px){
-  
-}
-@media screen and (max-width:710px){
-
-}
-@media screen and (max-width:452px){
-    .slider-container{
-        height: 25vh;
+@media screen and (max-width:768px) {
+    .slider-container img{
+        height:100%!important
     }
 }
