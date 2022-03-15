@@ -17,6 +17,7 @@ import Checkout from "./Components/CartOverview/Checkout/Checkout";
 import PlaceOrder from "./Components/CartOverview/PlaceOrder/PlaceOrder";
 import Success from "./Components/PaymentInfo/Success/Success";
 import ScrollToTop from "react-scroll-to-top";
+import TrackOrder from "./Components/PaymentInfo/TrackOrder/TrackOrder";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
             <Route path="placeOrder" element={<PlaceOrder />} />
             <Route path="checkout" element={<Checkout />} />
             <Route path="/success/:id" element={<Success />} />
+            <Route path="trackOrder" element={<TrackOrder />} />
             <Route path="contact" element={<Contact />} />
             <Route path="about" element={<AboutUs />} />
             <Route path="blogs" element={<Blogs />} />

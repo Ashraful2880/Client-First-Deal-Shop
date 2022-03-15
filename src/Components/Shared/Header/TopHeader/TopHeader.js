@@ -22,7 +22,7 @@ const TopHeader = () => {
           </Link>
           <Link
             className="mx-1 text-xs lg:text-base md:text-base hover:text-black duration-200 border-r border-gray-300"
-            to="/order"
+            to="/trackOrder"
           >
             Track Order
             <span className="ml-2"></span>

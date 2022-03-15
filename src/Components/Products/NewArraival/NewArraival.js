@@ -59,7 +59,7 @@ const NewArraival = () => {
               >
                 {products?.map((product, key) => (
                   <SwiperSlide key={key}>
-                    <div className="border rounded-lg mx-auto bg-white py-10 h-[360px] mb-10">
+                    <div className="border rounded-lg mx-auto bg-white lg:py-10 py-5 h-[360px] mb-2 lg:mb-10">
                       <div className="overflow-hidden relative product-link ">
                         <img
                           className="rounded-t-lg product-Image"

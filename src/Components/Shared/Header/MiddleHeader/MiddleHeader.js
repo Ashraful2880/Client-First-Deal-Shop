@@ -17,7 +17,7 @@ const MiddleHeader = () => {
     <div className="bg-gray-900 border-b border-gray-500">
       <div className="container mx-auto lg:flex sm:block justify-between items-center py-1">
         <span className="ml-4">
-          <i className="fa-solid fa-phone mx-2 lg:text-xl text-base text-orange-500"></i>
+          <i className="fa-solid fa-phone mx-2 lg:text-xl text-base text-orange-500 animate-bounce"></i>
           <span className="font-bold text-orange-500">
             Hotline: +88-01974238487
           </span>
