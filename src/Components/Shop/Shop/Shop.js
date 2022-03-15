@@ -5,11 +5,11 @@ import "./Shop.css";
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
-  const [search, setSearch] = useState("Men");
+  const [search, setSearch] = useState("All");
 
   useEffect(() => {
     fetch(
-      `https://safe-bastion-76919.herokuapp.com/findProducts?category=${search}`
+      ` https://safe-bastion-76919.herokuapp.com/findProducts?category=${search}`
     )
       .then((res) => res.json())
       .then((data) => setProducts(data));
@@ -86,53 +86,56 @@ const Shop = () => {
       </div>
       <div className="drawer-side">
         <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-        <ul className="menu px-20 overflow-y-auto w-64 shop-menu-bg text-white text-base text-left border-t border-orange-500 font-bold">
-          <li className="cursor-pointer pb-2 pt-8 border-b-2 border-transparent hover:border-orange-500 focus:text-orange-500 duration-300">
+        <div className="menu px-10 overflow-y-auto w-64 shop-menu-bg text-white text-lg border-t border-orange-500">
+          <button
+            className="text-left pb-2 mt-12 pt-4 border-b-2 border-transparent hover:border-orange-500 focus:border-orange-500 duration-300 font-bold"
+            onClick={() => setSearch("All")}
+          >
             All Products
-          </li>
-          <li
-            className="cursor-pointer py-2 border-b-2 border-transparent hover:border-orange-500 duration-300"
+          </button>
+          <button
+            className="text-left pb-2 mt-4 border-b-2 border-transparent hover:border-orange-500 focus:border-orange-500 duration-300 font-bold"
             onClick={() => setSearch("Men")}
           >
             Mens
-          </li>
-          <li
-            className="cursor-pointer py-2 border-b-2 border-transparent hover:border-orange-500 duration-300"
+          </button>
+          <button
+            className="text-left pb-2 mt-4 border-b-2 border-transparent hover:border-orange-500 focus:border-orange-500 duration-300 font-bold"
             onClick={() => setSearch("Women")}
           >
             Womens
-          </li>
-          <li
-            className="cursor-pointer py-2 border-b-2 border-transparent hover:border-orange-500 duration-300"
+          </button>
+          <button
+            className="text-left pb-2 mt-4 border-b-2 border-transparent hover:border-orange-500 focus:border-orange-500 duration-300 font-bold"
             onClick={() => setSearch("Kids")}
           >
             Kids
-          </li>
-          <li
-            className="cursor-pointer py-2 border-b-2 border-transparent hover:border-orange-500 duration-300"
+          </button>
+          <button
+            className="text-left pb-2 mt-4 border-b-2 border-transparent hover:border-orange-500 focus:border-orange-500 duration-300 font-bold"
             onClick={() => setSearch("BagPack")}
           >
             BagPack
-          </li>
-          <li
-            className="cursor-pointer py-2 border-b-2 border-transparent hover:border-orange-500 duration-300"
+          </button>
+          <button
+            className="text-left pb-2 mt-4 border-b-2 border-transparent hover:border-orange-500 focus:border-orange-500 duration-300 font-bold"
             onClick={() => setSearch("Shoes")}
           >
             Shoes
-          </li>
-          <li
-            className="cursor-pointer py-2 border-b-2 border-transparent hover:border-orange-500 duration-300"
+          </button>
+          <button
+            className="text-left pb-2 mt-4 border-b-2 border-transparent hover:border-orange-500 focus:border-orange-500 duration-300 font-bold"
             onClick={() => setSearch("Others")}
           >
             Others
-          </li>
-          <li
-            className="cursor-pointer py-2 border-b-2 border-transparent hover:border-orange-500 duration-300"
+          </button>
+          <button
+            className="text-left pb-2 mt-4 border-b-2 border-transparent hover:border-orange-500 focus:border-orange-500 duration-300 font-bold"
             onClick={() => setSearch("Uncategorize")}
           >
             Uncategorized
-          </li>
-        </ul>
+          </button>
+        </div>
       </div>
     </div>
   );
