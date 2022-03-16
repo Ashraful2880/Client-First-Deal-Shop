@@ -13,7 +13,7 @@ const SignUp = () => {
     handleRegister,
   } = useAuth();
   return (
-    <div className="bg lg:h-screen sm:h-full">
+    <div className="bg h-auto py-5">
       <div className="container mx-auto">
         <div className="flex justify-center px-6 mb-12 pt-6">
           <div className="w-full xl:w-3/4 lg:w-11/12 flex">
