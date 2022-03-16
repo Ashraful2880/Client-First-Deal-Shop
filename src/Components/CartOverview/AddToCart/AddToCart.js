@@ -9,15 +9,17 @@ const AddToCart = () => {
   const [cartCount, setCartCount] = useState(1);
   const [price, setPrice] = useState();
   const { productId } = useParams();
+  console.log(productId);
   useEffect(() => {
     setPrice(cart?.price * cartCount);
   }, [cart?.price, cartCount]);
 
   useEffect(() => {
-    fetch(`https://safe-bastion-76919.herokuapp.com/addToCart/${productId}`)
+    fetch(`http://localhost:5000/addToCart/${productId}`)
       .then((res) => res.json())
       .then((data) => setCart(data));
   }, [productId]);
+  console.log(cart);
 
   const addLocalStorage = () => {
     let AddLocalStorage = [];

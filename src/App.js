@@ -30,7 +30,8 @@ function App() {
             <Route path="/*" element={<NotFound />} />
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
-            <Route path="shop" element={<Shop />} />
+            <Route path="shopCategory/:category" element={<Shop />} />
+            {/* <Route path="shop" element={<Shop />} /> */}
             <Route path="addToCart/:productId" element={<AddToCart />} />
             <Route path="placeOrder" element={<PlaceOrder />} />
             <Route path="checkout" element={<Checkout />} />

@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Rating from "react-rating";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "./Shop.css";
 
 const Shop = () => {
+  const { category } = useParams();
+
   const [products, setProducts] = useState([]);
-  const [search, setSearch] = useState("All");
+  const [search, setSearch] = useState(category);
 
   useEffect(() => {
     fetch(

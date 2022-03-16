@@ -1,21 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SwiperCore, { Autoplay, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import useProducts from "../../../Hooks/UseProducts";
 import { Link } from "react-router-dom";
 import Rating from "react-rating";
 
 SwiperCore.use([Autoplay, Pagination]);
 
 const NewArraival = () => {
-  const [products] = useProducts();
+  const [newArrival, setNewArrival] = useState([]);
+  useEffect(() => {
+    fetch(
+      "https://safe-bastion-76919.herokuapp.com/newArrival?newArrival=newArrival"
+    )
+      .then((res) => res.json())
+      .then((data) => setNewArrival(data));
+  }, []);
   return (
     <>
-      {products?.length > 0 ? (
+      {newArrival?.length > 0 ? (
         <div className="container mx-auto mb-10">
           <div className="overflow-hidden px-1">
             <Link to="/home">
@@ -57,17 +63,17 @@ const NewArraival = () => {
                 }}
                 className="mySwiper"
               >
-                {products?.map((product, key) => (
+                {newArrival?.map((newPd, key) => (
                   <SwiperSlide key={key}>
                     <div className="border rounded-lg mx-auto bg-white lg:py-10 py-5 h-[360px] mb-2 lg:mb-10">
                       <div className="overflow-hidden relative product-link ">
                         <img
                           className="rounded-t-lg product-Image"
-                          src={product?.url}
+                          src={newPd?.url}
                           alt="ProductsImage"
                         />
                         <Link
-                          to={`/addToCart/${product._id}`}
+                          to={`/addToCart/${newPd._id}`}
                           className="overlay overflow-hidden absolute bottom-0 left-0 right-0 h-0 w-full bg-gray-500"
                         >
                           <p className=" text-orange-500 absolute top-1/2 left-1/2 icon">
@@ -81,13 +87,13 @@ const NewArraival = () => {
                           className="text-orange-500"
                           emptySymbol="far fa-star"
                           fullSymbol="fas fa-star"
-                          initialRating={product?.star}
+                          initialRating={newPd?.star}
                         />
                         <h1 className="text-md font-bold text-gray-700">
-                          {product?.name}
+                          {newPd?.name}
                         </h1>
                         <span className="text-sm font-bold bg-orange-500 text-white p-2 rounded-full absolute top-2 left-2">
-                          {product?.price}$
+                          {newPd?.price}$
                         </span>
                       </div>
                     </div>

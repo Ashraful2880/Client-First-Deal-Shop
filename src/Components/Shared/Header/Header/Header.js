@@ -20,7 +20,7 @@ const Header = () => {
     <div>
       <TopHeader />
       <MiddleHeader />
-      <nav className="bg-gray-900">
+      <nav className="bg-gray-900 sticky top-0 z-50">
         <div className="container mx-auto px-6 py-3 md:flex md:justify-between md:items-center">
           <div className="flex justify-between items-center">
             <div className="lg:block sm:hidden md:hidden">
@@ -64,7 +64,7 @@ const Header = () => {
               <ul className="flex justify-center">
                 <li className="hoverable hover:text-white">
                   <Link
-                    to="/shop"
+                    to="/shopCategory/All"
                     className="my-1 text-md font-semibold  hover:text-orange-500 focus:text-orange-500 duration-300 md:mx-4 md:my-0"
                   >
                     <span className="font-semibold ">Browse Categories</span>
@@ -80,49 +80,49 @@ const Header = () => {
                         </div>
                         <div className="text-gray-100 text-md flex flex-col">
                           <Link
-                            to="/shop"
+                            to="/shopCategory/All"
                             className="mb-1 hover:text-orange-500 duration-300"
                           >
                             <i className="fa-solid fa-angles-right mr-2 text-md"></i>
                             All Products
                           </Link>
                           <Link
-                            to="/shop"
+                            to="/shopCategory/Men"
                             className="mb-1 hover:text-orange-500 duration-300"
                           >
                             <i className="fa-solid fa-angles-right mr-2 text-md"></i>
                             Mens Collections
                           </Link>
                           <Link
-                            to="/shop"
+                            to="/shopCategory/Women"
                             className="mb-1 hover:text-orange-500 duration-300"
                           >
                             <i className="fa-solid fa-angles-right mr-2 text-md"></i>
                             Womens Collections
                           </Link>
                           <Link
-                            to="/shop"
+                            to="/shopCategory/Kids"
                             className="mb-1 hover:text-orange-500 duration-300"
                           >
                             <i className="fa-solid fa-angles-right mr-2 text-md"></i>
                             Kids Collections
                           </Link>
                           <Link
-                            to="/shop"
+                            to="/shopCategory/Shoes"
                             className="mb-1 hover:text-orange-500 duration-300"
                           >
                             <i className="fa-solid fa-angles-right mr-2 text-md"></i>
                             Shoes Collections
                           </Link>
                           <Link
-                            to="/shop"
+                            to="/shopCategory/Others"
                             className="mb-1 hover:text-orange-500 duration-300"
                           >
                             <i className="fa-solid fa-angles-right mr-2 text-md"></i>
                             Others Collections
                           </Link>
                           <Link
-                            to="/shop"
+                            to="/shopCategory/Uncategorize"
                             className="mb-1 hover:text-orange-500 duration-300"
                           >
                             <i className="fa-solid fa-angles-right mr-2 text-md"></i>
@@ -239,7 +239,7 @@ const Header = () => {
                 <li className="shop-container hover:text-white">
                   <Link
                     className="my-1 text-md font-semibold hover:text-orange-500 focus:text-orange-500 duration-300 md:mx-4 md:my-0"
-                    to="/shop"
+                    to="/shopCategory/All"
                   >
                     Shop
                     <i className="fa-solid fa-angle-down ml-2"></i>
@@ -249,49 +249,49 @@ const Header = () => {
                       <ul className="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-r lg:border-b-0 lg:pt-3">
                         <div className="text-gray-100 text-md flex flex-col">
                           <Link
-                            to="/shop"
+                            to="/shopCategory/All"
                             className="mb-1 hover:text-orange-500 duration-300"
                           >
                             <i className="fa-solid fa-angles-right mr-2 text-md"></i>
                             All Products
                           </Link>
                           <Link
-                            to="/shop"
+                            to="/shopCategory/Men"
                             className="mb-1 hover:text-orange-500 duration-300"
                           >
                             <i className="fa-solid fa-angles-right mr-2 text-md"></i>
                             Mens Collections
                           </Link>
                           <Link
-                            to="/shop"
+                            to="/shopCategory/Women"
                             className="mb-1 hover:text-orange-500 duration-300"
                           >
                             <i className="fa-solid fa-angles-right mr-2 text-md"></i>
                             Womens Collections
                           </Link>
                           <Link
-                            to="/shop"
+                            to="/shopCategory/Kids"
                             className="mb-1 hover:text-orange-500 duration-300"
                           >
                             <i className="fa-solid fa-angles-right mr-2 text-md"></i>
                             Kids Collections
                           </Link>
                           <Link
-                            to="/shop"
+                            to="/shopCategory/Shoes"
                             className="mb-1 hover:text-orange-500 duration-300"
                           >
                             <i className="fa-solid fa-angles-right mr-2 text-md"></i>
                             Shoes Collections
                           </Link>
                           <Link
-                            to="/shop"
+                            to="/shopCategory/Others"
                             className="mb-1 hover:text-orange-500 duration-300"
                           >
                             <i className="fa-solid fa-angles-right mr-2 text-md"></i>
                             Others Collections
                           </Link>
                           <Link
-                            to="/shop"
+                            to="/shopCategory/Uncategorize"
                             className="mb-1 hover:text-orange-500 duration-300"
                           >
                             <i className="fa-solid fa-angles-right mr-2 text-md"></i>
@@ -299,7 +299,7 @@ const Header = () => {
                           </Link>
                         </div>
                         <div className="flex items-center my-4">
-                          <Link to="/shop" className="w-full">
+                          <Link to="/shopCategory/" className="w-full">
                             <img
                               className="w-full mb-2"
                               src="https://i.ibb.co/qgb43KQ/shop-bannar-1.jpg"
@@ -339,7 +339,7 @@ const Header = () => {
                             Hot Sales
                           </Link>
                           <Link
-                            to="/home"
+                            to="/shopCategory/Shoes"
                             className="mb-1 hover:text-orange-500 duration-300"
                           >
                             <i className="fa-solid fa-angles-right mr-2 text-md"></i>
@@ -361,7 +361,7 @@ const Header = () => {
                           </Link>
                         </div>
                         <div className="flex items-center my-4">
-                          <Link to="/bag" className="w-full">
+                          <Link to="/shopCategory/BagPack" className="w-full">
                             <img
                               className="w-full mb-2"
                               src="https://i.ibb.co/CvM7Q81/Shop-bannar-2.jpg"
@@ -390,7 +390,10 @@ const Header = () => {
                           before we fire the new ux experience.
                         </p>
                         <div className="flex items-center my-4">
-                          <Link to="/women" className="mb-2 w-full">
+                          <Link
+                            to="/shopCategory/Women"
+                            className="mb-2 w-full"
+                          >
                             <img
                               className="mb-2 w-full"
                               src="https://i.ibb.co/qgb43KQ/shop-bannar-1.jpg"
@@ -401,13 +404,13 @@ const Header = () => {
                       </ul>
                       <ul className="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 pb-6 pt-6 lg:pt-3 cursor-pointer">
                         <div className="flex items-center mb-4">
-                          <Link to="/kids" className="mx-1">
+                          <Link to="/shopCategory/Kids" className="mx-1">
                             <img
                               src="https://i.ibb.co/1fzq18C/shop-bannar-3.jpg"
                               alt="Drop Down Bannar"
                             />
                           </Link>
-                          <Link to="/womens" className="mx-1">
+                          <Link to="/shopCategory/Women" className="mx-1">
                             <img
                               src="https://i.ibb.co/28QStX4/shop-banner-4.jpg"
                               alt="Drop Down Bannar"
