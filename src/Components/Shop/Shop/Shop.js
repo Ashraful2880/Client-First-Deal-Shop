@@ -77,6 +77,13 @@ const Shop = () => {
                         <span className="text-sm font-bold bg-orange-500 text-white p-2 rounded-full absolute top-2 left-2">
                           {product?.price}$
                         </span>
+                        {product?.prevPrice ? (
+                          <span className="text-xs font-bold p-2 rounded-full absolute top-2 left-20 line-through">
+                            {product?.prevPrice}$
+                          </span>
+                        ) : (
+                          ""
+                        )}
                       </div>
                     </div>
                   ))}
