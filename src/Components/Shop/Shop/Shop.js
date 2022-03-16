@@ -46,7 +46,7 @@ const Shop = () => {
                 <div className="grid lg:grid-cols-5 md:grid-cols-2 sm:grid-col-1 gap-10 overflow-hidden px-5 relative">
                   {products?.map((product, key) => (
                     <div key={key}>
-                      <div className="border rounded-lg mx-auto bg-white pt-10 relative h-[360px]">
+                      <div className="border rounded-lg mx-auto bg-white pt-10 relative h-[300px]">
                         <div className="overflow-hidden relative product-link ">
                           <img
                             className="rounded-t-lg product-Image"

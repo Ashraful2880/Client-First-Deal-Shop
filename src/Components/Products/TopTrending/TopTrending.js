@@ -65,7 +65,7 @@ const TopTrending = () => {
               >
                 {topTrending?.map((product, key) => (
                   <SwiperSlide key={key}>
-                    <div className="border rounded-lg mx-auto bg-white lg:py-10 py-5 h-[360px]">
+                    <div className="border rounded-lg mx-auto bg-white lg:py-10 py-5 h-[300px]">
                       <div className="overflow-hidden relative product-link flex">
                         <img
                           className="rounded-t-lg"
