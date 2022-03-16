@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="./Logo.png" />
@@ -16,7 +16,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
     <title>First-Deal eCommerce</title>
   </head>
-  <body>
+  <body >
     <div id="root"></div>
+    <script> 
+      document.addEventListener('contextmenu', event=> event.preventDefault()); 
+      document.onkeydown = function(e) { 
+      if(event.keyCode == 123) { 
+      alert("Cool Dude Dont Try This")
+      return false; 
+      } 
+      if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){ 
+        alert("Cool Dude Dont Try This")
+      return false; 
+      } 
+      if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){ 
+        alert("Cool Dude Dont Try This")
+      return false; 
+      } 
+      if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){ 
+        alert("Cool Dude Dont Try This")
+      return false; 
+      } 
+      } 
+      </script> 
   </body>
 </html>
