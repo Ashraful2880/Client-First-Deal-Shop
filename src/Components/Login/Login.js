@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import useAuth from "../../Hooks/UseAuth";
 
 const Login = () => {
-  const { user, handleSignIn } = useAuth();
+  const { handleSignIn } = useAuth();
   return (
     <div className="bg lg:h-screen sm:h-full">
       <div className="container mx-auto">

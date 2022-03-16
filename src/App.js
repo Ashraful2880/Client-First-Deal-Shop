@@ -18,22 +18,36 @@ import PlaceOrder from "./Components/CartOverview/PlaceOrder/PlaceOrder";
 import Success from "./Components/PaymentInfo/Success/Success";
 import ScrollToTop from "react-scroll-to-top";
 import TrackOrder from "./Components/PaymentInfo/TrackOrder/TrackOrder";
+import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 
 function App() {
   return (
     <div className="App">
       <ScrollToTop smooth color="#fff" />
-      <AuthProvider>
-        <BrowserRouter>
+      <BrowserRouter>
+        <AuthProvider>
           <Header />
           <Routes>
             <Route path="/*" element={<NotFound />} />
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="shopCategory/:category" element={<Shop />} />
-            {/* <Route path="shop" element={<Shop />} /> */}
-            <Route path="addToCart/:productId" element={<AddToCart />} />
-            <Route path="placeOrder" element={<PlaceOrder />} />
+            <Route
+              path="addToCart/:productId"
+              element={
+                <PrivateRoute>
+                  <AddToCart />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="placeOrder"
+              element={
+                <PrivateRoute>
+                  <PlaceOrder />
+                </PrivateRoute>
+              }
+            />
             <Route path="checkout" element={<Checkout />} />
             <Route path="/success/:id" element={<Success />} />
             <Route path="trackOrder" element={<TrackOrder />} />
@@ -44,8 +58,8 @@ function App() {
             <Route path="login" element={<Login />} />
           </Routes>
           <Footer />
-        </BrowserRouter>
-      </AuthProvider>
+        </AuthProvider>
+      </BrowserRouter>
     </div>
   );
 }

@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 import useAuth from "../../../../Hooks/UseAuth";
 
 const MiddleHeader = () => {
-  // console.log = console.warn = console.error = () => {};
-  // console.error("Something bad happened.");
+  console.log = console.warn = console.error = () => {};
+  console.error("Something bad happened.");
 
   const { user } = useAuth();
   const [items, setItems] = useState([]);
   useEffect(() => {
     const myCartProduct = localStorage.getItem("cart");
     setItems(JSON.parse(myCartProduct));
-  }, []);
+  }, [items]);
 
   return (
     <div className="bg-gray-900 border-b border-gray-500">
@@ -65,7 +65,7 @@ const MiddleHeader = () => {
               />
             </Link>
           ) : (
-            <Link to="/login">
+            <Link to="/signup">
               <i className="fa-solid fa-right-to-bracket mr-2 ml-6 text-xl text-white"></i>
             </Link>
           )}

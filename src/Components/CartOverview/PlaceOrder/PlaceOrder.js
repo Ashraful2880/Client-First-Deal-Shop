@@ -126,16 +126,16 @@ const PlaceOrder = () => {
                       />
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-black">
-                      {item?.name}
+                      {item?.name || ""}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-black">
-                      {item?.price}$
+                      {item?.price || 0}$
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-black">
-                      {item?.quantity}
+                      {item?.quantity || 0}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-black">
-                      {item?.price}$
+                      {item?.price || 0}$
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-orange-600">
                       <button onClick={() => removeItem(item?.productId)}>
@@ -154,23 +154,25 @@ const PlaceOrder = () => {
           <div className="px-8 pt-8">
             <h2 className="text-lg font-bold border-b my-4 flex justify-between">
               <span>Products Total: </span>
-              <span className="text-orange-500">{TotalCartPrice}$</span>
+              <span className="text-orange-500">{TotalCartPrice || 0}$</span>
             </h2>
             <h2 className="text-lg font-bold border-b my-4 flex justify-between">
               <span>Shipping: </span>
               <span className="text-orange-500">
-                {shippingCost?.toFixed(2)}$
+                {shippingCost?.toFixed(2) || 0}$
               </span>
             </h2>
             <h2 className="text-lg font-bold border-b my-4 flex justify-between">
               <span>Delivery: </span>
               <span className="text-orange-500">
-                {deliveryCost?.toFixed(2)}$
+                {deliveryCost?.toFixed(2) || 0}$
               </span>
             </h2>
             <h2 className="text-lg font-bold border-b my-4 flex justify-between">
               <span>Sub Total: </span>
-              <span className="text-orange-500">{subTotal?.toFixed(2)}$</span>
+              <span className="text-orange-500">
+                {subTotal?.toFixed(2) || 0}$
+              </span>
             </h2>
           </div>
           <div className="px-8 pt-4 pb-4 flex justify-start">

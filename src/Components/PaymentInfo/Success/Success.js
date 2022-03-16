@@ -6,8 +6,6 @@ const Success = () => {
   const [orderDetails, setOrderDetails] = useState({});
   const goToHome = useNavigate();
 
-  console.log(orderDetails);
-
   const validateOrder = () => {
     const orderInfo = {
       tran_id: id,

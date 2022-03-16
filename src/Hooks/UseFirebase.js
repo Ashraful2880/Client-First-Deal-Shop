@@ -11,12 +11,14 @@ import {
 import { useEffect, useState } from "react";
 import FirebaseAuthentication from "../Firebase/Firebase.init";
 import { useAlert } from "react-alert";
+import { useNavigate } from "react-router-dom";
 
 FirebaseAuthentication();
 
 const useFirebase = () => {
   const auth = getAuth();
   const alert = useAlert();
+  const navigate = useNavigate();
 
   // All State Here
   const [user, setUser] = useState("");
@@ -24,8 +26,7 @@ const useFirebase = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [repeatPass, setRepeatPass] = useState("");
-  const [error, setError] = useState("");
-  const [demoLoading, setDemoLoading] = useState(true);
+  const [isLoading, setisLoading] = useState(true);
 
   // Signin With Google
 
@@ -36,6 +37,7 @@ const useFirebase = () => {
         const googleUser = result?.user;
         setUser(googleUser);
         alert.success("Login Successful");
+        navigate("/home");
       })
       .catch((error) => {
         const errorMessage = error.message;
@@ -60,17 +62,22 @@ const useFirebase = () => {
 
   const handleRegister = (event) => {
     event.preventDefault();
-    createUserWithEmailAndPassword(auth, email, password, repeatPass)
-      .then((userCredential) => {
-        const user = userCredential.user;
-        setUser({ ...user, displayName: name });
-        setName("");
-        updateName();
-        alert.success("Registration Successful");
-      })
-      .catch((error) => {
-        alert.error(error.message);
-      });
+    if (password === repeatPass) {
+      createUserWithEmailAndPassword(auth, email, password, repeatPass)
+        .then((userCredential) => {
+          const user = userCredential.user;
+          setUser({ ...user, displayName: name });
+          setName("");
+          updateName();
+          alert.success("Registration Successful");
+          navigate("/home");
+        })
+        .catch((error) => {
+          alert.error(error.message);
+        });
+    } else {
+      alert.error("Password Didn't Match");
+    }
   };
 
   // Update User Name By Email registration
@@ -88,16 +95,17 @@ const useFirebase = () => {
 
   const handleSignIn = (event) => {
     event.preventDefault();
-    setDemoLoading(true);
+    setisLoading(true);
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
         setUser(user);
+        navigate("/home");
       })
       .catch((error) => {
         alert.error(error.message);
       })
-      .finally(() => setDemoLoading(false));
+      .finally(() => setisLoading(false));
   };
   // Function For Log out
 
@@ -108,11 +116,12 @@ const useFirebase = () => {
       .then(() => {
         setUser("");
         alert.success("Logout Successfull");
+        navigate("/home");
       })
       .catch((error) => {
         alert.error(error.message);
       })
-      .finally(() => setDemoLoading(false));
+      .finally(() => setisLoading(false));
   };
 
   // observe user auth state changed or not
@@ -124,7 +133,7 @@ const useFirebase = () => {
       } else {
         setUser("");
       }
-      setDemoLoading(false);
+      setisLoading(false);
     });
     return () => unsubscribed;
   }, [auth]);
@@ -139,6 +148,7 @@ const useFirebase = () => {
     handleRegister,
     handleSignIn,
     handleSignOut,
+    isLoading,
   };
 };
 
