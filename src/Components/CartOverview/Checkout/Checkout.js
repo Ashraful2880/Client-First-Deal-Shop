@@ -244,7 +244,7 @@ const Checkout = () => {
               <h2 className="text-2xl text-left mb-6 font-bold ml-1">
                 Order Summary
               </h2>
-              <div className="shadow-xl overflow-hidden rounded-md border border-gray-200 h-[56vh]">
+              <div className="shadow-xl overflow-hidden rounded-md border border-gray-200 pb-28">
                 <div className="px-4 pb-6 bg-gray-50 text-right sm:px-6 font-bold">
                   <div className="flex justify-between py-4">
                     <h4 className="text-md font-bold">Your Orderd Items</h4>

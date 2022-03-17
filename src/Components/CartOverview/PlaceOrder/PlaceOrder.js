@@ -196,7 +196,7 @@ const PlaceOrder = () => {
               </button>
             </div>
           </div>
-          <div className="px-8 pb-4">
+          <div className="px-8 pb-4 mb-10 lg:mb-32">
             <h2 className="text-lg font-bold flex justify-between">
               <span>Grand Total:</span>
               <span>{grandTotal?.toFixed(2) || subTotal}$</span>

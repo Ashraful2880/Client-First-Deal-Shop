@@ -33,7 +33,7 @@ const Banner = () => {
             <h4 className="lg:mt-5 md:mt-2 sm:mt-1 text-gray-100 lg:text-3xl md:text-xl sm:text-sm font-semibold mb-2">
               With 20% Discount
             </h4>
-            <Link to="/shop">
+            <Link to="/shopCategory/All">
               <button className="border border-orange-500 rounded-md px-4 lg:py-2 sm:py-1 lg:text-lg sm:text-xs text-white lg:font-bold sm:font-normal bg-orange-500 hover:bg-transparent hover:text-orange-500 duration-300 lg:mt-10 md:mt-8 sm:mt-8">
                 Shop Now
               </button>
@@ -55,7 +55,7 @@ const Banner = () => {
             <h4 className="lg:mt-5 md:mt-2 sm:mt-1 text-gray-800 lg:text-3xl md:text-xl sm:text-sm font-semibold mb-2">
               With 25% Discount
             </h4>
-            <Link to="/shop">
+            <Link to="/shopCategory/All">
               <button className="border border-orange-500 rounded-md px-4 lg:py-2 sm:py-1 lg:text-lg sm:text-xs text-white lg:font-bold sm:font-normal bg-orange-500 hover:bg-transparent hover:text-orange-500 duration-300 lg:mt-10 md:mt-8 sm:mt-8">
                 Shop Now
               </button>
@@ -77,7 +77,7 @@ const Banner = () => {
             <h4 className="lg:mt-5 md:mt-2 sm:mt-1 text-gray-800 lg:text-3xl md:text-xl sm:text-sm font-semibold mb-2">
               With 30% Discount
             </h4>
-            <Link to="/shop">
+            <Link to="/shopCategory/All">
               <button className="border border-orange-500 rounded-md px-4 lg:py-2 sm:py-1 lg:text-lg sm:text-xs text-white lg:font-bold sm:font-normal bg-orange-500 hover:bg-transparent hover:text-orange-500 duration-300 lg:mt-10 md:mt-8 sm:mt-8">
                 Shop Now
               </button>
@@ -99,7 +99,7 @@ const Banner = () => {
             <h4 className="lg:mt-5 md:mt-2 sm:mt-1 text-gray-800 lg:text-3xl md:text-xl sm:text-sm font-semibold mb-2">
               With 15% Discount
             </h4>
-            <Link to="/shop">
+            <Link to="/shopCategory/All">
               <button className="border border-orange-500 rounded-md px-4 lg:py-2 sm:py-1 lg:text-lg sm:text-xs text-white lg:font-bold sm:font-normal bg-orange-500 hover:bg-transparent hover:text-orange-500 duration-300 lg:mt-10 md:mt-8 sm:mt-8">
                 Shop Now
               </button>
