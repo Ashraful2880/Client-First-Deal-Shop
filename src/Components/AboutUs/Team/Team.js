@@ -12,7 +12,7 @@ SwiperCore.use([Autoplay, Pagination]);
 const Team = () => {
   const [teams, setTeams] = useState([]);
   useEffect(() => {
-    fetch("https://safe-bastion-76919.herokuapp.com/about")
+    fetch("https://server-firat-deal-shop.onrender.com/about")
       .then((res) => res.json())
       .then((data) => setTeams(data));
   }, []);
@@ -29,7 +29,6 @@ const Team = () => {
               <Swiper
                 loop={true}
                 autoplay={{ delay: 3000 }}
-                grabCursor={true}
                 slidesPerView={3}
                 spaceBetween={30}
                 breakpoints={{

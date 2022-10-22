@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 const Topbrands = () => {
   const [brands, setBrands] = useState([]);
   useEffect(() => {
-    fetch(" https://safe-bastion-76919.herokuapp.com/brands")
+    fetch(" https://server-firat-deal-shop.onrender.com/brands")
       .then((res) => res.json())
       .then((data) => setBrands(data));
   }, []);
@@ -48,7 +48,7 @@ const Topbrands = () => {
               >
                 {brands?.map((brand, key) => (
                   <SwiperSlide key={key}>
-                    <div className="border border-orange-500 rounded-lg mx-auto bg-white pb-1 brand-container">
+                    <div className="mx-auto bg-white pb-1 brand-container">
                       <div className="overflow-hidden">
                         <img
                           className="rounded-t-lg"

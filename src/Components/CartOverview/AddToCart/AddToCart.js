@@ -15,7 +15,7 @@ const AddToCart = () => {
   }, [cart?.price, cartCount]);
 
   useEffect(() => {
-    fetch(`https://safe-bastion-76919.herokuapp.com/addToCart/${productId}`)
+    fetch(`https://server-firat-deal-shop.onrender.com/addToCart/${productId}`)
       .then((res) => res.json())
       .then((data) => setCart(data));
   }, [productId]);

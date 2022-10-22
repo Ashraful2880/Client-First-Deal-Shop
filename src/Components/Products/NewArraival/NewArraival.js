@@ -14,7 +14,7 @@ const NewArraival = () => {
   const [newArrival, setNewArrival] = useState([]);
   useEffect(() => {
     fetch(
-      "https://safe-bastion-76919.herokuapp.com/newArrival?newArrival=newArrival"
+      "https://server-firat-deal-shop.onrender.com/newArrival?newArrival=newArrival"
     )
       .then((res) => res.json())
       .then((data) => setNewArrival(data));

@@ -44,7 +44,7 @@ const Checkout = () => {
       cus_phone: phone,
       productDetails,
     };
-    fetch(`https://safe-bastion-76919.herokuapp.com/init`, {
+    fetch(`https://server-firat-deal-shop.onrender.com/init`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

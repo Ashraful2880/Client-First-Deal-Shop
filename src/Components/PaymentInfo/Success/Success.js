@@ -11,7 +11,7 @@ const Success = () => {
       tran_id: id,
       val_id: orderDetails?.val_id,
     };
-    fetch(`https://safe-bastion-76919.herokuapp.com/validate`, {
+    fetch(`https://server-firat-deal-shop.onrender.com/validate`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -19,14 +19,14 @@ const Success = () => {
       body: JSON.stringify(orderInfo),
     })
       .then((res) => res.json())
-      .then((data) => {});
+      .then((data) => { });
     localStorage.removeItem("cart");
     localStorage.removeItem("pendingPayment");
     goToHome("/home");
   };
 
   useEffect(() => {
-    fetch(`https://safe-bastion-76919.herokuapp.com/orders/${id}`)
+    fetch(`https://server-firat-deal-shop.onrender.com/orders/${id}`)
       .then((res) => res.json())
       .then((data) => setOrderDetails(data));
   }, [id]);

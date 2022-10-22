@@ -14,7 +14,7 @@ const TopTrending = () => {
   const [topTrending, settopTrending] = useState([]);
   useEffect(() => {
     fetch(
-      "https://safe-bastion-76919.herokuapp.com/topTrending?trending=topTrending"
+      "https://server-firat-deal-shop.onrender.com/topTrending?trending=topTrending"
     )
       .then((res) => res.json())
       .then((data) => settopTrending(data));

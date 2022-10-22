@@ -20,7 +20,7 @@ const Newslater = () => {
               className="w-full px-4 lg:py-3 py-2 text-sm leading-tight text-white border rounded shadow appearance-none focus:outline-none focus:shadow-outline mx-1"
               name="email"
               type="email"
-              placeholder="Subscribe Our Newslater"
+              placeholder="Subscribe Newslater"
               required
             />
             <button

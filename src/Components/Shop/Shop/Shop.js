@@ -11,7 +11,7 @@ const Shop = () => {
 
   useEffect(() => {
     fetch(
-      ` https://safe-bastion-76919.herokuapp.com/findProducts?category=${search}`
+      ` https://server-firat-deal-shop.onrender.com/findProducts?category=${search}`
     )
       .then((res) => res.json())
       .then((data) => setProducts(data));

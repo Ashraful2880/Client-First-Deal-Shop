@@ -13,7 +13,7 @@ const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    fetch("https://safe-bastion-76919.herokuapp.com/blogs")
+    fetch("https://server-firat-deal-shop.onrender.com/blogs")
       .then((res) => res.json())
       .then((data) => setBlogs(data));
   }, []);
